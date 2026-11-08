@@ -1,0 +1,1077 @@
+{
+ "created_at": "2026-11-07T22:37:49",
+ "telem_dir": "/Users/maw/Documents/pascasarjana/cbns/tugas kelompok/revamp/lab/ml/../ns3-sim/results/step2/telemetry_stage2",
+ "run_tag": "stage2",
+ "windows": "all",
+ "config": {
+  "m": 50,
+  "Y": 200,
+  "n_min": 10,
+  "delta": 0.1,
+  "alpha": 0.01,
+  "z_thr": 3.5,
+  "dto_seed": 0,
+  "b_max_observer": 0.8,
+  "note": "konfigurasi reproduksi (K5); bukan nilai dari paper"
+ },
+ "input_columns": [
+  "window",
+  "observer",
+  "neighbor_type",
+  "neighbor_id",
+  "wd_started",
+  "wd_forwarded",
+  "wd_forwarded_late",
+  "wd_unobserved_rxfail",
+  "wd_unobserved_clean",
+  "wd_heard_rxfail",
+  "rx_ok_from"
+ ],
+ "energy_criterion": "NOT_AVAILABLE (K3)",
+ "scenarios": {
+  "dto_decisions_20_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 6,
+   "candidates": 6,
+   "steps": [
+    {
+     "step": 0,
+     "node": 17,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 6,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_20_s1.csv",
+   "source_sha256": "063384ede0f62950f046406b01ddcc10629ea178b2c54d692a1dfd64ad6c6f60",
+   "decisions_sha256": "efe4d00ef1b0a4b70c94607219b786b8bd2f58199655d02b044587973d87d37d",
+   "b_pooled": 0.0,
+   "dto_seed": 0,
+   "seed": 2027,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_20_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 6,
+   "candidates": 6,
+   "steps": [
+    {
+     "step": 0,
+     "node": 3,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 6,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_20_s2.csv",
+   "source_sha256": "8f50c53c5ddd2455edb301ccf5436f055f300c2f382f6b64b6e0ddf27724d55f",
+   "decisions_sha256": "d5573d783de0eacc5418084e5129749ce743d57dc81b1a36e3d2c77903a78da5",
+   "b_pooled": 0.003205128205128205,
+   "dto_seed": 0,
+   "seed": 2034,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_20_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 6,
+   "candidates": 6,
+   "steps": [
+    {
+     "step": 0,
+     "node": 15,
+     "score": 0.5789473684210527,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 6,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 3,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 5,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_20_s3.csv",
+   "source_sha256": "024060081be45e47b1890dce4316b3fe9fbc0c1026d9072d705813e0902df909",
+   "decisions_sha256": "fea91b0cb74d62352e0d0696e3953127ef9560abd4c670f7b5001c7fac345c97",
+   "b_pooled": 0.001639344262295082,
+   "dto_seed": 0,
+   "seed": 2041,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_30_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 9,
+   "candidates": 9,
+   "steps": [
+    {
+     "step": 0,
+     "node": 16,
+     "score": 0.72,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 9,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 15,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 8,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_30_s1.csv",
+   "source_sha256": "681a0e2a0dc092eafa8c862190e73596206a1bc6aa808e1e99732ddac4b39f44",
+   "decisions_sha256": "fdfebc5b09d13af0d1d7cfe2284edf7cd76e737b84342602ec01de9f6c0b6768",
+   "b_pooled": 0.011928429423459244,
+   "dto_seed": 0,
+   "seed": 3037,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_30_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 10,
+   "candidates": 10,
+   "steps": [
+    {
+     "step": 0,
+     "node": 24,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 10,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_30_s2.csv",
+   "source_sha256": "0bf5c71fe8ff4c2ae4cdc69247933df80660e0663219e396fb3a685171e14f7a",
+   "decisions_sha256": "c582171c161802585967822020cddc3c18b3d88754ff183aa0e35f78504baae1",
+   "b_pooled": 0.0,
+   "dto_seed": 0,
+   "seed": 3044,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_30_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 10,
+   "candidates": 10,
+   "steps": [
+    {
+     "step": 0,
+     "node": 19,
+     "score": 0.7647058823529411,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 10,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 15,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 9,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_30_s3.csv",
+   "source_sha256": "5f594d3859f304ab8eb4dc46c6c807ae7c3c58697fc61b19613f6f677d1dc892",
+   "decisions_sha256": "74ff3c8fc56a8af39e8ed19486df0fac310a07e0e3973fab807a778a154b59c8",
+   "b_pooled": 0.0009727626459143969,
+   "dto_seed": 0,
+   "seed": 3051,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_40_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 12,
+   "candidates": 12,
+   "steps": [
+    {
+     "step": 0,
+     "node": 15,
+     "score": 0.63,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 12,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 17,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 11,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_40_s1.csv",
+   "source_sha256": "43f156262e1722928a8934e9d87c5e6250486f028a7c6d94fcb10f13cb7ed982",
+   "decisions_sha256": "152e41f9b663a91e1525b1f7c60ed361203432462aaff83f7c5b9ba8b081cace",
+   "b_pooled": 0.020016680567139282,
+   "dto_seed": 0,
+   "seed": 4047,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_40_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 12,
+   "candidates": 12,
+   "steps": [
+    {
+     "step": 0,
+     "node": 15,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 12,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_40_s2.csv",
+   "source_sha256": "e4cd40855dc63c32431ece13b811444539792cfed7e9412c837885987e4c14d1",
+   "decisions_sha256": "d559c5633c94cd88130eb2a006084d2abb8f1bb43270a1e118efeed3626f880a",
+   "b_pooled": 0.02282453637660485,
+   "dto_seed": 0,
+   "seed": 4054,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_40_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 10,
+   "candidates": 10,
+   "steps": [
+    {
+     "step": 0,
+     "node": 6,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 10,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_40_s3.csv",
+   "source_sha256": "7539c775c6719c651732aed871ec2c1dadec4499337cb2cb485675fa2358af26",
+   "decisions_sha256": "f027461e4e9a661caf79c2472c57f5f0ac35f79d1e6bc0ec2066ecd0f1525a03",
+   "b_pooled": 0.0,
+   "dto_seed": 0,
+   "seed": 4061,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_50_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 20,
+   "candidates": 20,
+   "steps": [
+    {
+     "step": 0,
+     "node": 36,
+     "score": 0.743421052631579,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 20,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 34,
+     "score": 0.693069306930693,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 19,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 17,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 18,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_50_s1.csv",
+   "source_sha256": "13eea499ea53c36b51c7f43433921e0053af3c43dbe5b5800e3a54e905ff80da",
+   "decisions_sha256": "18ba81eb13656d395a89f8ff6708a62547de8859af72aba43c1a21b3ae8cb5d5",
+   "b_pooled": 0.02005730659025788,
+   "dto_seed": 0,
+   "seed": 5057,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_50_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 19,
+   "candidates": 19,
+   "steps": [
+    {
+     "step": 0,
+     "node": 19,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 19,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_50_s2.csv",
+   "source_sha256": "08289abdf676c9f55bbc3f801e697fc6fda040e0987211e3c91f2ae8755ea416",
+   "decisions_sha256": "ce6d22aba28a1d39efe21183bfd6c3a17a779567feda90a9e0f490acd111fe7b",
+   "b_pooled": 0.00585321927059883,
+   "dto_seed": 0,
+   "seed": 5064,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_50_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 17,
+   "candidates": 17,
+   "steps": [
+    {
+     "step": 0,
+     "node": 36,
+     "score": 0.6161538461538462,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 17,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 33,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 16,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_50_s3.csv",
+   "source_sha256": "2f29c1cf41aa09df31daffcd68e41c17d39284173bd8a445e93d6efd54bc52c8",
+   "decisions_sha256": "6c4b7b225a172f0ff951136bb0df20a4714037d5024a8f6d1d18803803cb6882",
+   "b_pooled": 0.2564966313763234,
+   "dto_seed": 0,
+   "seed": 5071,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "0": 0.98,
+    "1": 0.96,
+    "2": 0.98,
+    "11": 0.88,
+    "12": 0.9,
+    "18": 0.8266666666666667,
+    "32": 0.8484848484848485
+   }
+  },
+  "dto_decisions_60_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 24,
+   "candidates": 24,
+   "steps": [
+    {
+     "step": 0,
+     "node": 44,
+     "score": 0.66,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 24,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 24,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 23,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_60_s1.csv",
+   "source_sha256": "a5b31a7402eb09583596db9d71c0f9781f99cace6f63f2a2b92fc3c54027141b",
+   "decisions_sha256": "7d98b416a5ed303c212cadc5897ca75627947c22fe76ac6464190f5a16863aff",
+   "b_pooled": 0.08561278863232683,
+   "dto_seed": 0,
+   "seed": 6067,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_60_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 22,
+   "candidates": 22,
+   "steps": [
+    {
+     "step": 0,
+     "node": 15,
+     "score": 0.5028571428571429,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 22,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 5,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 21,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_60_s2.csv",
+   "source_sha256": "240b1940cdb372f15d458799646b8052d616f4910ab05bc6ce260f081eb7f00e",
+   "decisions_sha256": "5bc8abe41eb209950efbf9df25c0f3e4cb338c7864580683a941c392d2e193d3",
+   "b_pooled": 0.06588735387885228,
+   "dto_seed": 0,
+   "seed": 6074,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "0": 0.98,
+    "1": 0.94,
+    "2": 0.94
+   }
+  },
+  "dto_decisions_60_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 21,
+   "candidates": 21,
+   "steps": [
+    {
+     "step": 0,
+     "node": 39,
+     "score": 0.69,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 21,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 17,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 20,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_60_s3.csv",
+   "source_sha256": "6156e00ae3afe84ec9929c3eceb089741b8eb66cbb9dfa189354754ddf214822",
+   "decisions_sha256": "5768f5b518c329cfad31ebe614f609dfd8ae8f11bbc8238ae7a7641f459c4a0b",
+   "b_pooled": 0.06935123042505593,
+   "dto_seed": 0,
+   "seed": 6081,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "8": 0.98,
+    "42": 0.98
+   }
+  },
+  "dto_decisions_70_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 24,
+   "candidates": 24,
+   "steps": [
+    {
+     "step": 0,
+     "node": 36,
+     "score": 0.6955591225254146,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 24,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 63,
+     "score": 0.5961538461538461,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 23,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 6,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 22,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_70_s1.csv",
+   "source_sha256": "214dc47a9627d69d4fc89df5773b16a8137c7c5f7d64b54ae11892a74cc407da",
+   "decisions_sha256": "5922010b8d111216553ebe194cb3d369b97ca70c2dc02d58857547bd7c5cc6ec",
+   "b_pooled": 0.11964631113567284,
+   "dto_seed": 0,
+   "seed": 7077,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "67": 0.96,
+    "68": 0.98
+   }
+  },
+  "dto_decisions_70_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 26,
+   "candidates": 26,
+   "steps": [
+    {
+     "step": 0,
+     "node": 17,
+     "score": 0.71,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 26,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 26,
+     "score": 0.66,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 25,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 25,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 24,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_70_s2.csv",
+   "source_sha256": "03de3633aca16648bb1b8958dd260195fea5cffefd6179c190845042f6a1ae98",
+   "decisions_sha256": "0098b10b1930eae19805af43f76b2559b1af9981da9c46e934e8efa3e7324b2d",
+   "b_pooled": 0.2320876650744591,
+   "dto_seed": 0,
+   "seed": 7084,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "11": 1.0,
+    "22": 0.9866666666666667,
+    "24": 0.9770114942528736,
+    "40": 1.0
+   }
+  },
+  "dto_decisions_70_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 21,
+   "candidates": 21,
+   "steps": [
+    {
+     "step": 0,
+     "node": 6,
+     "score": 0.74,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 21,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 56,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 20,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_70_s3.csv",
+   "source_sha256": "c582798787f28b8d0d0a35ca1003d32194b559b60400a812a017be168b143738",
+   "decisions_sha256": "3bbcd50104520047b3802a2dc201f6bb6a236f4f6db286617cd293890e35479b",
+   "b_pooled": 0.23645465253239104,
+   "dto_seed": 0,
+   "seed": 7091,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "22": 1.0,
+    "24": 0.9731343283582089,
+    "26": 0.9743589743589743,
+    "42": 0.96
+   }
+  },
+  "dto_decisions_80_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 29,
+   "candidates": 29,
+   "steps": [
+    {
+     "step": 0,
+     "node": 69,
+     "score": 0.74,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 29,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 72,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 28,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_80_s1.csv",
+   "source_sha256": "8cd884dc135bbe5aa5c1967b6afd095049d91d354b2c3d9a308e0a60e635cc68",
+   "decisions_sha256": "6d306c0bcc2cffbd35e2b72d0af994020f9092a8e046dfbb9f59ed0df389bd89",
+   "b_pooled": 0.2778494623655914,
+   "dto_seed": 0,
+   "seed": 8087,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "1": 0.9285714285714286,
+    "4": 0.8,
+    "11": 0.9615384615384616,
+    "12": 0.92,
+    "22": 1.0,
+    "24": 0.9767441860465116,
+    "54": 0.8,
+    "64": 0.8771929824561403
+   }
+  },
+  "dto_decisions_80_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 30,
+   "candidates": 30,
+   "steps": [
+    {
+     "step": 0,
+     "node": 73,
+     "score": 0.7084625609215773,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 30,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 24,
+     "score": 0.020888888888888887,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 29,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_80_s2.csv",
+   "source_sha256": "4e6397322109cb4cda108895cfa031fd4784d549bf0d49c79aebad5a83ce20b8",
+   "decisions_sha256": "f2d747cd20e33565519be6cf4e9c09533a506cfd6d2339cb547584272286af2e",
+   "b_pooled": 0.27955195424213536,
+   "dto_seed": 0,
+   "seed": 8094,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "2": 1.0,
+    "8": 0.9523809523809523,
+    "9": 1.0,
+    "12": 1.0,
+    "57": 1.0,
+    "59": 0.9411764705882353
+   }
+  },
+  "dto_decisions_80_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 30,
+   "candidates": 30,
+   "steps": [
+    {
+     "step": 0,
+     "node": 35,
+     "score": 0.68,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 30,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 15,
+     "score": 0.05555555555555555,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 29,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_80_s3.csv",
+   "source_sha256": "07be901a599784638d37851a06bec3815beec830633744821039b84171ce1adf",
+   "decisions_sha256": "ba54ec6d725188efeb00bc9f1510b51c9a3c0d187735f2388ee176331e43c49d",
+   "b_pooled": 0.13205718439544464,
+   "dto_seed": 0,
+   "seed": 8101,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "68": 0.8292682926829268
+   }
+  },
+  "dto_decisions_90_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 33,
+   "candidates": 33,
+   "steps": [
+    {
+     "step": 0,
+     "node": 6,
+     "score": 0.6604787493893504,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 33,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 44,
+     "score": 0.66,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 32,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 18,
+     "score": 0.05,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 31,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_90_s1.csv",
+   "source_sha256": "9bdbbc88ffd79db35da5e192301959d5e1030f801dbc076956288bd488eac178",
+   "decisions_sha256": "9bf70af39f142393ae21997748918f89a49fde643f7275260a992960ff8d869c",
+   "b_pooled": 0.2874493927125506,
+   "dto_seed": 0,
+   "seed": 9097,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "3": 0.9636363636363636,
+    "59": 0.98,
+    "74": 0.91
+   }
+  },
+  "dto_decisions_90_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 34,
+   "candidates": 34,
+   "steps": [
+    {
+     "step": 0,
+     "node": 35,
+     "score": 0.76,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 34,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 66,
+     "score": 0.7058823529411765,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 33,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 18,
+     "score": 0.07,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 32,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_90_s2.csv",
+   "source_sha256": "9d768ee7daec7ae3e1cae9bb0d0084501239d3f697eed20359dd3ba68df1fc55",
+   "decisions_sha256": "b1d0695fd1349ce0bc0fdba58413fc238f26e20519c0a4093a67a1683a09f87e",
+   "b_pooled": 0.23634945397815912,
+   "dto_seed": 0,
+   "seed": 9104,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "3": 0.9625,
+    "24": 0.967741935483871,
+    "59": 0.9583333333333334,
+    "74": 0.94
+   }
+  },
+  "dto_decisions_90_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 35,
+   "candidates": 35,
+   "steps": [
+    {
+     "step": 0,
+     "node": 56,
+     "score": 0.76,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 35,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 58,
+     "score": 0.64,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 34,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 87,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 33,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_90_s3.csv",
+   "source_sha256": "3d8ee069bef6f98146fdb2ebb6fd9c9563999dd5c7922d5ad76810be8e058559",
+   "decisions_sha256": "8d1de0bd3d162962a75cf18fa1ff21c1b427f18bc53207b9a95890a50bbad48c",
+   "b_pooled": 0.2424128180961357,
+   "dto_seed": 0,
+   "seed": 9111,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "1": 0.92,
+    "2": 0.95,
+    "3": 0.9807692307692307,
+    "59": 0.8888888888888888,
+    "60": 0.9795918367346939
+   }
+  },
+  "dto_decisions_100_s1_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 36,
+   "candidates": 36,
+   "steps": [
+    {
+     "step": 0,
+     "node": 36,
+     "score": 0.74,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 36,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 17,
+     "score": 0.7142857142857143,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 35,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 16,
+     "score": 0.48363636363636364,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 34,
+     "n_eval": 30050
+    },
+    {
+     "step": 3,
+     "node": 6,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 33,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_100_s1.csv",
+   "source_sha256": "1e103110c0f78ab93fb85eb55ad4afb3822926642c8451446e82a8aade45296f",
+   "decisions_sha256": "fd07d14b9ba3f88d63138e66c84117195b5babcc5bbcec5f72765b03188ed875",
+   "b_pooled": 0.3369749192183413,
+   "dto_seed": 0,
+   "seed": 10107,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "0": 0.92,
+    "1": 0.96,
+    "14": 0.92,
+    "32": 1.0,
+    "33": 0.9607843137254902,
+    "58": 0.9866666666666667,
+    "68": 0.86,
+    "80": 0.9945652173913043,
+    "95": 1.0
+   }
+  },
+  "dto_decisions_100_s2_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 34,
+   "candidates": 34,
+   "steps": [
+    {
+     "step": 0,
+     "node": 81,
+     "score": 0.7290322580645161,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 34,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 82,
+     "score": 0.68,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 33,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 15,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 32,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_100_s2.csv",
+   "source_sha256": "50484798fe1e2b4eeea69a5bcc7f1dc7fa12de2e9bdacc4bec38c68b375919e8",
+   "decisions_sha256": "cb238368088c70bf266bc29b339b903638558a5351ae21e6df54c343edc0b44d",
+   "b_pooled": 0.37051604782882314,
+   "dto_seed": 0,
+   "seed": 10114,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "0": 0.86,
+    "1": 0.95,
+    "4": 0.94,
+    "11": 0.84,
+    "14": 0.94,
+    "32": 0.9306930693069307,
+    "33": 0.96,
+    "40": 0.96,
+    "46": 0.8,
+    "64": 0.985,
+    "74": 0.98
+   }
+  },
+  "dto_decisions_100_s3_stage2_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 29,
+   "candidates": 29,
+   "steps": [
+    {
+     "step": 0,
+     "node": 62,
+     "score": 0.6005092592592592,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 29,
+     "n_eval": 30050
+    },
+    {
+     "step": 1,
+     "node": 15,
+     "score": 0.4,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 28,
+     "n_eval": 30050
+    },
+    {
+     "step": 2,
+     "node": 75,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 27,
+     "n_eval": 30050
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_100_s3.csv",
+   "source_sha256": "08ff7127eb76951251d0148e2bc921da3045952fdf333984868d17e8667d1831",
+   "decisions_sha256": "23a998a92beb14a74780df94a2967b508dba53d1cc0849590d7a8f3ac03431d6",
+   "b_pooled": 0.23930058284762698,
+   "dto_seed": 0,
+   "seed": 10121,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "18": 0.8297872340425532,
+    "32": 1.0,
+    "33": 0.8211920529801324,
+    "70": 0.84,
+    "86": 0.86,
+    "87": 0.8
+   }
+  }
+ }
+}

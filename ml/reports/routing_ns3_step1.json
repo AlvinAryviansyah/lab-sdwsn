@@ -1,0 +1,509 @@
+{
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "nodes": [
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  100
+ ],
+ "n_scenarios": 27,
+ "metrics": {
+  "pdr_percent": {
+   "label": "PDR (%)",
+   "mean_tldqn": 98.08596296296298,
+   "mean_greedy": 92.03919259259258,
+   "mean_diff": 6.04677037037037,
+   "sd_diff": 8.623990123924647,
+   "better": 21,
+   "tie": 1,
+   "worse": 5,
+   "p_sign_test": 0.002493917942047119
+  },
+  "packet_drop_ratio_percent": {
+   "label": "Packet drop ratio (%)",
+   "mean_tldqn": 1.914038851851852,
+   "mean_greedy": 7.960799629629629,
+   "mean_diff": -6.046760777777779,
+   "sd_diff": 8.623998479230323,
+   "better": 21,
+   "tie": 1,
+   "worse": 5,
+   "p_sign_test": 0.002493917942047119
+  },
+  "throughput_kbps": {
+   "label": "Throughput (kbps)",
+   "mean_tldqn": 22.799339629629625,
+   "mean_greedy": 21.489836296296293,
+   "mean_diff": 1.3095033333333337,
+   "sd_diff": 1.7347797357235073,
+   "better": 23,
+   "tie": 1,
+   "worse": 3,
+   "p_sign_test": 8.797645568847656e-05
+  },
+  "latency_ms": {
+   "label": "Latency (ms)",
+   "mean_tldqn": 0.7544562592592593,
+   "mean_greedy": 0.6660168518518519,
+   "mean_diff": 0.08843940740740742,
+   "sd_diff": 0.6568303446669677,
+   "better": 9,
+   "tie": 0,
+   "worse": 18,
+   "p_sign_test": 0.12207812070846558
+  },
+  "grayhole_drops": {
+   "label": "Paket dijatuhkan grayhole",
+   "mean_tldqn": 63.48148148148148,
+   "mean_greedy": 241.11111111111111,
+   "mean_diff": -177.62962962962962,
+   "sd_diff": 231.68963791911006,
+   "better": 21,
+   "tie": 2,
+   "worse": 4,
+   "p_sign_test": 0.0009105205535888672
+  },
+  "energy_consumption_J": {
+   "label": "Energi (J)",
+   "mean_tldqn": 54.26742592592592,
+   "mean_greedy": 54.2448,
+   "mean_diff": 0.022625925925924776,
+   "sd_diff": 0.025154088100109995,
+   "better": 2,
+   "tie": 0,
+   "worse": 25,
+   "p_sign_test": 5.647540092468262e-06
+  },
+  "benign_hops_per_rx_est": {
+   "label": "Hop per paket (sensor normal)",
+   "mean_tldqn": 2.0161355555555556,
+   "mean_greedy": 1.9144840740740738,
+   "mean_diff": 0.10165148148148152,
+   "sd_diff": 0.17087024561398143
+  }
+ },
+ "per_n": {
+  "20": {
+   "pdr_percent": {
+    "tldqn_mean": 95.59346666666666,
+    "tldqn_std": 7.632339618579176,
+    "greedy_mean": 98.00630000000001,
+    "greedy_std": 3.4531896950500696
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 4.406533333333333,
+    "tldqn_std": 7.632339618579176,
+    "greedy_mean": 1.9937033333333334,
+    "greedy_std": 3.453195468552763
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 6.19989,
+    "tldqn_std": 0.3445947974070416,
+    "greedy_mean": 6.531926666666666,
+    "greedy_std": 1.0915422612218608
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.33806633333333336,
+    "tldqn_std": 0.0022138465017551238,
+    "greedy_mean": 0.28197066666666665,
+    "greedy_std": 0.011182127451130813
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 41.333333333333336,
+    "tldqn_std": 71.59143337951359,
+    "greedy_mean": 19.0,
+    "greedy_std": 32.90896534380867
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 18.038566666666668,
+    "tldqn_std": 0.0025716402029308033,
+    "greedy_mean": 18.032033333333334,
+    "greedy_std": 0.0028571547618793944
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 1.7138499999999999,
+    "tldqn_std": 0.07068531459928586,
+    "greedy_mean": 1.3803633333333334,
+    "greedy_std": 0.01594641443501745
+   }
+  },
+  "30": {
+   "pdr_percent": {
+    "tldqn_mean": 100.0,
+    "tldqn_std": 0.0,
+    "greedy_mean": 87.44183333333335,
+    "greedy_std": 12.570395972018275
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 0.0,
+    "tldqn_std": 0.0,
+    "greedy_mean": 12.558143333333334,
+    "greedy_std": 12.57041588032923
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 10.731466666666668,
+    "tldqn_std": 0.6470424741339116,
+    "greedy_mean": 9.735966666666666,
+    "greedy_std": 0.773181882504585
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.36802466666666667,
+    "tldqn_std": 0.015909456820813645,
+    "greedy_mean": 0.343882,
+    "greedy_std": 0.015277501202749096
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 0.0,
+    "tldqn_std": 0.0,
+    "greedy_mean": 177.33333333333334,
+    "greedy_std": 174.90664176449485
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 27.076633333333334,
+    "tldqn_std": 0.005510293398117095,
+    "greedy_mean": 27.068866666666665,
+    "greedy_std": 0.0011060440015367595
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 1.7953400000000002,
+    "tldqn_std": 0.06365663123351716,
+    "greedy_mean": 1.65233,
+    "greedy_std": 0.08738409008509493
+   }
+  },
+  "40": {
+   "pdr_percent": {
+    "tldqn_mean": 98.92073333333333,
+    "tldqn_std": 1.8693447015821663,
+    "greedy_mean": 88.68726666666667,
+    "greedy_std": 10.536382261636742
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 1.0792633333333332,
+    "tldqn_std": 1.8693389280794785,
+    "greedy_mean": 11.312733333333334,
+    "greedy_std": 10.536382261636739
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 15.192599999999999,
+    "tldqn_std": 2.099386460373602,
+    "greedy_mean": 13.636600000000001,
+    "greedy_std": 2.582814478432393
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.38741733333333334,
+    "tldqn_std": 0.016684088987215732,
+    "greedy_mean": 0.9259806666666668,
+    "greedy_std": 0.9181084892780011
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 20.333333333333332,
+    "tldqn_std": 35.21836642056717,
+    "greedy_mean": 215.33333333333334,
+    "greedy_std": 193.27269163886896
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 36.1336,
+    "tldqn_std": 0.008876373133210604,
+    "greedy_mean": 36.125166666666665,
+    "greedy_std": 0.009000740710260692
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 1.90785,
+    "tldqn_std": 0.0648403909611902,
+    "greedy_mean": 1.9011166666666668,
+    "greedy_std": 0.08724003801772054
+   }
+  },
+  "50": {
+   "pdr_percent": {
+    "tldqn_mean": 100.0,
+    "tldqn_std": 0.0,
+    "greedy_mean": 89.9239,
+    "greedy_std": 12.018860849514818
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 0.0,
+    "tldqn_std": 0.0,
+    "greedy_mean": 10.07608,
+    "greedy_std": 12.018878287943512
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 18.4211,
+    "tldqn_std": 0.3567037005695339,
+    "greedy_mean": 16.689466666666664,
+    "greedy_std": 2.161832059465613
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.6359043333333333,
+    "tldqn_std": 0.42531275495843446,
+    "greedy_mean": 0.6832683333333334,
+    "greedy_std": 0.4343605421862503
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 0.0,
+    "tldqn_std": 0.0,
+    "greedy_mean": 249.66666666666666,
+    "greedy_std": 299.09418806344826
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 45.18216666666667,
+    "tldqn_std": 0.008863595959502667,
+    "greedy_mean": 45.18273333333334,
+    "greedy_std": 0.005589573627149911
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 1.9290033333333332,
+    "tldqn_std": 0.07274004215927657,
+    "greedy_mean": 2.10491,
+    "greedy_std": 0.057294478791590275
+   }
+  },
+  "60": {
+   "pdr_percent": {
+    "tldqn_mean": 98.3524,
+    "tldqn_std": 2.5199769304499617,
+    "greedy_mean": 88.67280000000001,
+    "greedy_std": 11.743778313217593
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 1.6475993333333332,
+    "tldqn_std": 2.5199362152644524,
+    "greedy_mean": 11.327193333333334,
+    "greedy_std": 11.743778439877573
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 24.1147,
+    "tldqn_std": 1.1860736950122444,
+    "greedy_mean": 21.713866666666664,
+    "greedy_std": 2.37866760253158
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.7384423333333333,
+    "tldqn_std": 0.5239759967119996,
+    "greedy_mean": 0.6774213333333332,
+    "greedy_std": 0.4443741637970566
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 46.0,
+    "tldqn_std": 79.67433714816836,
+    "greedy_mean": 341.6666666666667,
+    "greedy_std": 357.9390078397901
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 54.271800000000006,
+    "tldqn_std": 0.009041570660009173,
+    "greedy_mean": 54.24113333333333,
+    "greedy_std": 0.008639637338069717
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 2.111103333333333,
+    "tldqn_std": 0.0692825377229598,
+    "greedy_mean": 2.02617,
+    "greedy_std": 0.1028055168753116
+   }
+  },
+  "70": {
+   "pdr_percent": {
+    "tldqn_mean": 98.68903333333333,
+    "tldqn_std": 0.5044310887855042,
+    "greedy_mean": 95.7989,
+    "greedy_std": 2.187904986511065
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 1.3109766666666667,
+    "tldqn_std": 0.5044490485007711,
+    "greedy_mean": 4.20109,
+    "greedy_std": 2.18790563560223
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 26.05003333333333,
+    "tldqn_std": 1.759309436493005,
+    "greedy_mean": 24.754,
+    "greedy_std": 2.4496585333470455
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.8972470000000001,
+    "tldqn_std": 0.39669651084550767,
+    "greedy_mean": 0.8600136666666667,
+    "greedy_std": 0.7287830267029641
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 45.666666666666664,
+    "tldqn_std": 22.03028218914441,
+    "greedy_mean": 148.66666666666666,
+    "greedy_std": 74.33258594542055
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 63.328399999999995,
+    "tldqn_std": 0.02806082678753244,
+    "greedy_mean": 63.30956666666666,
+    "greedy_std": 0.01523625063239953
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 2.103756666666667,
+    "tldqn_std": 0.0726388892628002,
+    "greedy_mean": 2.052013333333333,
+    "greedy_std": 0.04676691280524438
+   }
+  },
+  "80": {
+   "pdr_percent": {
+    "tldqn_mean": 98.10156666666667,
+    "tldqn_std": 0.8711029464611729,
+    "greedy_mean": 96.08323333333334,
+    "greedy_std": 3.5101445188671816
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 1.8984313333333336,
+    "tldqn_std": 0.8711196340717694,
+    "greedy_mean": 3.9167699999999996,
+    "greedy_std": 3.5101383052381285
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 30.944266666666667,
+    "tldqn_std": 3.9352982839085193,
+    "greedy_mean": 30.185399999999998,
+    "greedy_std": 4.364752653931262
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.8374906666666666,
+    "tldqn_std": 0.6781411860559226,
+    "greedy_mean": 0.8425433333333334,
+    "greedy_std": 0.3426722846005106
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 66.66666666666667,
+    "tldqn_std": 58.59465277082315,
+    "greedy_mean": 143.33333333333334,
+    "greedy_std": 139.6579153980659
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 72.3897,
+    "tldqn_std": 0.025229347989988802,
+    "greedy_mean": 72.3657,
+    "greedy_std": 0.041143043154338914
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 2.1322566666666667,
+    "tldqn_std": 0.08061537963275574,
+    "greedy_mean": 2.0796666666666668,
+    "greedy_std": 0.029706084113079012
+   }
+  },
+  "90": {
+   "pdr_percent": {
+    "tldqn_mean": 98.09236666666668,
+    "tldqn_std": 2.426445413219373,
+    "greedy_mean": 98.07866666666666,
+    "greedy_std": 1.799445287674323
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 1.9076556666666669,
+    "tldqn_std": 2.426449105102008,
+    "greedy_mean": 1.9213233333333335,
+    "greedy_std": 1.7994277615490246
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 36.68646666666667,
+    "tldqn_std": 2.717761965907489,
+    "greedy_mean": 36.5881,
+    "greedy_std": 2.050739995708866
+   },
+   "latency_ms": {
+    "tldqn_mean": 1.61688,
+    "tldqn_std": 0.2965447472136372,
+    "greedy_mean": 0.5751006666666667,
+    "greedy_std": 0.2732998155622015
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 84.33333333333333,
+    "tldqn_std": 115.51767541520793,
+    "greedy_mean": 93.66666666666667,
+    "greedy_std": 87.38611636486274
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 81.4586,
+    "tldqn_std": 0.017545084781785982,
+    "greedy_mean": 81.42796666666668,
+    "greedy_std": 0.01857857188627449
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 2.1225833333333335,
+    "tldqn_std": 0.047311031835432706,
+    "greedy_mean": 2.0445466666666667,
+    "greedy_std": 0.007690619827642668
+   }
+  },
+  "100": {
+   "pdr_percent": {
+    "tldqn_mean": 95.02409999999999,
+    "tldqn_std": 2.837164704418834,
+    "greedy_mean": 85.65983333333334,
+    "greedy_std": 7.554801255713707
+   },
+   "packet_drop_ratio_percent": {
+    "tldqn_mean": 4.97589,
+    "tldqn_std": 2.837161234826107,
+    "greedy_mean": 14.34016,
+    "greedy_std": 7.554811664283895
+   },
+   "throughput_kbps": {
+    "tldqn_mean": 36.85353333333333,
+    "tldqn_std": 2.728394975683202,
+    "greedy_mean": 33.5732,
+    "greedy_std": 1.8295788285832337
+   },
+   "latency_ms": {
+    "tldqn_mean": 0.9706336666666666,
+    "tldqn_std": 0.5598140148838124,
+    "greedy_mean": 0.8039710000000001,
+    "greedy_std": 0.5121530299148879
+   },
+   "grayhole_drops": {
+    "tldqn_mean": 267.0,
+    "tldqn_std": 152.14795430764096,
+    "greedy_mean": 781.3333333333334,
+    "greedy_std": 426.53526622465034
+   },
+   "energy_consumption_J": {
+    "tldqn_mean": 90.52736666666665,
+    "tldqn_std": 0.03152226726194729,
+    "greedy_mean": 90.45003333333334,
+    "greedy_std": 0.025267040454577207
+   },
+   "benign_hops_per_rx_est": {
+    "tldqn_mean": 2.329476666666667,
+    "tldqn_std": 0.029030071190634936,
+    "greedy_mean": 1.98924,
+    "greedy_std": 0.1064720052408144
+   }
+  }
+ },
+ "checks": {
+  "ids_metrics_identical_across_routing": true,
+  "grayhole_drop_ratio_pooled": 0.6989631140574537,
+  "grayhole_drop_prob_config": 0.7,
+  "dto": {
+   "tldqn": {
+    "TP": 136.0,
+    "FP": 26.0,
+    "attackers": 162.0
+   },
+   "greedy": {
+    "TP": 128.0,
+    "FP": 34.0,
+    "attackers": 162.0
+   }
+  }
+ }
+}

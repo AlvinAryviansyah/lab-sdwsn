@@ -1,0 +1,952 @@
+{
+ "created": "2026-11-07",
+ "note": "Dipindah dengan git mv; kembalikan dgn: git mv archive/<grup>/<path_asli> <path_asli>",
+ "groups": {
+  "ns3-results-superseded": {
+   "reason": "Hasil sweep NS-3 lama, digantikan langkah 1-2 (konfigurasi lama / tanpa jangkauan 150 m / detektor rekonstruksi / IDS sintetis)",
+   "files": 118,
+   "entries": [
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_100.csv",
+     "sha256": "5e1bf09d6bde9c888921a4aeb9606c75996bfa96891cfd49a8f8d6fca0ec8bae"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_20.csv",
+     "sha256": "384ff35a63f761ab0b5aec51a5b9438852fe6f47682e299934d553e7dc242000"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_30.csv",
+     "sha256": "d1b3eb41530ee18850b943ee09216122faae32814233f489375a205fb35abbb8"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_40.csv",
+     "sha256": "ee832490ee3c6478beff53a5593da0af47294c80827349732865b2b910817566"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_50.csv",
+     "sha256": "91217cc896a0da0e0a9f41fe6692cf81fe0387b0ce048bc9f5a3433bb935a788"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_60.csv",
+     "sha256": "03903d0f4d8fa6709f1b55294e19cff3bcccf48eba04502b2582e38ea452cb25"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_70.csv",
+     "sha256": "a5b4a0f60e1f15b833cde29b020581d9201699c853b865961d469ff93e087ab1"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_80.csv",
+     "sha256": "0f6f396defbae3a664af91f4ea101e2e59d1224b11fa95f66d8c55d40bb66a94"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run1_single_seed/metrics_90.csv",
+     "sha256": "9a6220bcda6a5407b0254824fcefb6ecaab52f568dab96bf291d5d8a0cbdad97"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_100_s1.csv",
+     "sha256": "32fad1d1e9f18236653b0ae76ab6f994193dc87db160bbb6454125ed8b1d460a"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_100_s2.csv",
+     "sha256": "0bf3fcb3dbebc512fa29e684c5929716dcee0df510fca61d663b1c9ce9de82a9"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_100_s3.csv",
+     "sha256": "5660e4de0499dd274edafdfa789c371998e8a046f243c505754ae8f7f919085b"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_100_s4.csv",
+     "sha256": "d5dc792b95b69026dd6110ca84dbe638fadd70844a8991cbcfce78ee77d4e1da"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_100_s5.csv",
+     "sha256": "d98a0a6e3674350c896b963eaf02680b98d76011f208522aaa8cbcada32830fa"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_20_s1.csv",
+     "sha256": "0963f5ea4185ee4950fc4a2584db86a4479069a5dac6ae6d709ba48601f6c1b9"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_20_s2.csv",
+     "sha256": "39038bd31c87b944edfe42756141066e5a1307a6a320c68a90b21e7b52dc161e"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_20_s3.csv",
+     "sha256": "f3fa66178017b1d2e4c88aef1f0cc3af4e226c473b141194f2076591eeb5a7c7"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_20_s4.csv",
+     "sha256": "8452ebd576849304bc1327f75e14083c67cba0ec15a0a5188cfa852b02d86127"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_20_s5.csv",
+     "sha256": "658ceb11fcfad067ffb479d5b306a1984c922e5840b9df9b0d58c1982ec3d0d4"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_30_s1.csv",
+     "sha256": "65d05b3cd42c820a799587171c2d03bf39d97063d26859462ccba93b3db6d071"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_30_s2.csv",
+     "sha256": "481bf439fbe6934eca175aedd329e44586543fdd643a806497434c1b91d4235e"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_30_s3.csv",
+     "sha256": "ac30298d33e5064699a470765dab5750d852cf2b54829daa3a74e993a07fd2a7"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_30_s4.csv",
+     "sha256": "c645b1112e6167f2fcbba37c79df0288ce43684068569f11fde461ad5f6fe143"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_30_s5.csv",
+     "sha256": "f9a28267dd79ca34954f949a8bab3790d8804569e0d9e68ede97e8e3b91ec749"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_40_s1.csv",
+     "sha256": "4395ce58535dc68438d51c466d6b7b78ee7086fe7bd9d51bd060b52027a4d1d1"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_40_s2.csv",
+     "sha256": "f9f320faf35115933c50774593df3be2c93a546bffa804079502b5e45e73c2fd"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_40_s3.csv",
+     "sha256": "b10942d456a31876e2b05598db378bac2221c8105362c27ccb22b92e8c4cdc24"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_40_s4.csv",
+     "sha256": "3f1bf1756889a2bba2d02eb83fc78afbb936443e19da6b13d562eac8a5ddd0ee"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_40_s5.csv",
+     "sha256": "68cdee4a1d73e8827f74943c01b0351c8647425b7f07746b1b06187a8e12ad19"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_50_s1.csv",
+     "sha256": "1e91242f055cd8de83b65a72c0ff038f4d84f2878e8527e8bc6614b5711827b5"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_50_s2.csv",
+     "sha256": "d47c0288c6212d344b98cdd11a79a2f90998d4f316717e320802a2c3576486e5"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_50_s3.csv",
+     "sha256": "79422cef5a4be1d881ddf2af0719538d30c347454393c80c4383a90b955bbb83"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_50_s4.csv",
+     "sha256": "a676ef1e8f6d0329ca0eadbb5e960e9e918a32697decbf487aae013d98126077"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_50_s5.csv",
+     "sha256": "60c39c2d4ebc082c62360d9970bd61f020e9e64cc1070297fe6dfb28370d2db0"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_60_s1.csv",
+     "sha256": "dc95ef92a690efd2195f8c40e5ec64b2f4444b3f8c1a8fc35cc1ff1d9fb6b37c"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_60_s2.csv",
+     "sha256": "6e2d621367b15a2be6d3db4f8d36174df0c1ae6de35de9f6c957e983c4212956"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_60_s3.csv",
+     "sha256": "acdb50d528a2fcd4188cb00a9963b78175880f838d5670137b5983431104331f"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_60_s4.csv",
+     "sha256": "a24360eaa99d9d48d53a53898b247e86a0909d2a902385731774419aaf13968b"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_60_s5.csv",
+     "sha256": "18bd83739d61d9e4530d5c1181143e3eb269ace8876351f8b232439eccf69737"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_70_s1.csv",
+     "sha256": "5c2a6210b6d4e85246957bf884cfc1d7e0fda564511148453ecd7b6c23770d8f"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_70_s2.csv",
+     "sha256": "4d446fe92ea90ebe93633fe60751e5697969555c5cff03ce2ff8a6cd24d626bd"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_70_s3.csv",
+     "sha256": "9643af79dbb58cac47e497d912dda77767be6887553d7e366dd55bc4887bfe66"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_70_s4.csv",
+     "sha256": "5df5ce24dab71225def291a2ea9f1e39f4dd84af7cb040f349116ecc34c2232e"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_70_s5.csv",
+     "sha256": "41933ac495b6b5f1ec219f72e06eb7d19c76a02228916ee34d84a75083c043e0"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_80_s1.csv",
+     "sha256": "d6b2f5952a64545a7cef8955bb5c10adc38efd887ffea5ecbdc0dbfc212b925b"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_80_s2.csv",
+     "sha256": "78a464a77087316b5743cc8c43b86a1e36334b5d9c213b988fa1dd136c609224"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_80_s3.csv",
+     "sha256": "2cf5afa8957b95a829a98a697c4a64ea3977cdfa50e16e323963cd5b7d2fdf9b"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_80_s4.csv",
+     "sha256": "1cbe552a4112f2b9564dd150777f7fba62d0835928df0c78ac953794a44357ea"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_80_s5.csv",
+     "sha256": "98c8cb49290cf9fcccb25bc2f940315e1245348f731bfa708a449d689ca6fd99"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_90_s1.csv",
+     "sha256": "57d73772b7dbb7de33105307d06d6240e05d1de531c24be1c46b3d59987889b6"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_90_s2.csv",
+     "sha256": "d15175372716a5baebc35923fe13d670014efffff0bbd6790b56255a015aaa97"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_90_s3.csv",
+     "sha256": "8c70e7e347f03cd97c6d0cfcae0095fcfa2ec7f94a46ed133fe6d612c78ccc9f"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_90_s4.csv",
+     "sha256": "4bda99650281bbd6b36fd76cb1525b24c81b3376b2859a079288bf09c0b033f5"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run2_5seed_old_config/metrics_90_s5.csv",
+     "sha256": "3b272721209f1dcdcfd67fc7b53960205752f17a64a76d05b7d62c180f928b19"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_100_s1.csv",
+     "sha256": "26b15d5af7bd7820e3b2abad5095920cbbeb471ae74f8f9fc964c86992a5ada2"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_100_s2.csv",
+     "sha256": "9c712f94c232c34a45129111d419f22ab72ca7fc8d6956f84f142a84307cb97a"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_100_s3.csv",
+     "sha256": "b91ed7efd0034d17d0236385340bb9ce68200e338a6c74b0e853b71484a35892"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_20_s1.csv",
+     "sha256": "b09ebcbb510b55972dca86b54a0f8aac4734e0946e23fcac99b0ebe992270d10"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_20_s2.csv",
+     "sha256": "4f05a49c9d532072a7e35e0d00422f225f53e6d86c90db6c3b5f644e70874a88"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_20_s3.csv",
+     "sha256": "457dc245360a782f91c2d8b8aefe441334ae934671f5a7289b2010d8b192660c"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_30_s1.csv",
+     "sha256": "f991e0d8280787bb36725b75ff38550e458dab2bf89c753a40506b1947e82032"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_30_s2.csv",
+     "sha256": "bbcd549be2744c95e0f06a1eb8a5ae23ef61b025753407c49c48888e2ee5a378"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_30_s3.csv",
+     "sha256": "49297bbb7b31f9317f1cadce92d32b6a47652dc3fd13a7fbe533fdd3b4e8010a"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_40_s1.csv",
+     "sha256": "d18e1aff9d94af49dd041817b7752926b894c713ee4d0201c1342e61307d09f7"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_40_s2.csv",
+     "sha256": "4107befc0f34f279304061fcb25b85974cd71da376df615b049a1854cb06fafe"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_40_s3.csv",
+     "sha256": "e889ba8fd6d24adeefc2e1d71f5ce089217212b35f71e891197f8036a13f7f29"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_50_s1.csv",
+     "sha256": "51a464a6fcc5a6187133b936f2e705632415f407744d3e74b28634795c74ceb2"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_50_s2.csv",
+     "sha256": "90fec0cd1809a1996c456d965ca66c9ee564d65711fbb9ed94d4b49486251526"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_50_s3.csv",
+     "sha256": "92a0458829297f516e7803b8a344058fb8265636f80f7c77fc102dbc731386d4"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_60_s1.csv",
+     "sha256": "e506d2bbc27cbc60ef2fd362b790977944c5dfe27539a726d76edb59628229c2"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_60_s2.csv",
+     "sha256": "85054e2ef898861029eef9391bda7f3a1a9906f5492b0403d2c7cffad79c7803"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_60_s3.csv",
+     "sha256": "a52bb5af738b2ed290afde851898b3a781b215b0902957f1dc98874a4b0e2b11"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_70_s1.csv",
+     "sha256": "350b84de11d076effa342b1307877c721261252ab0fa2c0d8e78fb6db3722c12"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_70_s2.csv",
+     "sha256": "8a17a395dbad321c33ffcce0e5f12d75da00405e4a085b255fd07d49e0a5a969"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_70_s3.csv",
+     "sha256": "31567cf85cf7ac316e260719bcab5fe828053c55c8e0ccb313db0d3e5340a838"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_80_s1.csv",
+     "sha256": "b0d7c773b2b01e59cadd3ae78f1869cc3716e15ba0c783ae8a0fc3e045482e55"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_80_s2.csv",
+     "sha256": "20c63856ac2b6457f3c08546885be19843c6254d9c70e59718b6edeb45840761"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_80_s3.csv",
+     "sha256": "e37968ff4b1e3fa215368b64eafff5a253e869a9414fab9bd8b5e4a1f4fbb08e"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_90_s1.csv",
+     "sha256": "7abf8d73d717bc3a9a7e11b8b7b7c537d20231685fe007c06d36d04c97a2a553"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_90_s2.csv",
+     "sha256": "95d7219e67539015fbd79ef269a034f96950d293b28acf746c08808195bf798e"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/metrics_90_s3.csv",
+     "sha256": "4290b5bc3a3a488963402b079d3e1125fe5998250d1c805cbc19b4641e741770"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/sweep_times.csv",
+     "sha256": "767784f25d14405de9da5c9fdb9df8058720eff9a95251e5ba5623e0953b5052"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_100_s1.csv",
+     "sha256": "912d2efc4659fa05d16bfbe2b823e49041abc629912740f1bfd240b391e10f5a"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_100_s2.csv",
+     "sha256": "607fec83fb8ffedb88fa2022063bc4258fec6710d3e1086e8ba2be777b92f5ef"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_100_s3.csv",
+     "sha256": "d62619dc03dc143ef58636cd055c941bbb6126940c17880ffb551802007ec9ed"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_20_s1.csv",
+     "sha256": "bac79fa985d2cccc43a80c7a4800630cf9aad04859be46cc5548ceab39efb5c8"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_20_s2.csv",
+     "sha256": "bdebc752de3b4ccd94e4640dfd3e11d92ca566beebe0b88cc25dcf3232f79ddb"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_20_s3.csv",
+     "sha256": "dfa3374d14d080fc1d07938c3827d81c0499e73cef7b436f9ebf80880e736e95"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_30_s1.csv",
+     "sha256": "f54e8ea459d82c27686c25c2d6a6c1bb36874158a4db59fa71d37d73be23259a"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_30_s2.csv",
+     "sha256": "de645c757b13de9b0c3d2d5d555fa111ca8403a67a2bc663c62130a5ce27c754"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_30_s3.csv",
+     "sha256": "44e820f62318e48dd1b96772c7de1e271e383260b4da91f946bb90b5ad2b73be"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_40_s1.csv",
+     "sha256": "db492191f68254c3e3116e4068f0212fdb7a44c74e96e28deb2befe283614aff"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_40_s2.csv",
+     "sha256": "e9c85c706c00cc067f8ee64d701283643d2c2455c41c5c308f462b7e3d1536fb"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_40_s3.csv",
+     "sha256": "e2afee194b5fadeff403205f19e57cd5422d4cc4967d8939c226901a2a036825"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_50_s1.csv",
+     "sha256": "2866e977281a3501f0dc0f674544f353ceb10cf8ae867c52ca6cf02d0bfe07d8"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_50_s2.csv",
+     "sha256": "2aabeff196a924c766beb1e2f288d7af1c55f9142b729a31b89116ef716722c0"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_50_s3.csv",
+     "sha256": "3c6ee9723e1749c389b078306dcefa09b9b41ce3f2d3f71a36194bfa0871b930"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_60_s1.csv",
+     "sha256": "43cca3948a7f0184f1ee86b3a550eea873d1b814d384a5bb28ef02603e52b393"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_60_s2.csv",
+     "sha256": "d973559ae73414e3e62930a607725a8341db94d3ed09207c61db9a75139eebc6"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_60_s3.csv",
+     "sha256": "53f44e16d779af1a15a45f25651987b66e3d857f26f9e4870c8be38032354acd"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_70_s1.csv",
+     "sha256": "8035ab341841b2bcc6762d34b1fc7aa215be3da4859f274fcf0b13625ff3290e"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_70_s2.csv",
+     "sha256": "e7ad65a04ba32e7166d876cb44416f63d85b523d381a2f68ce5125948bac8687"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_70_s3.csv",
+     "sha256": "8a14fe98c8dd9422df3adde3c651cecfbf57d8f23bb04f356f5fdd1e226d5ed7"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_80_s1.csv",
+     "sha256": "b7cd201e14bd929c0363af252fe3a5c7c5e4056f98916f6915ef7c20cf8803ba"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_80_s2.csv",
+     "sha256": "6461e583d3e1435c025ba780797f1b2f8dcc618394da439414570471a0089719"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_80_s3.csv",
+     "sha256": "9147c06f93af413f37f29cb7295fe605b890b40de297198a5904a995d6794206"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_90_s1.csv",
+     "sha256": "8190856163ff1dd9f3095648411ab68392ce5b3ae3c1077dfe27932bebc7c5dc"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_90_s2.csv",
+     "sha256": "90b04c024859af21ce1fd383fb665f01bf7341642110f0f068c7e16a13628b59"
+    },
+    {
+     "original": "ns3-sim/results/legacy_run3_paper_recon_detector/timeseries_90_s3.csv",
+     "sha256": "9c186f0bef747c9dcfb25b034d7a63d6f6edb18325fe7ca18f252951ca72d20b"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_100.csv",
+     "sha256": "2a4a2e45abe00c29270e79b993fc1cf52a0c34f793cdbbf0895bdab965365001"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_20.csv",
+     "sha256": "fe46e39326ae348538da3d2a85c919ad74ce5d3c7eacd7c5554cc41c21d160f3"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_30.csv",
+     "sha256": "b8bfb6fb8b66c1134331635eacf3c77ec4cb246b51cab667d5d351f53a2bb176"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_40.csv",
+     "sha256": "c69013c68e42a3075c324e812cdcea2eb651d73a12aa3080ff68e2bdc0b33de9"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_50.csv",
+     "sha256": "88c9af001405c4bc6bc21c6e1ca475c5b801ff1a94e5568a71951ec04057e7e7"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_60.csv",
+     "sha256": "06c68ae9843c7d873a1f505b7318cdb2200082cc0ae3dff59b0e8dd66927f876"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_70.csv",
+     "sha256": "7693e3abc87dc40f647d105a5da65fbfbdb807bfbdcc6667677da2e2fc679227"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_80.csv",
+     "sha256": "e25add1867bc239814bfb8e707f484f07782dda5091d0c58f43cfde3f1bcff58"
+    },
+    {
+     "original": "ns3-sim/results/legacy_synthetic_ids/metrics_90.csv",
+     "sha256": "653e72cf8b275444d87bf458085d2ebba47171bcb82024000ce1ffe64227f80b"
+    }
+   ]
+  },
+  "ns3-inputs-legacy-tldqn-routes": {
+   "reason": "tldqn_routes_<n>_s<seed>.csv: pilihan sink TLDQN lama; tidak dibaca NS-3 sejak langkah 1 (diganti tldqn_nexthop)",
+   "files": 45,
+   "entries": [
+    {
+     "original": "ns3-sim/results/tldqn_routes_100_s1.csv",
+     "sha256": "12f4f1ba4dccb9bb4bece3ae1c8ce4cadd65923d242ab4efb7fc79e9c3c51b60"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_100_s2.csv",
+     "sha256": "879c26919902a327dfa2723423f62f30812f5acab6443f8aaeb3598be5e905c6"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_100_s3.csv",
+     "sha256": "66c81c48b2b5027e955d3de3463319177085d9865f66da9aaab2a988dbfea2e8"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_100_s4.csv",
+     "sha256": "092caada7226e94bbf55a93baf71e2d487c1d33845aae175a6e2701ebc399f46"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_100_s5.csv",
+     "sha256": "802f241fbc521d9f0c5e179eae783bd7b061ec2c0e55fbdfcda551d7a40121b8"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_20_s1.csv",
+     "sha256": "43e51e0b6617cde358f7511c906c39d4dd91241e212d5a37b9bad3025b3f3f07"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_20_s2.csv",
+     "sha256": "148c1ebc05db61f9d031e60595ecd01279182f8f49e25672972d3b0df3924a43"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_20_s3.csv",
+     "sha256": "a0cb4e113e54d8d483ac52fbaef477f789b0d6cfb13b6d0ea52e128b8366cd5c"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_20_s4.csv",
+     "sha256": "69e3f69367e208b8bef466093a6158da573c7594f5ba8f812a9abd1a6d568a43"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_20_s5.csv",
+     "sha256": "392cb22f7fc6007e385e50177a5dd31aa67fff19c86415e7bdd7d707ecbad25b"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_30_s1.csv",
+     "sha256": "43eb516468348412ba0772223921fa08bc97e886909d9173fdff35d7bad3f1b2"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_30_s2.csv",
+     "sha256": "378a6381ecba9dd531009163dc28c5eb67c943c79c11b5c28e7c0a38c35ef7a0"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_30_s3.csv",
+     "sha256": "a945db0dfd9c3995ba668c13f3522571911bbc1b43b25f35b939bf939f70bc6b"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_30_s4.csv",
+     "sha256": "dde39468a5cf7c2631dc528c0005500682e54b5e31c927068a1a55c7fa6ee9a4"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_30_s5.csv",
+     "sha256": "90194e023d9117424e90372e8b40318a0396cee9b975542f481af4a66d7b2053"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_40_s1.csv",
+     "sha256": "c676d9ce5373c4e2e0dd965ec7c00daf54ec652f79acde91f9a6b5814b7c3d75"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_40_s2.csv",
+     "sha256": "cdf435c3882704f98986967a850bffd50f561e4d04f262fb62d0daa49fdcd0d7"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_40_s3.csv",
+     "sha256": "1c91ec0420a5dcd686580aaac247b50d53817a647d3fd3eff56c843fe4f04f1e"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_40_s4.csv",
+     "sha256": "ec8384e8eca697d79486ffa67e372e59c81836bc32b18a06271b02184e2bfebd"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_40_s5.csv",
+     "sha256": "9f2bc3c78a43d463456516d989f5413ba76bc794c3682b12ee4a5b131525ddad"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_50_s1.csv",
+     "sha256": "876cac718ff2ab14c916c8eb0248eba21a9f565b170365e43957d0beddd950c0"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_50_s2.csv",
+     "sha256": "61a1343cdb5072b4775982f71baad7f3e0a2fc3a629af7178428d1bd06552d31"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_50_s3.csv",
+     "sha256": "f66135bc49ad4ae547c6ae1a8bbd8fa01e9ca9cb9b89905c63fd1dc1445e43a4"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_50_s4.csv",
+     "sha256": "b789e958091c2cf05c4187d786f88c0e712e087f146cfb054c9021c4d07e5fa5"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_50_s5.csv",
+     "sha256": "770fef5a3ecc2740ec940107464b477f0f3fd6bbd26b8f3cf5a38439b9bc1fef"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_60_s1.csv",
+     "sha256": "eddc99f62cc84b6dff969a5a81fafcd69d5d00c4a859192638f1f73e15fbba1c"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_60_s2.csv",
+     "sha256": "9ff8ec2afb5c26fcb694f7374637278060cbc1e5d82c4702f93b2adc9b1c9eec"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_60_s3.csv",
+     "sha256": "516d10260d45831f58b34a4cb60f74e0860c50096013b0279c018362188aefef"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_60_s4.csv",
+     "sha256": "79faa58aefedd27cfc3f8d55368f303bfb4ab4af5504a398320537efe0628395"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_60_s5.csv",
+     "sha256": "748fe35afcac3dc5aaaf8453f88aff7e8de5c6ce099b2f669a38bc3a7cdd0f01"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_70_s1.csv",
+     "sha256": "c9891c1a704377d8ed41cbc5d065ff2104dbd276f896979ee93e8b158a8d55cb"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_70_s2.csv",
+     "sha256": "50f27b011765f20df8757e92ff9628b82d543a10361fd3edbb30406f375d281c"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_70_s3.csv",
+     "sha256": "e2c3f088f82b4fcfac6610636e988630b77ddb278c4022421ae618d8e45fc8a1"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_70_s4.csv",
+     "sha256": "45d8f74b94557cf3c7f88dbcd9e3158fe688469559db75d66864c9ddb532d213"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_70_s5.csv",
+     "sha256": "f92bce037a7c5b969ca6519ce9439aaa2590fc9bb88a46c938da3915490768fa"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_80_s1.csv",
+     "sha256": "23d257cb612ae2aed7ee988da54d96237beda6c48f53af08efeca8975124968c"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_80_s2.csv",
+     "sha256": "da941f0c558bfd77a847d1fcf08ed074c9ea0b7b4871ae7fb73e419156833e3a"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_80_s3.csv",
+     "sha256": "5008283c4ce7842c6b4eac8a3dd3dcb33adfd3389809ef26fa64f4ad593e0138"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_80_s4.csv",
+     "sha256": "62739536e62db51bd6ae6841114d1eaf1032423cfaa9e4d3e8b505193b8c28cc"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_80_s5.csv",
+     "sha256": "9771d235080d1d65ed7dce3f7e5c40bd4b6a36bd52a30c41fefc5d5da280fbec"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_90_s1.csv",
+     "sha256": "1098900c19a6776595fd0111f8d2c6915101e610609118f0dd742de7d111d8da"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_90_s2.csv",
+     "sha256": "6cf220f71353c35f6c6dd64ace49f077df3d5f5b9a1bdb09dab95cbb44db2d1e"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_90_s3.csv",
+     "sha256": "b46e3ab28acd0cfd081e1e59024309b23f2c092de803f135474b1a39a5c271a2"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_90_s4.csv",
+     "sha256": "3ed457db5560b679258ca27c94765976c7c419170dcfaaf04c04455e7001d402"
+    },
+    {
+     "original": "ns3-sim/results/tldqn_routes_90_s5.csv",
+     "sha256": "da928a61e932f14d941f1b92f5cbea06847ab88392ed44ca41dea5d8dc0e8415"
+    }
+   ]
+  },
+  "ns3-inputs-unused-seeds-4-5": {
+   "reason": "Skenario seed 4-5 (bigan_decisions/bigan_windows) dari export_decisions --seeds 5; tidak dipakai run mana pun (sweep memakai seed 1-3)",
+   "files": 36,
+   "entries": [
+    {
+     "original": "ns3-sim/results/bigan_decisions_100_s4.csv",
+     "sha256": "5852e5a37ad2045cab1577bb021839caa01d4b9b514540e4916c5c6f88e44bc6"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_100_s5.csv",
+     "sha256": "9be5f1b8be9384a925a33b7cf977611828c23b4162c637cffd794f8d6e344e00"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_20_s4.csv",
+     "sha256": "d43216d376f3b4a66f69c0e891a5288149fdfe0566e863044e03abbdba08b49d"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_20_s5.csv",
+     "sha256": "b5e3057d713f1a6f7e2e0ecc48e1fc2edbc1d960ca1b5ad62afabf782b027a91"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_30_s4.csv",
+     "sha256": "8570e1997ca4b623f24a82b7d9bfbc4198e0cf3b8e841d89fdff94c00755d968"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_30_s5.csv",
+     "sha256": "e45c00cd82d5aa554e6c54a6da524bea2f167d72af8fddad2132f1a20a14b9d8"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_40_s4.csv",
+     "sha256": "8fff1e85aff9a686f5cd2425f333e34e7872ad31a1518e092153c4a28e1eb528"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_40_s5.csv",
+     "sha256": "1bc294f1775e36a01e86827a772fa914ac29433838e33fbf78ad06ac5262871e"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_50_s4.csv",
+     "sha256": "a4caef5de441e30f6bda9025c7fac1c20499cce04d6715c2ae2fd8e759691280"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_50_s5.csv",
+     "sha256": "2bbaefe9c67a5c4a403337053143c68b2df388b6d2e61ac1170d063266db90e7"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_60_s4.csv",
+     "sha256": "8c2873e508af4bd45855b86e9a42fad5ed4623899f545d05bb79e3a6d59c1d8b"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_60_s5.csv",
+     "sha256": "4a0e25ff2bd65fbc49452b9ab54424291865dd8b10a71da37274f2ff15aaab08"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_70_s4.csv",
+     "sha256": "e83d3f934a99b2a137a6fc8d87099a8201a767f5bd6bb693a37d0c037af4ef4c"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_70_s5.csv",
+     "sha256": "06c3583f4523f4aa148bec98f0f661bd723b28372a20fc345267b0e5ea51c558"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_80_s4.csv",
+     "sha256": "1f2d0d0e8d307047d07180a9e428b602733054280649de19964852a2d54ff5c3"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_80_s5.csv",
+     "sha256": "c8b978a72988c161fdc48a1c05a72204f0e85f5152b067de69578ed3fc05e884"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_90_s4.csv",
+     "sha256": "547d20cfebb619d3aad87b8a7dd3cb4634a91ba2e00ab269beed65196671a51f"
+    },
+    {
+     "original": "ns3-sim/results/bigan_decisions_90_s5.csv",
+     "sha256": "d4250893127293c414436504207af80f4aaccdaaa12062c2a0ec62184b54fae3"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_100_s4.csv",
+     "sha256": "bd74f55c66e634959e830716d5d2300fa36db1e28187fbb3638739f401eb34a3"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_100_s5.csv",
+     "sha256": "729555c54d3dd8260f686ef3422dd5ec473042c4084f78da9a236ec691676a41"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_20_s4.csv",
+     "sha256": "440aeda3bcdc69a123fa6c7ff02a8627e502d8e8aefecb8bcaf63f8d5b1d40f0"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_20_s5.csv",
+     "sha256": "6364325ed182bb11237d08cf26ef6226d0f37d62470702b67614b55ca86f95e3"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_30_s4.csv",
+     "sha256": "eddd54151bd3cc41e8724f46c57289407415d4c427f020286022b267f410b8af"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_30_s5.csv",
+     "sha256": "e7b6d757cbf2721b2f607c5f900a5446a2875fef7185d00890c32b1013f2ec60"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_40_s4.csv",
+     "sha256": "d2e1fafce929db65004c9c5a6622d7c873fe227ee857f433766696afda62f50c"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_40_s5.csv",
+     "sha256": "7a227c9d4d4bd6d9d5c29ff82c5d03646fd434d656ac5f41cd51ca3bb72d7b3d"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_50_s4.csv",
+     "sha256": "2ed180ba2dd9e55b8d3eaab0e8996daea50e51ab71deab0d10e6f39e7d5630ad"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_50_s5.csv",
+     "sha256": "2fef575f799189150d5db57f32c4e5ea3f1346ff1bd855762fa75bbd684271ae"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_60_s4.csv",
+     "sha256": "bda660c9ee8d22f6a1f64c46654cf904ec2820c37b5a73516310ee6fd1e09c58"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_60_s5.csv",
+     "sha256": "557c1d9cc1faa8091b634222ad2c774fdcad6777f30666c5249f372c99421a09"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_70_s4.csv",
+     "sha256": "d66586db5533979e7c7ee6158890b3e2d7bfdeec6ba1ef0fffad989362954c50"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_70_s5.csv",
+     "sha256": "6854c58209485ec138b65d684404bd1490418cd8e7ec72813443ab6b61dd7857"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_80_s4.csv",
+     "sha256": "4785be466111b5df7db7e4c7d1797f6a89581495923a67844b5d9866d80cb0c7"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_80_s5.csv",
+     "sha256": "aa8da1b981e4275119332d63cd8337aea46865bf3bb9f79722ad0ac8e0e2b7a2"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_90_s4.csv",
+     "sha256": "a6b6a4ffa2ee2e66de87f0ebf1b6a8bdaed63bcdab887340f74ec319108d5d4e"
+    },
+    {
+     "original": "ns3-sim/results/bigan_windows_90_s5.csv",
+     "sha256": "c8ac37dbae52e31d54664e8fa51a512ad5df83181b0949f68972537ae4585325"
+    }
+   ]
+  },
+  "legacy-first-ai-module": {
+   "reason": "Keluaran modul AI pertama (commit 257219f), digantikan refaktor Bi-GAN fase 1 (ml/reports/bigan_eval_*)",
+   "files": 2,
+   "entries": [
+    {
+     "original": "ns3-sim/results/bigan_metrics.csv",
+     "sha256": "a22e21181ffc4dee7cf52147b9ed46feefbeee6176b53523a433b0c8c26a1b5a"
+    },
+    {
+     "original": "figures/bigan_confusion.png",
+     "sha256": "b9d5325cc3b6174b4d1bc65aab74a96d79c1906c08063c4578ad88496ff9aa7b"
+    }
+   ]
+  },
+  "figures-pre-step1-sweep": {
+   "reason": "Grafik dari sweep SEBELUM langkah 1 (dibuat 1d6b3bc); data sumbernya sudah ditimpa hasil langkah 1, jadi grafik ini tidak lagi mencerminkan metrics_*.csv. Bangkitkan ulang dgn ml/metrics_plots.py bila perlu",
+   "files": 12,
+   "entries": [
+    {
+     "original": "figures/real/comp_overhead.png",
+     "sha256": "691cd5eab53c4798acfb6cc0277007732314c81324471aa7f6fee3a685df0591"
+    },
+    {
+     "original": "figures/real/control_overhead.png",
+     "sha256": "318abc07fc74b1210a37ee826b646780da6f002b8e542ad0a59da336fe627f8a"
+    },
+    {
+     "original": "figures/real/det_accuracy.png",
+     "sha256": "51fea7de96dad135d1d8afddfe3796890f384971438af1b7aa30e5cfb910b5ed"
+    },
+    {
+     "original": "figures/real/drop_ratio.png",
+     "sha256": "115fe21f33c5ee55687807230b622f05de720c570e81026dbf6aec9d923b5854"
+    },
+    {
+     "original": "figures/real/energy.png",
+     "sha256": "0ce94eb91a9086550d6ea19be067c536d28b5d071af04d3e519b7e6bca2f9a09"
+    },
+    {
+     "original": "figures/real/latency.png",
+     "sha256": "713f90d893997172839a84fa068f2eef26e14e3b09b108d90a63d658a082ba9b"
+    },
+    {
+     "original": "figures/real/lifetime.png",
+     "sha256": "d9eb37a1c127f0ad85dc26db1379ef8c196430450018bb043389dc83fdce5e8f"
+    },
+    {
+     "original": "figures/real/pdr.png",
+     "sha256": "3ad4342ff888e01a0a539b0e21d97454c3c2c2c33a651f6991433df496573d12"
+    },
+    {
+     "original": "figures/real/throughput.png",
+     "sha256": "c330395b9baf5069fd4143b5d77f2cfbc42a5038f57372214a393cbd59efc3b2"
+    },
+    {
+     "original": "figures/real/timebased_100.png",
+     "sha256": "fbced9df546377df62decee2b98cf9b3fb4847bd181c1395f3b0847ca95a1fa6"
+    },
+    {
+     "original": "figures/fig18_time_metrics.png",
+     "sha256": "1e5532dec9e0f1efc48f2b2b7a5ac544a8e07de3a14d0f33b633eda1703b8f6f"
+    },
+    {
+     "original": "figures/fig19_confusion.png",
+     "sha256": "8ac1b7b53e373d7354cb800d209baced869500ba9e2919f911e29eab20a7e7e5"
+    }
+   ]
+  },
+  "figures-reference-table7": {
+   "reason": "Kurva acuan baseline Tabel 7 paper (bukan hasil simulasi); perbandingan baseline di luar ruang lingkup",
+   "files": 9,
+   "entries": [
+    {
+     "original": "figures/compare/fig09_energy.png",
+     "sha256": "f2f841790af5d75e729f6287ecef8b06952a7b85e1130085c1b992b4cea1fac4"
+    },
+    {
+     "original": "figures/compare/fig10_latency.png",
+     "sha256": "9ba03ad9f979b67067640e03411e5e302e54c272958083bebea1f0fdd74700ec"
+    },
+    {
+     "original": "figures/compare/fig11_throughput.png",
+     "sha256": "d96c27a6080a5d1f8740160a4965a9d90a92285b8b3273b8169e7e22ac501ca9"
+    },
+    {
+     "original": "figures/compare/fig12_pdr.png",
+     "sha256": "43fd4eaa2042b9f6eae454205af4d05fcf8c48732b575bb315e1c4a2a8087181"
+    },
+    {
+     "original": "figures/compare/fig13_lifetime.png",
+     "sha256": "65e385f09ee89da875ff93be903ab661816d18354e04284658dfbeca0412a806"
+    },
+    {
+     "original": "figures/compare/fig14_comp_overhead.png",
+     "sha256": "8b854e0b06b6aa44eb5db7b3ca3738a800e076bbca20d8649a26e72f55f3a7fb"
+    },
+    {
+     "original": "figures/compare/fig15_det_accuracy.png",
+     "sha256": "49528b5253db2e74a843202afaa7e0f24957107f4fa5b2c933f2caca0d45c631"
+    },
+    {
+     "original": "figures/compare/fig16_drop_ratio.png",
+     "sha256": "14b24772c3e09c4f51df7767d44a86ed7c14220a2a8474ed05963240532b96e0"
+    },
+    {
+     "original": "figures/compare/fig17_control_overhead.png",
+     "sha256": "5d1aed33deb6d860b9df9afc211d0023a6b3fb1dfbdf8bf3a8b5b6e29015976c"
+    }
+   ]
+  },
+  "future-work-feature-selection": {
+   "reason": "Future work #1 paper (feature selection NSL-KDD); bukan bagian model HieMulti-Block yang direplikasi",
+   "files": 4,
+   "entries": [
+    {
+     "original": "ml/feature_selection.py",
+     "sha256": "44b55ffe9b6cfb65a57f4e3da88d82d81c9ab34caed74281389e5987d95be9d3"
+    },
+    {
+     "original": "ns3-sim/results/feature_selection.csv",
+     "sha256": "557ff18cc7acbf9cb4c6b30941df45e869fbc0c999e86c025c237efd9cab7ae7"
+    },
+    {
+     "original": "figures/feature_importance.png",
+     "sha256": "9fdea4a6bbc66f2246b24556a7dc5cdb9cdd5d32bb994356864ee52c3e8e760c"
+    },
+    {
+     "original": "figures/feature_selection.png",
+     "sha256": "3082d107ff54685c6309adc5cf6c41a0b96c7d1c84eaf945f06fa56b36cec3ca"
+    }
+   ]
+  }
+ }
+}

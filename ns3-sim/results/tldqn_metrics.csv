@@ -1,0 +1,7 @@
+metric,dqn_mean,dqn_std,dqn_n,tldqn_mean,tldqn_std,tldqn_n
+initial_gain,-0.1745,0.1058,5,0.7127,0.0441,5
+final_gain,0.8306,0.0282,5,0.8382,0.0134,5
+final_gain_bayes,0.8314,0.0272,5,0.8390,0.0123,5
+final_pdr,0.6583,0.0161,5,0.6642,0.0122,5
+auc_gain,0.6580,0.0133,5,0.7936,0.0146,5
+episodes_to_threshold,nan,0.0000,0,nan,0.0000,0

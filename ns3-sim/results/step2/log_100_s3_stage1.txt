@@ -1,0 +1,61 @@
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+  [Bi-GAN] 100 keputusan dimuat dari results/bigan_decisions_100_s3.csv (model PyTorch, NSL-KDD).
+  [Bi-GAN] prediksi 20 window dimuat dari results/bigan_windows_100_s3.csv
+  [TLDQN] 132 entri next-hop dimuat dari results/routes_stage1/tldqn_nexthop_100_s3.csv (100 sensor, rute tervalidasi bebas loop).
+
+######################################################
+#  HieMulti-Block: AI-Based IDS/IPS di Edge-Assisted SDWSN
+#  Topologi: Modified Honeycomb Structure (ns-3.48)
+######################################################
+
+Jaringan: 100 sensor, 10 user, 4 edge-sink, 4 switch, 1 master + 2 slave controller, 3 blockchain, 1 cloud, 1 TA.
+  [TLDQN] 132 host route dipasang; 10 relay grayhole (pDrop=0.7).
+
+=== TAHAP 1: Secure Authentication (3D Cube + DNN) ===
+  TA mem-registrasi node (ID, PUF, lokasi, random) lalu meng-generate private key via 3D Cube.
+  Private key disimpan di HieMulti-Block (lihat results/).
+  Clone attack detection dilakukan (validasi random number).
+  [HieMulti-Block] main chain len=110, shards=3
+     side chain[0] len=35
+     side chain[1] len=40
+     side chain[2] len=35
+
+=== TAHAP 2: Modified Honeycomb Partitioning & Clustering (1/7) ===
+  [Honeycomb] Clustering 1/7: 7 sel/cluster, Sc = 49 sensor/cluster (pers. 15).
+  CH dipilih via bobot (centrality, distance, energy, trust), w_i=0.25 (pers. 16).
+  [Honeycomb] CH feature => centrality=20 distance=10 energy=47 trust=63 | WCH=35 | network=78 cells=91 sensors=7
+
+=== TAHAP 3: RL-based Intelligent Routing (TLDQN) ===
+  TLDQN: rata-rata hop terencana = 2.19 (multi-hop, jangkauan 150 m)
+  TLDQN: sensor per sink = [27, 20, 20, 33]; 10 node malicious mengirim flooding (faktor 1.5-5).
+
+=== TAHAP 4: Hybrid IDS (DTO malicious + Bi-GAN intrusion) ===
+  [DTO] node malicious terdeteksi (10): 15 23 25 39 41 43 46 62 63 64 
+  [Bi-GAN] confusion => TP=4 TN=90 FP=0 FN=6
+  [DTO]    confusion => TP=9 TN=89 FP=1 FN=1
+  [IPS] node diisolasi = 10 (penyerang terisolasi 9)
+
+=== TAHAP 4c: Intrusion Prevention (optimal delegator) ===
+  Delegator optimal = sensor 61 (sisa energi 99.9865 J); kirim alarm ke edge-sink 3.
+
+######################################################
+#  TAHAP 6: HASIL EVALUASI (node=100)
+######################################################
+Energy consumption : 90.4635 J
+Avg latency        : 0.383049 ms
+Throughput         : 30.5047 kbps
+PDR                : 81.8546 %
+Packet drop ratio  : 18.1454 %
+Detection accuracy : 92.65 %
+Precision          : 70.5426 %
+Recall             : 45.5 %
+F1-score           : 55.3191 %
+Confusion matrix   : TP=91 TN=1762 FP=38 FN=109
+Network lifetime   : 66325.1 s (proyeksi)
+Computation ovhd   : 20.4167 % (RT=0.0982694 ms)
+Control overhead   : 4.36833 mps
+
+Metrik ditulis ke: results/metrics_100_s3_stage1.csv
+  [PERINGATAN] telemetry_ip_forward_udp_total (5085) != FlowMonitor UDP timesForwarded (4256)
+  [Telemetry] 6081 watch (+0 terpotong akhir sim; fwd=5071 late=0 rxfail=476 clean=534) -> results/telemetry_stage1/telemetry_*100_s3*

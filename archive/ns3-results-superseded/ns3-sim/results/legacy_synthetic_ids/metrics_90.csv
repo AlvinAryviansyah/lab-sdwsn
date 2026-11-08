@@ -1,0 +1,15 @@
+metric,value
+numNodes,90
+energy_consumption_J,7921.93
+latency_ms,1.23688
+throughput_kbps,244.064
+pdr_percent,100
+packet_drop_ratio_percent,0
+detection_accuracy_percent,98.8889
+precision_percent,90
+recall_percent,100
+f1_percent,94.7368
+TP,9
+TN,80
+FP,1
+FN,0

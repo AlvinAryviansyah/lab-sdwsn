@@ -1,0 +1,152 @@
+{
+ "created_at": "2026-11-07T22:37:40",
+ "telem_dir": "/Users/maw/Documents/pascasarjana/cbns/tugas kelompok/revamp/lab/ml/../ns3-sim/results/step2/telemetry_stage1rep",
+ "run_tag": "stage1rep",
+ "windows": "all",
+ "config": {
+  "m": 30,
+  "Y": 100,
+  "n_min": 10,
+  "delta": 0.1,
+  "alpha": 0.01,
+  "z_thr": 3.5,
+  "dto_seed": 0,
+  "b_max_observer": 0.8,
+  "note": "konfigurasi reproduksi (K5); bukan nilai dari paper"
+ },
+ "input_columns": [
+  "window",
+  "observer",
+  "neighbor_type",
+  "neighbor_id",
+  "wd_started",
+  "wd_forwarded",
+  "wd_forwarded_late",
+  "wd_unobserved_rxfail",
+  "wd_unobserved_clean",
+  "wd_heard_rxfail",
+  "rx_ok_from"
+ ],
+ "energy_criterion": "NOT_AVAILABLE (K3)",
+ "scenarios": {
+  "dto_decisions_20_s1_stage1rep_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 8,
+   "candidates": 8,
+   "steps": [
+    {
+     "step": 0,
+     "node": 10,
+     "score": 0.75,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 8,
+     "n_eval": 9030
+    },
+    {
+     "step": 1,
+     "node": 2,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 7,
+     "n_eval": 9030
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_20_s1.csv",
+   "source_sha256": "767438d2cd8bca1398ea7179f7015ca1af2b458302ad8c72a022893f4532cad3",
+   "decisions_sha256": "14d284f00f041e9bf6a81df6f721c08f76f86890aa77a1713058a1f74af21c5a",
+   "b_pooled": 0.0,
+   "dto_seed": 0,
+   "seed": 2027,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_60_s1_stage1rep_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 27,
+   "candidates": 27,
+   "steps": [
+    {
+     "step": 0,
+     "node": 44,
+     "score": 0.6933333333333334,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 27,
+     "n_eval": 9030
+    },
+    {
+     "step": 1,
+     "node": 21,
+     "score": 0.0,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 26,
+     "n_eval": 9030
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_60_s1.csv",
+   "source_sha256": "4e05227dd2d2d2bbf64264fd6e015b57ea89d172524b967b7627543a7777b7b3",
+   "decisions_sha256": "ab184331ed28f45562010b8f2793b116118142d6e85e7af790c0a4cc37952c59",
+   "b_pooled": 0.10069444444444445,
+   "dto_seed": 0,
+   "seed": 6067,
+   "b_max_observer": 0.8,
+   "excluded_observers": {}
+  },
+  "dto_decisions_100_s1_stage1rep_main_all.csv": {
+   "q0_baseline_plr": 0.0,
+   "bonferroni_M": 39,
+   "candidates": 39,
+   "steps": [
+    {
+     "step": 0,
+     "node": 17,
+     "score": 0.7077426390403491,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 39,
+     "n_eval": 9030
+    },
+    {
+     "step": 1,
+     "node": 33,
+     "score": 0.67,
+     "accepted": true,
+     "dto_found_argmax": true,
+     "n_candidates": 38,
+     "n_eval": 9030
+    },
+    {
+     "step": 2,
+     "node": 3,
+     "score": 0.0442512077294686,
+     "accepted": false,
+     "dto_found_argmax": true,
+     "n_candidates": 37,
+     "n_eval": 9030
+    }
+   ],
+   "k_paper": null,
+   "source": "telemetry_links_100_s1.csv",
+   "source_sha256": "8b8a4190c94e64561d4aa5200f770a09e132bcd6ab74a7e2698ddab1ace6d843",
+   "decisions_sha256": "42442ebd948a876d9854caf591f632f29aa0e8e56a0e184d3b3e2921e56c0845",
+   "b_pooled": 0.31781045751633985,
+   "dto_seed": 0,
+   "seed": 10107,
+   "b_max_observer": 0.8,
+   "excluded_observers": {
+    "0": 0.991304347826087,
+    "1": 0.98,
+    "32": 0.9369369369369369,
+    "33": 0.8688524590163934,
+    "58": 0.98,
+    "80": 0.9945652173913043,
+    "95": 1.0
+   }
+  }
+ }
+}

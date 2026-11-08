@@ -1,0 +1,19 @@
+[1/9] node=20 seed=1 profile=paper
+    selesai dalam 1 s
+[2/9] node=60 seed=1 profile=paper
+    selesai dalam 6 s
+[3/9] node=100 seed=1 profile=paper
+    selesai dalam 18 s
+[4/9] node=20 seed=2 profile=paper
+    selesai dalam 1 s
+[5/9] node=60 seed=2 profile=paper
+    selesai dalam 7 s
+[6/9] node=100 seed=2 profile=paper
+    selesai dalam 17 s
+[7/9] node=20 seed=3 profile=paper
+    selesai dalam 1 s
+[8/9] node=60 seed=3 profile=paper
+    selesai dalam 7 s
+[9/9] node=100 seed=3 profile=paper
+    selesai dalam 17 s
+Selesai. Hasil: /app/ns-3-dev/results/metrics_<n>_s<seed>.csv

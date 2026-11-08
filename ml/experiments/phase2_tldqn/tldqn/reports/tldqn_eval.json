@@ -1,0 +1,3318 @@
+{
+ "episodes": [
+  0,
+  100,
+  200,
+  300,
+  400,
+  500,
+  600,
+  700,
+  800,
+  900,
+  1000,
+  1100,
+  1200,
+  1300,
+  1400,
+  1500,
+  1600,
+  1700,
+  1800,
+  1900,
+  2000,
+  2100,
+  2200,
+  2300,
+  2400,
+  2500,
+  2600,
+  2700,
+  2800,
+  2900,
+  3000
+ ],
+ "gain_threshold": 0.9,
+ "per_seed": [
+  {
+   "seed": 1,
+   "refs": {
+    "random": {
+     "pdr": 0.4148088808627982,
+     "expected_return": -0.23786255662044017
+    },
+    "oracle": {
+     "pdr": 0.7350576155300087,
+     "expected_return": 0.3742255612034244
+    },
+    "bayes": {
+     "pdr": 0.7350576155300087,
+     "expected_return": 0.3742255612034244
+    },
+    "greedy": {
+     "pdr": 0.4422581121420869,
+     "expected_return": -0.1610013456846724,
+     "mean_hops": 2.11
+    }
+   },
+   "seconds": {
+    "source": 2.416348934173584,
+    "dqn": 2.167128086090088,
+    "tldqn": 2.0438480377197266
+   },
+   "scenario_seeds": {
+    "source": 1001,
+    "target": 2001
+   },
+   "curves": {
+    "dqn": [
+     {
+      "pdr": 0.34152293482302304,
+      "expected_return": -0.41334408348015295,
+      "mean_hops": 4.193333333333333,
+      "episode": 0,
+      "normalized_gain": -0.28669324195280266,
+      "normalized_gain_bayes": -0.28669324195280266
+     },
+     {
+      "pdr": 0.34152293482302304,
+      "expected_return": -0.41334408348015295,
+      "mean_hops": 4.193333333333333,
+      "episode": 100,
+      "normalized_gain": -0.28669324195280266,
+      "normalized_gain_bayes": -0.28669324195280266
+     },
+     {
+      "pdr": 0.34152293482302304,
+      "expected_return": -0.41334408348015295,
+      "mean_hops": 4.193333333333333,
+      "episode": 200,
+      "normalized_gain": -0.28669324195280266,
+      "normalized_gain_bayes": -0.28669324195280266
+     },
+     {
+      "pdr": 0.5169595827657838,
+      "expected_return": -0.010461435010990418,
+      "mean_hops": 2.013333333333333,
+      "episode": 300,
+      "normalized_gain": 0.3715169678802474,
+      "normalized_gain_bayes": 0.3715169678802474
+     },
+     {
+      "pdr": 0.5571490823916514,
+      "expected_return": 0.07790506120723587,
+      "mean_hops": 1.79,
+      "episode": 400,
+      "normalized_gain": 0.5158858808602814,
+      "normalized_gain_bayes": 0.5158858808602814
+     },
+     {
+      "pdr": 0.583951936957175,
+      "expected_return": 0.11216990729610221,
+      "mean_hops": 2.0366666666666666,
+      "episode": 500,
+      "normalized_gain": 0.5718661312377711,
+      "normalized_gain_bayes": 0.5718661312377711
+     },
+     {
+      "pdr": 0.6180770103731804,
+      "expected_return": 0.179301516236497,
+      "mean_hops": 2.066666666666667,
+      "episode": 600,
+      "normalized_gain": 0.6815425111339622,
+      "normalized_gain_bayes": 0.6815425111339622
+     },
+     {
+      "pdr": 0.6426808262089238,
+      "expected_return": 0.20302370365775915,
+      "mean_hops": 2.48,
+      "episode": 700,
+      "normalized_gain": 0.7202986750431732,
+      "normalized_gain_bayes": 0.7202986750431732
+     },
+     {
+      "pdr": 0.662692930335624,
+      "expected_return": 0.23617175681767577,
+      "mean_hops": 2.53,
+      "episode": 800,
+      "normalized_gain": 0.7744543630799984,
+      "normalized_gain_bayes": 0.7744543630799984
+     },
+     {
+      "pdr": 0.6428487632911883,
+      "expected_return": 0.22146686891659864,
+      "mean_hops": 2.1866666666666665,
+      "episode": 900,
+      "normalized_gain": 0.7504302275464465,
+      "normalized_gain_bayes": 0.7504302275464465
+     },
+     {
+      "pdr": 0.6452331395177776,
+      "expected_return": 0.22758544086839141,
+      "mean_hops": 2.1533333333333333,
+      "episode": 1000,
+      "normalized_gain": 0.7604264548438264,
+      "normalized_gain_bayes": 0.7604264548438264
+     },
+     {
+      "pdr": 0.6526352144436717,
+      "expected_return": 0.23642431189893748,
+      "mean_hops": 2.2466666666666666,
+      "episode": 1100,
+      "normalized_gain": 0.774866975372097,
+      "normalized_gain_bayes": 0.774866975372097
+     },
+     {
+      "pdr": 0.6834530287905447,
+      "expected_return": 0.2776373051661042,
+      "mean_hops": 2.473333333333333,
+      "episode": 1200,
+      "normalized_gain": 0.8421987729794249,
+      "normalized_gain_bayes": 0.8421987729794249
+     },
+     {
+      "pdr": 0.6844548836643266,
+      "expected_return": 0.27633623421096243,
+      "mean_hops": 2.5033333333333334,
+      "episode": 1300,
+      "normalized_gain": 0.840073146101113,
+      "normalized_gain_bayes": 0.840073146101113
+     },
+     {
+      "pdr": 0.6651279005132462,
+      "expected_return": 0.25407629955496785,
+      "mean_hops": 2.316666666666667,
+      "episode": 1400,
+      "normalized_gain": 0.8037059401257143,
+      "normalized_gain_bayes": 0.8037059401257143
+     },
+     {
+      "pdr": 0.6614541452521846,
+      "expected_return": 0.24329934869293196,
+      "mean_hops": 2.3533333333333335,
+      "episode": 1500,
+      "normalized_gain": 0.7860990783876515,
+      "normalized_gain_bayes": 0.7860990783876515
+     },
+     {
+      "pdr": 0.653375637058972,
+      "expected_return": 0.23727499293101337,
+      "mean_hops": 2.1966666666666668,
+      "episode": 1600,
+      "normalized_gain": 0.7762567769501775,
+      "normalized_gain_bayes": 0.7762567769501775
+     },
+     {
+      "pdr": 0.663023183804744,
+      "expected_return": 0.25066829615679664,
+      "mean_hops": 2.2533333333333334,
+      "episode": 1700,
+      "normalized_gain": 0.7981381087972979,
+      "normalized_gain_bayes": 0.7981381087972979
+     },
+     {
+      "pdr": 0.6886736214581204,
+      "expected_return": 0.29199036013429236,
+      "mean_hops": 2.37,
+      "episode": 1800,
+      "normalized_gain": 0.8656481008625034,
+      "normalized_gain_bayes": 0.8656481008625034
+     },
+     {
+      "pdr": 0.6647907900373816,
+      "expected_return": 0.26029733826347135,
+      "mean_hops": 2.19,
+      "episode": 1900,
+      "normalized_gain": 0.8138695726605542,
+      "normalized_gain_bayes": 0.8138695726605542
+     },
+     {
+      "pdr": 0.6838527225843058,
+      "expected_return": 0.28710426214513346,
+      "mean_hops": 2.33,
+      "episode": 2000,
+      "normalized_gain": 0.857665429990652,
+      "normalized_gain_bayes": 0.857665429990652
+     },
+     {
+      "pdr": 0.688027005844775,
+      "expected_return": 0.29348303803110287,
+      "mean_hops": 2.34,
+      "episode": 2100,
+      "normalized_gain": 0.8680867659065454,
+      "normalized_gain_bayes": 0.8680867659065454
+     },
+     {
+      "pdr": 0.6647846065020072,
+      "expected_return": 0.26368951840387744,
+      "mean_hops": 2.1433333333333335,
+      "episode": 2200,
+      "normalized_gain": 0.8194115527147761,
+      "normalized_gain_bayes": 0.8194115527147761
+     },
+     {
+      "pdr": 0.6977032800491016,
+      "expected_return": 0.3041130233965358,
+      "mean_hops": 2.47,
+      "episode": 2300,
+      "normalized_gain": 0.8854535225154228,
+      "normalized_gain_bayes": 0.8854535225154228
+     },
+     {
+      "pdr": 0.661297549197474,
+      "expected_return": 0.25374671917631114,
+      "mean_hops": 2.183333333333333,
+      "episode": 2400,
+      "normalized_gain": 0.8031674876234366,
+      "normalized_gain_bayes": 0.8031674876234366
+     },
+     {
+      "pdr": 0.686219752398891,
+      "expected_return": 0.2897614493683745,
+      "mean_hops": 2.37,
+      "episode": 2500,
+      "normalized_gain": 0.8620066141206234,
+      "normalized_gain_bayes": 0.8620066141206234
+     },
+     {
+      "pdr": 0.6921093746584065,
+      "expected_return": 0.29900887224798406,
+      "mean_hops": 2.3833333333333333,
+      "episode": 2600,
+      "normalized_gain": 0.8771146069248076,
+      "normalized_gain_bayes": 0.8771146069248076
+     },
+     {
+      "pdr": 0.6892971663777455,
+      "expected_return": 0.29002490355700067,
+      "mean_hops": 2.4433333333333334,
+      "episode": 2700,
+      "normalized_gain": 0.8624370328478531,
+      "normalized_gain_bayes": 0.8624370328478531
+     },
+     {
+      "pdr": 0.6834778010070705,
+      "expected_return": 0.2839649395456099,
+      "mean_hops": 2.3566666666666665,
+      "episode": 2800,
+      "normalized_gain": 0.852536556372447,
+      "normalized_gain_bayes": 0.852536556372447
+     },
+     {
+      "pdr": 0.6860040749966204,
+      "expected_return": 0.28680939397192656,
+      "mean_hops": 2.4066666666666667,
+      "episode": 2900,
+      "normalized_gain": 0.857183688612866,
+      "normalized_gain_bayes": 0.857183688612866
+     },
+     {
+      "pdr": 0.6840379345457775,
+      "expected_return": 0.28370108407955297,
+      "mean_hops": 2.36,
+      "episode": 3000,
+      "normalized_gain": 0.8521054820575347,
+      "normalized_gain_bayes": 0.8521054820575347
+     }
+    ],
+    "tldqn": [
+     {
+      "pdr": 0.6255637958615627,
+      "expected_return": 0.16553017411084936,
+      "mean_hops": 2.4266666666666667,
+      "episode": 0,
+      "normalized_gain": 0.6590435575934028,
+      "normalized_gain_bayes": 0.6590435575934028
+     },
+     {
+      "pdr": 0.6255637958615627,
+      "expected_return": 0.16553017411084936,
+      "mean_hops": 2.4266666666666667,
+      "episode": 100,
+      "normalized_gain": 0.6590435575934028,
+      "normalized_gain_bayes": 0.6590435575934028
+     },
+     {
+      "pdr": 0.6255637958615627,
+      "expected_return": 0.16553017411084936,
+      "mean_hops": 2.4266666666666667,
+      "episode": 200,
+      "normalized_gain": 0.6590435575934028,
+      "normalized_gain_bayes": 0.6590435575934028
+     },
+     {
+      "pdr": 0.6442090247668216,
+      "expected_return": 0.21099044266345637,
+      "mean_hops": 2.3266666666666667,
+      "episode": 300,
+      "normalized_gain": 0.7333143483975607,
+      "normalized_gain_bayes": 0.7333143483975607
+     },
+     {
+      "pdr": 0.641175969014562,
+      "expected_return": 0.21121595954097352,
+      "mean_hops": 2.2133333333333334,
+      "episode": 400,
+      "normalized_gain": 0.7336827869784612,
+      "normalized_gain_bayes": 0.7336827869784612
+     },
+     {
+      "pdr": 0.6368603355926153,
+      "expected_return": 0.18886214369752558,
+      "mean_hops": 2.4266666666666667,
+      "episode": 500,
+      "normalized_gain": 0.6971622024539296,
+      "normalized_gain_bayes": 0.6971622024539296
+     },
+     {
+      "pdr": 0.6534606261541456,
+      "expected_return": 0.22265336997679516,
+      "mean_hops": 2.3766666666666665,
+      "episode": 600,
+      "normalized_gain": 0.7523686756646927,
+      "normalized_gain_bayes": 0.7523686756646927
+     },
+     {
+      "pdr": 0.6568645658968176,
+      "expected_return": 0.24629183016844602,
+      "mean_hops": 2.1233333333333335,
+      "episode": 700,
+      "normalized_gain": 0.7909880500706065,
+      "normalized_gain_bayes": 0.7909880500706065
+     },
+     {
+      "pdr": 0.6693089729947224,
+      "expected_return": 0.25520687870240477,
+      "mean_hops": 2.3633333333333333,
+      "episode": 800,
+      "normalized_gain": 0.8055530257242004,
+      "normalized_gain_bayes": 0.8055530257242004
+     },
+     {
+      "pdr": 0.6713635348686051,
+      "expected_return": 0.2617018815349138,
+      "mean_hops": 2.3133333333333335,
+      "episode": 900,
+      "normalized_gain": 0.8161642476110106,
+      "normalized_gain_bayes": 0.8161642476110106
+     },
+     {
+      "pdr": 0.671183168529429,
+      "expected_return": 0.26459557456082317,
+      "mean_hops": 2.263333333333333,
+      "episode": 1000,
+      "normalized_gain": 0.8208918234969749,
+      "normalized_gain_bayes": 0.8208918234969749
+     },
+     {
+      "pdr": 0.6647297893729791,
+      "expected_return": 0.2533312279872394,
+      "mean_hops": 2.21,
+      "episode": 1100,
+      "normalized_gain": 0.8024886781890224,
+      "normalized_gain_bayes": 0.8024886781890224
+     },
+     {
+      "pdr": 0.681431020724217,
+      "expected_return": 0.28734572447426804,
+      "mean_hops": 2.2466666666666666,
+      "episode": 1200,
+      "normalized_gain": 0.8580599194801605,
+      "normalized_gain_bayes": 0.8580599194801605
+     },
+     {
+      "pdr": 0.6782010534640548,
+      "expected_return": 0.27613228887959723,
+      "mean_hops": 2.296666666666667,
+      "episode": 1300,
+      "normalized_gain": 0.8397399500703024,
+      "normalized_gain_bayes": 0.8397399500703024
+     },
+     {
+      "pdr": 0.6888726609578933,
+      "expected_return": 0.29053312617428323,
+      "mean_hops": 2.3933333333333335,
+      "episode": 1400,
+      "normalized_gain": 0.863267342410289,
+      "normalized_gain_bayes": 0.863267342410289
+     },
+     {
+      "pdr": 0.6941628839968437,
+      "expected_return": 0.3068284410829692,
+      "mean_hops": 2.3066666666666666,
+      "episode": 1500,
+      "normalized_gain": 0.8898898407633368,
+      "normalized_gain_bayes": 0.8898898407633368
+     },
+     {
+      "pdr": 0.6729225639905688,
+      "expected_return": 0.2694275068771366,
+      "mean_hops": 2.2266666666666666,
+      "episode": 1600,
+      "normalized_gain": 0.8287860011090027,
+      "normalized_gain_bayes": 0.8287860011090027
+     },
+     {
+      "pdr": 0.6864557864143184,
+      "expected_return": 0.28726906511142736,
+      "mean_hops": 2.3766666666666665,
+      "episode": 1700,
+      "normalized_gain": 0.85793467711618,
+      "normalized_gain_bayes": 0.85793467711618
+     },
+     {
+      "pdr": 0.6845021441478949,
+      "expected_return": 0.2861334346619113,
+      "mean_hops": 2.3566666666666665,
+      "episode": 1800,
+      "normalized_gain": 0.8560793389443601,
+      "normalized_gain_bayes": 0.8560793389443601
+     },
+     {
+      "pdr": 0.6815675696762177,
+      "expected_return": 0.27909861351741794,
+      "mean_hops": 2.3366666666666664,
+      "episode": 1900,
+      "normalized_gain": 0.8445861879753395,
+      "normalized_gain_bayes": 0.8445861879753395
+     },
+     {
+      "pdr": 0.6704699791355978,
+      "expected_return": 0.26313064731138625,
+      "mean_hops": 2.2533333333333334,
+      "episode": 2000,
+      "normalized_gain": 0.8184984961201176,
+      "normalized_gain_bayes": 0.8184984961201176
+     },
+     {
+      "pdr": 0.6529780824278429,
+      "expected_return": 0.2292209104381047,
+      "mean_hops": 2.256666666666667,
+      "episode": 2100,
+      "normalized_gain": 0.7630984060255088,
+      "normalized_gain_bayes": 0.7630984060255088
+     },
+     {
+      "pdr": 0.6803316185132521,
+      "expected_return": 0.27943090014339833,
+      "mean_hops": 2.3,
+      "episode": 2200,
+      "normalized_gain": 0.8451290618137693,
+      "normalized_gain_bayes": 0.8451290618137693
+     },
+     {
+      "pdr": 0.6668964960049473,
+      "expected_return": 0.26210507389640775,
+      "mean_hops": 2.18,
+      "episode": 2300,
+      "normalized_gain": 0.8168229638150228,
+      "normalized_gain_bayes": 0.8168229638150228
+     },
+     {
+      "pdr": 0.6765041571148858,
+      "expected_return": 0.277042391481992,
+      "mean_hops": 2.243333333333333,
+      "episode": 2400,
+      "normalized_gain": 0.8412268317396124,
+      "normalized_gain_bayes": 0.8412268317396124
+     },
+     {
+      "pdr": 0.6743460262440469,
+      "expected_return": 0.2732982345717973,
+      "mean_hops": 2.236666666666667,
+      "episode": 2500,
+      "normalized_gain": 0.8351098090411386,
+      "normalized_gain_bayes": 0.8351098090411386
+     },
+     {
+      "pdr": 0.6876518187402595,
+      "expected_return": 0.28762251124664145,
+      "mean_hops": 2.4166666666666665,
+      "episode": 2600,
+      "normalized_gain": 0.8585121203386863,
+      "normalized_gain_bayes": 0.8585121203386863
+     },
+     {
+      "pdr": 0.690324186391302,
+      "expected_return": 0.29383992003116927,
+      "mean_hops": 2.39,
+      "episode": 2700,
+      "normalized_gain": 0.8686698224790781,
+      "normalized_gain_bayes": 0.8686698224790781
+     },
+     {
+      "pdr": 0.6766871700384329,
+      "expected_return": 0.271067743459729,
+      "mean_hops": 2.3333333333333335,
+      "episode": 2800,
+      "normalized_gain": 0.8314657404060567,
+      "normalized_gain_bayes": 0.8314657404060567
+     },
+     {
+      "pdr": 0.685315496128281,
+      "expected_return": 0.279361972967379,
+      "mean_hops": 2.46,
+      "episode": 2900,
+      "normalized_gain": 0.8450164519231144,
+      "normalized_gain_bayes": 0.8450164519231144
+     },
+     {
+      "pdr": 0.6865675614005278,
+      "expected_return": 0.287061037484392,
+      "mean_hops": 2.4,
+      "episode": 3000,
+      "normalized_gain": 0.8575948116278986,
+      "normalized_gain_bayes": 0.8575948116278986
+     }
+    ]
+   },
+   "dqn": {
+    "episodes_to_gain": {
+     "0.5": 400,
+     "0.6": 600,
+     "0.7": 700,
+     "0.8": 1200,
+     "0.9": null
+    },
+    "initial_gain": -0.28669324195280266,
+    "final_gain": 0.8539419090142825,
+    "final_gain_bayes": 0.8539419090142825,
+    "final_pdr": 0.6845066035164895,
+    "auc_gain": 0.6769150547642192,
+    "episodes_to_threshold": null
+   },
+   "tldqn": {
+    "episodes_to_gain": {
+     "0.5": 0,
+     "0.6": 0,
+     "0.7": 300,
+     "0.8": 800,
+     "0.9": null
+    },
+    "initial_gain": 0.6590435575934028,
+    "final_gain": 0.8446923346523566,
+    "final_gain_bayes": 0.8446923346523566,
+    "final_pdr": 0.6828567425224139,
+    "auc_gain": 0.8048139446634077,
+    "episodes_to_threshold": null
+   }
+  },
+  {
+   "seed": 2,
+   "refs": {
+    "random": {
+     "pdr": 0.4058794184455589,
+     "expected_return": -0.2543662276229322
+    },
+    "oracle": {
+     "pdr": 0.711119294673281,
+     "expected_return": 0.32281296545857857
+    },
+    "bayes": {
+     "pdr": 0.711119294673281,
+     "expected_return": 0.32281296545857857
+    },
+    "greedy": {
+     "pdr": 0.43297348596479374,
+     "expected_return": -0.17478524973499085,
+     "mean_hops": 2.11
+    }
+   },
+   "seconds": {
+    "source": 1.619664192199707,
+    "dqn": 2.029247999191284,
+    "tldqn": 2.2300972938537598
+   },
+   "scenario_seeds": {
+    "source": 1002,
+    "target": 2002
+   },
+   "curves": {
+    "dqn": [
+     {
+      "pdr": 0.3059211366415681,
+      "expected_return": -0.4384800521897652,
+      "mean_hops": 3.27,
+      "episode": 0,
+      "normalized_gain": -0.318989018962837,
+      "normalized_gain_bayes": -0.318989018962837
+     },
+     {
+      "pdr": 0.3059211366415681,
+      "expected_return": -0.4384800521897652,
+      "mean_hops": 3.27,
+      "episode": 100,
+      "normalized_gain": -0.318989018962837,
+      "normalized_gain_bayes": -0.318989018962837
+     },
+     {
+      "pdr": 0.3059211366415681,
+      "expected_return": -0.4384800521897652,
+      "mean_hops": 3.27,
+      "episode": 200,
+      "normalized_gain": -0.318989018962837,
+      "normalized_gain_bayes": -0.318989018962837
+     },
+     {
+      "pdr": 0.4484885491535808,
+      "expected_return": -0.14891475752029554,
+      "mean_hops": 2.09,
+      "episode": 300,
+      "normalized_gain": 0.1827014406732859,
+      "normalized_gain_bayes": 0.1827014406732859
+     },
+     {
+      "pdr": 0.5105727298238601,
+      "expected_return": -0.012801201735592085,
+      "mean_hops": 1.76,
+      "episode": 400,
+      "normalized_gain": 0.41852691292914584,
+      "normalized_gain_bayes": 0.41852691292914584
+     },
+     {
+      "pdr": 0.5509525036927098,
+      "expected_return": 0.056351289249727404,
+      "mean_hops": 1.8466666666666667,
+      "episode": 500,
+      "normalized_gain": 0.5383380423222901,
+      "normalized_gain_bayes": 0.5383380423222901
+     },
+     {
+      "pdr": 0.57534604675551,
+      "expected_return": 0.10049376849570736,
+      "mean_hops": 1.9,
+      "episode": 600,
+      "normalized_gain": 0.6148177210340382,
+      "normalized_gain_bayes": 0.6148177210340382
+     },
+     {
+      "pdr": 0.5897604962423334,
+      "expected_return": 0.12845370222790872,
+      "mean_hops": 1.92,
+      "episode": 700,
+      "normalized_gain": 0.6632601009177025,
+      "normalized_gain_bayes": 0.6632601009177025
+     },
+     {
+      "pdr": 0.6113018330723705,
+      "expected_return": 0.14795419623696715,
+      "mean_hops": 2.3466666666666667,
+      "episode": 800,
+      "normalized_gain": 0.697045958486384,
+      "normalized_gain_bayes": 0.697045958486384
+     },
+     {
+      "pdr": 0.6183348303040982,
+      "expected_return": 0.17789659145087144,
+      "mean_hops": 1.9666666666666666,
+      "episode": 900,
+      "normalized_gain": 0.7489230801373644,
+      "normalized_gain_bayes": 0.7489230801373644
+     },
+     {
+      "pdr": 0.6238974216687873,
+      "expected_return": 0.17571848409963067,
+      "mean_hops": 2.1933333333333334,
+      "episode": 1000,
+      "normalized_gain": 0.7451493693429542,
+      "normalized_gain_bayes": 0.7451493693429542
+     },
+     {
+      "pdr": 0.628240165494146,
+      "expected_return": 0.1859523448107942,
+      "mean_hops": 2.16,
+      "episode": 1100,
+      "normalized_gain": 0.7628801899162423,
+      "normalized_gain_bayes": 0.7628801899162423
+     },
+     {
+      "pdr": 0.624804986255886,
+      "expected_return": 0.18239905151581476,
+      "mean_hops": 2.1066666666666665,
+      "episode": 1200,
+      "normalized_gain": 0.7567238812038497,
+      "normalized_gain_bayes": 0.7567238812038497
+     },
+     {
+      "pdr": 0.6387604335234134,
+      "expected_return": 0.2065945010394135,
+      "mean_hops": 2.1233333333333335,
+      "episode": 1300,
+      "normalized_gain": 0.7986440505613438,
+      "normalized_gain_bayes": 0.7986440505613438
+     },
+     {
+      "pdr": 0.6423092858611806,
+      "expected_return": 0.21675269080410298,
+      "mean_hops": 2.066666666666667,
+      "episode": 1400,
+      "normalized_gain": 0.8162437663626979,
+      "normalized_gain_bayes": 0.8162437663626979
+     },
+     {
+      "pdr": 0.6443822489480281,
+      "expected_return": 0.2135836924610901,
+      "mean_hops": 2.28,
+      "episode": 1500,
+      "normalized_gain": 0.8107532733217172,
+      "normalized_gain_bayes": 0.8107532733217172
+     },
+     {
+      "pdr": 0.6558795338772072,
+      "expected_return": 0.23220290890298628,
+      "mean_hops": 2.2733333333333334,
+      "episode": 1600,
+      "normalized_gain": 0.8430122609378331,
+      "normalized_gain_bayes": 0.8430122609378331
+     },
+     {
+      "pdr": 0.6449410811940129,
+      "expected_return": 0.21656168871345746,
+      "mean_hops": 2.1633333333333336,
+      "episode": 1700,
+      "normalized_gain": 0.8159128429806096,
+      "normalized_gain_bayes": 0.8159128429806096
+     },
+     {
+      "pdr": 0.6577661081419549,
+      "expected_return": 0.23674996609787458,
+      "mean_hops": 2.276666666666667,
+      "episode": 1800,
+      "normalized_gain": 0.8508903293945491,
+      "normalized_gain_bayes": 0.8508903293945491
+     },
+     {
+      "pdr": 0.6630521414493463,
+      "expected_return": 0.2330993599456508,
+      "mean_hops": 2.4833333333333334,
+      "episode": 1900,
+      "normalized_gain": 0.8445654199106617,
+      "normalized_gain_bayes": 0.8445654199106617
+     },
+     {
+      "pdr": 0.6516478781694892,
+      "expected_return": 0.2246627196141652,
+      "mean_hops": 2.243333333333333,
+      "episode": 2000,
+      "normalized_gain": 0.8299483990051729,
+      "normalized_gain_bayes": 0.8299483990051729
+     },
+     {
+      "pdr": 0.6458380327929504,
+      "expected_return": 0.22497217131447356,
+      "mean_hops": 2.0866666666666664,
+      "episode": 2100,
+      "normalized_gain": 0.8304845439390472,
+      "normalized_gain_bayes": 0.8304845439390472
+     },
+     {
+      "pdr": 0.624449698228749,
+      "expected_return": 0.18097584651388493,
+      "mean_hops": 2.1133333333333333,
+      "episode": 2200,
+      "normalized_gain": 0.7542580871853033,
+      "normalized_gain_bayes": 0.7542580871853033
+     },
+     {
+      "pdr": 0.6356627913324426,
+      "expected_return": 0.2078665858900667,
+      "mean_hops": 2.026666666666667,
+      "episode": 2300,
+      "normalized_gain": 0.8008480192177011,
+      "normalized_gain_bayes": 0.8008480192177011
+     },
+     {
+      "pdr": 0.6578105299978599,
+      "expected_return": 0.24317754911301714,
+      "mean_hops": 2.12,
+      "episode": 2400,
+      "normalized_gain": 0.8620265295420739,
+      "normalized_gain_bayes": 0.8620265295420739
+     },
+     {
+      "pdr": 0.6381509924604784,
+      "expected_return": 0.20476994254268677,
+      "mean_hops": 2.17,
+      "episode": 2500,
+      "normalized_gain": 0.7954828858509779,
+      "normalized_gain_bayes": 0.7954828858509779
+     },
+     {
+      "pdr": 0.6485853786305282,
+      "expected_return": 0.21693924899486783,
+      "mean_hops": 2.316666666666667,
+      "episode": 2600,
+      "normalized_gain": 0.8165669904029978,
+      "normalized_gain_bayes": 0.8165669904029978
+     },
+     {
+      "pdr": 0.6621217371274568,
+      "expected_return": 0.2477390472615075,
+      "mean_hops": 2.21,
+      "episode": 2700,
+      "normalized_gain": 0.8699296178778417,
+      "normalized_gain_bayes": 0.8699296178778417
+     },
+     {
+      "pdr": 0.6526514293436988,
+      "expected_return": 0.2338470237840851,
+      "mean_hops": 2.1633333333333336,
+      "episode": 2800,
+      "normalized_gain": 0.8458607955018063,
+      "normalized_gain_bayes": 0.8458607955018063
+     },
+     {
+      "pdr": 0.6639644151731084,
+      "expected_return": 0.24963873659915908,
+      "mean_hops": 2.216666666666667,
+      "episode": 2900,
+      "normalized_gain": 0.8732209515926094,
+      "normalized_gain_bayes": 0.8732209515926094
+     },
+     {
+      "pdr": 0.649957402959533,
+      "expected_return": 0.22969202240703557,
+      "mean_hops": 2.1333333333333333,
+      "episode": 3000,
+      "normalized_gain": 0.8386619889147802,
+      "normalized_gain_bayes": 0.8386619889147802
+     }
+    ],
+    "tldqn": [
+     {
+      "pdr": 0.6089501733452769,
+      "expected_return": 0.1516922672618691,
+      "mean_hops": 2.1433333333333335,
+      "episode": 0,
+      "normalized_gain": 0.7035224064763829,
+      "normalized_gain_bayes": 0.7035224064763829
+     },
+     {
+      "pdr": 0.6089501733452769,
+      "expected_return": 0.1516922672618691,
+      "mean_hops": 2.1433333333333335,
+      "episode": 100,
+      "normalized_gain": 0.7035224064763829,
+      "normalized_gain_bayes": 0.7035224064763829
+     },
+     {
+      "pdr": 0.6089501733452769,
+      "expected_return": 0.1516922672618691,
+      "mean_hops": 2.1433333333333335,
+      "episode": 200,
+      "normalized_gain": 0.7035224064763829,
+      "normalized_gain_bayes": 0.7035224064763829
+     },
+     {
+      "pdr": 0.6263676126632873,
+      "expected_return": 0.18633516373753437,
+      "mean_hops": 2.11,
+      "episode": 300,
+      "normalized_gain": 0.7635434482792064,
+      "normalized_gain_bayes": 0.7635434482792064
+     },
+     {
+      "pdr": 0.6140689673243771,
+      "expected_return": 0.16441872422453285,
+      "mean_hops": 2.0833333333333335,
+      "episode": 400,
+      "normalized_gain": 0.725571810050199,
+      "normalized_gain_bayes": 0.725571810050199
+     },
+     {
+      "pdr": 0.6294711903083655,
+      "expected_return": 0.18726894429773427,
+      "mean_hops": 2.1633333333333336,
+      "episode": 500,
+      "normalized_gain": 0.7651612830372726,
+      "normalized_gain_bayes": 0.7651612830372726
+     },
+     {
+      "pdr": 0.6429351675580258,
+      "expected_return": 0.20516861370500775,
+      "mean_hops": 2.33,
+      "episode": 600,
+      "normalized_gain": 0.7961736092296093,
+      "normalized_gain_bayes": 0.7961736092296093
+     },
+     {
+      "pdr": 0.6431072799329571,
+      "expected_return": 0.21287845369232875,
+      "mean_hops": 2.183333333333333,
+      "episode": 700,
+      "normalized_gain": 0.809531401886962,
+      "normalized_gain_bayes": 0.809531401886962
+     },
+     {
+      "pdr": 0.6573416762930747,
+      "expected_return": 0.23028823572769075,
+      "mean_hops": 2.36,
+      "episode": 800,
+      "normalized_gain": 0.8396949667625644,
+      "normalized_gain_bayes": 0.8396949667625644
+     },
+     {
+      "pdr": 0.6395379176758227,
+      "expected_return": 0.203068773475973,
+      "mean_hops": 2.2933333333333334,
+      "episode": 900,
+      "normalized_gain": 0.792535501248232,
+      "normalized_gain_bayes": 0.792535501248232
+     },
+     {
+      "pdr": 0.6449316109678455,
+      "expected_return": 0.20666640584177104,
+      "mean_hops": 2.4266666666666667,
+      "episode": 1000,
+      "normalized_gain": 0.7987686302468547,
+      "normalized_gain_bayes": 0.7987686302468547
+     },
+     {
+      "pdr": 0.6423868719043306,
+      "expected_return": 0.20933866224163705,
+      "mean_hops": 2.2333333333333334,
+      "episode": 1100,
+      "normalized_gain": 0.8033984859864545,
+      "normalized_gain_bayes": 0.8033984859864545
+     },
+     {
+      "pdr": 0.6254198011730977,
+      "expected_return": 0.17691275086868305,
+      "mean_hops": 2.23,
+      "episode": 1200,
+      "normalized_gain": 0.7472185131779497,
+      "normalized_gain_bayes": 0.7472185131779497
+     },
+     {
+      "pdr": 0.6524895129133307,
+      "expected_return": 0.21303901833536001,
+      "mean_hops": 2.4833333333333334,
+      "episode": 1300,
+      "normalized_gain": 0.8098095904373394,
+      "normalized_gain_bayes": 0.8098095904373394
+     },
+     {
+      "pdr": 0.6639420201171498,
+      "expected_return": 0.2257152382912194,
+      "mean_hops": 2.6266666666666665,
+      "episode": 1400,
+      "normalized_gain": 0.8317719551722531,
+      "normalized_gain_bayes": 0.8317719551722531
+     },
+     {
+      "pdr": 0.6383448799537783,
+      "expected_return": 0.19881499383002102,
+      "mean_hops": 2.2733333333333334,
+      "episode": 1500,
+      "normalized_gain": 0.7851655549699516,
+      "normalized_gain_bayes": 0.7851655549699516
+     },
+     {
+      "pdr": 0.6363868724245958,
+      "expected_return": 0.19077541462638523,
+      "mean_hops": 2.296666666666667,
+      "episode": 1600,
+      "normalized_gain": 0.7712364679550279,
+      "normalized_gain_bayes": 0.7712364679550279
+     },
+     {
+      "pdr": 0.6516159509063484,
+      "expected_return": 0.21895193976242633,
+      "mean_hops": 2.35,
+      "episode": 1700,
+      "normalized_gain": 0.8200541063484166,
+      "normalized_gain_bayes": 0.8200541063484166
+     },
+     {
+      "pdr": 0.6446970221225278,
+      "expected_return": 0.20742333637120608,
+      "mean_hops": 2.33,
+      "episode": 1800,
+      "normalized_gain": 0.8000800609749685,
+      "normalized_gain_bayes": 0.8000800609749685
+     },
+     {
+      "pdr": 0.6467494008383599,
+      "expected_return": 0.20541511235101056,
+      "mean_hops": 2.38,
+      "episode": 1900,
+      "normalized_gain": 0.7966006839560678,
+      "normalized_gain_bayes": 0.7966006839560678
+     },
+     {
+      "pdr": 0.6619426085177529,
+      "expected_return": 0.23913052299227824,
+      "mean_hops": 2.3733333333333335,
+      "episode": 2000,
+      "normalized_gain": 0.8550147970173234,
+      "normalized_gain_bayes": 0.8550147970173234
+     },
+     {
+      "pdr": 0.6532501210849286,
+      "expected_return": 0.22419914507932237,
+      "mean_hops": 2.33,
+      "episode": 2100,
+      "normalized_gain": 0.8291452263676288,
+      "normalized_gain_bayes": 0.8291452263676288
+     },
+     {
+      "pdr": 0.6636345351682527,
+      "expected_return": 0.23631514031862452,
+      "mean_hops": 2.466666666666667,
+      "episode": 2200,
+      "normalized_gain": 0.8501369658213951,
+      "normalized_gain_bayes": 0.8501369658213951
+     },
+     {
+      "pdr": 0.6496432892441956,
+      "expected_return": 0.20966241886945117,
+      "mean_hops": 2.433333333333333,
+      "episode": 2300,
+      "normalized_gain": 0.8039594151254376,
+      "normalized_gain_bayes": 0.8039594151254376
+     },
+     {
+      "pdr": 0.6699989621641305,
+      "expected_return": 0.2479949220633649,
+      "mean_hops": 2.4233333333333333,
+      "episode": 2400,
+      "normalized_gain": 0.8703729373961551,
+      "normalized_gain_bayes": 0.8703729373961551
+     },
+     {
+      "pdr": 0.6621991977435344,
+      "expected_return": 0.24557557581116551,
+      "mean_hops": 2.2066666666666666,
+      "episode": 2500,
+      "normalized_gain": 0.866181264721188,
+      "normalized_gain_bayes": 0.866181264721188
+     },
+     {
+      "pdr": 0.6553696188925325,
+      "expected_return": 0.22645488420126256,
+      "mean_hops": 2.3066666666666666,
+      "episode": 2600,
+      "normalized_gain": 0.8330534391878051,
+      "normalized_gain_bayes": 0.8330534391878051
+     },
+     {
+      "pdr": 0.6676035404106898,
+      "expected_return": 0.24700745806175528,
+      "mean_hops": 2.33,
+      "episode": 2700,
+      "normalized_gain": 0.8686620926300131,
+      "normalized_gain_bayes": 0.8686620926300131
+     },
+     {
+      "pdr": 0.6759621514180214,
+      "expected_return": 0.25679414362942776,
+      "mean_hops": 2.45,
+      "episode": 2800,
+      "normalized_gain": 0.8856181535639186,
+      "normalized_gain_bayes": 0.8856181535639186
+     },
+     {
+      "pdr": 0.6476745667099654,
+      "expected_return": 0.2059440512175671,
+      "mean_hops": 2.4,
+      "episode": 2900,
+      "normalized_gain": 0.7975171044939124,
+      "normalized_gain_bayes": 0.7975171044939124
+     },
+     {
+      "pdr": 0.6633100930105542,
+      "expected_return": 0.2325040544534558,
+      "mean_hops": 2.4766666666666666,
+      "episode": 3000,
+      "normalized_gain": 0.8435340149339564,
+      "normalized_gain_bayes": 0.8435340149339564
+     }
+    ]
+   },
+   "dqn": {
+    "episodes_to_gain": {
+     "0.5": 500,
+     "0.6": 600,
+     "0.7": 900,
+     "0.8": 1400,
+     "0.9": null
+    },
+    "initial_gain": -0.318989018962837,
+    "final_gain": 0.8525812453363987,
+    "final_gain_bayes": 0.8525812453363987,
+    "final_pdr": 0.6555244158254467,
+    "auc_gain": 0.6473777545991765,
+    "episodes_to_threshold": null
+   },
+   "tldqn": {
+    "episodes_to_gain": {
+     "0.5": 0,
+     "0.6": 0,
+     "0.7": 0,
+     "0.8": 700,
+     "0.9": null
+    },
+    "initial_gain": 0.7035224064763829,
+    "final_gain": 0.8422230909972624,
+    "final_gain_bayes": 0.8422230909972624,
+    "final_pdr": 0.662315603712847,
+    "auc_gain": 0.8022606032389424,
+    "episodes_to_threshold": null
+   }
+  },
+  {
+   "seed": 3,
+   "refs": {
+    "random": {
+     "pdr": 0.38852418533656635,
+     "expected_return": -0.28774346180479315
+    },
+    "oracle": {
+     "pdr": 0.722037371647504,
+     "expected_return": 0.3396769654462976
+    },
+    "bayes": {
+     "pdr": 0.722037371647504,
+     "expected_return": 0.3396769654462976
+    },
+    "greedy": {
+     "pdr": 0.4553197186349426,
+     "expected_return": -0.12996359539191896,
+     "mean_hops": 2.11
+    }
+   },
+   "seconds": {
+    "source": 1.5996079444885254,
+    "dqn": 2.4595630168914795,
+    "tldqn": 2.4278650283813477
+   },
+   "scenario_seeds": {
+    "source": 1003,
+    "target": 2003
+   },
+   "curves": {
+    "dqn": [
+     {
+      "pdr": 0.36212798122781886,
+      "expected_return": -0.3482004504298202,
+      "mean_hops": 3.33,
+      "episode": 0,
+      "normalized_gain": -0.09635801768505763,
+      "normalized_gain_bayes": -0.09635801768505763
+     },
+     {
+      "pdr": 0.36212798122781886,
+      "expected_return": -0.3482004504298202,
+      "mean_hops": 3.33,
+      "episode": 100,
+      "normalized_gain": -0.09635801768505763,
+      "normalized_gain_bayes": -0.09635801768505763
+     },
+     {
+      "pdr": 0.36212798122781886,
+      "expected_return": -0.3482004504298202,
+      "mean_hops": 3.33,
+      "episode": 200,
+      "normalized_gain": -0.09635801768505763,
+      "normalized_gain_bayes": -0.09635801768505763
+     },
+     {
+      "pdr": 0.4553197186349426,
+      "expected_return": -0.12996359539191896,
+      "mean_hops": 2.11,
+      "episode": 300,
+      "normalized_gain": 0.25147390738320896,
+      "normalized_gain_bayes": 0.25147390738320896
+     },
+     {
+      "pdr": 0.5088601333599044,
+      "expected_return": -0.04500119178472504,
+      "mean_hops": 2.3666666666666667,
+      "episode": 400,
+      "normalized_gain": 0.38688933206014947,
+      "normalized_gain_bayes": 0.38688933206014947
+     },
+     {
+      "pdr": 0.5522195051038078,
+      "expected_return": 0.05355439105270281,
+      "mean_hops": 2.0633333333333335,
+      "episode": 500,
+      "normalized_gain": 0.5439699411012484,
+      "normalized_gain_bayes": 0.5439699411012484
+     },
+     {
+      "pdr": 0.5898151395887142,
+      "expected_return": 0.12075693743159785,
+      "mean_hops": 2.1266666666666665,
+      "episode": 600,
+      "normalized_gain": 0.6510792149789395,
+      "normalized_gain_bayes": 0.6510792149789395
+     },
+     {
+      "pdr": 0.5961141844649362,
+      "expected_return": 0.12794087849221675,
+      "mean_hops": 2.1733333333333333,
+      "episode": 700,
+      "normalized_gain": 0.662529178589614,
+      "normalized_gain_bayes": 0.662529178589614
+     },
+     {
+      "pdr": 0.5898193864703607,
+      "expected_return": 0.09947124350274729,
+      "mean_hops": 2.4233333333333333,
+      "episode": 800,
+      "normalized_gain": 0.6171534882981724,
+      "normalized_gain_bayes": 0.6171534882981724
+     },
+     {
+      "pdr": 0.6114171636653014,
+      "expected_return": 0.16563690849240512,
+      "mean_hops": 2.0233333333333334,
+      "episode": 900,
+      "normalized_gain": 0.722610151989453,
+      "normalized_gain_bayes": 0.722610151989453
+     },
+     {
+      "pdr": 0.6510245507332297,
+      "expected_return": 0.23237238950985709,
+      "mean_hops": 2.05,
+      "episode": 1000,
+      "normalized_gain": 0.8289750041984244,
+      "normalized_gain_bayes": 0.8289750041984244
+     },
+     {
+      "pdr": 0.6312698759316357,
+      "expected_return": 0.19542860942247836,
+      "mean_hops": 2.1233333333333335,
+      "episode": 1100,
+      "normalized_gain": 0.7700929874792046,
+      "normalized_gain_bayes": 0.7700929874792046
+     },
+     {
+      "pdr": 0.6465832921368598,
+      "expected_return": 0.22460483215240185,
+      "mean_hops": 2.08,
+      "episode": 1200,
+      "normalized_gain": 0.8165948568202348,
+      "normalized_gain_bayes": 0.8165948568202348
+     },
+     {
+      "pdr": 0.6144750664075861,
+      "expected_return": 0.16375083674431282,
+      "mean_hops": 2.1433333333333335,
+      "episode": 1300,
+      "normalized_gain": 0.719604078762995,
+      "normalized_gain_bayes": 0.719604078762995
+     },
+     {
+      "pdr": 0.637094097983755,
+      "expected_return": 0.20763638731602466,
+      "mean_hops": 2.0233333333333334,
+      "episode": 1400,
+      "normalized_gain": 0.7895500809420873,
+      "normalized_gain_bayes": 0.7895500809420873
+     },
+     {
+      "pdr": 0.6550114068200635,
+      "expected_return": 0.2280250587521105,
+      "mean_hops": 2.2466666666666666,
+      "episode": 1500,
+      "normalized_gain": 0.8220461084071389,
+      "normalized_gain_bayes": 0.8220461084071389
+     },
+     {
+      "pdr": 0.6604489260692804,
+      "expected_return": 0.2414739477270293,
+      "mean_hops": 2.2133333333333334,
+      "episode": 1600,
+      "normalized_gain": 0.8434813189785294,
+      "normalized_gain_bayes": 0.8434813189785294
+     },
+     {
+      "pdr": 0.6398700596605779,
+      "expected_return": 0.21696574041095876,
+      "mean_hops": 1.9833333333333334,
+      "episode": 1700,
+      "normalized_gain": 0.8044194614877745,
+      "normalized_gain_bayes": 0.8044194614877745
+     },
+     {
+      "pdr": 0.6464175722661425,
+      "expected_return": 0.22508979255920517,
+      "mean_hops": 2.033333333333333,
+      "episode": 1800,
+      "normalized_gain": 0.8173678001063308,
+      "normalized_gain_bayes": 0.8173678001063308
+     },
+     {
+      "pdr": 0.6360894050138883,
+      "expected_return": 0.2085679938287145,
+      "mean_hops": 2.04,
+      "episode": 1900,
+      "normalized_gain": 0.7910349011236225,
+      "normalized_gain_bayes": 0.7910349011236225
+     },
+     {
+      "pdr": 0.6405433925317451,
+      "expected_return": 0.21240191353464036,
+      "mean_hops": 2.1,
+      "episode": 2000,
+      "normalized_gain": 0.7971455082052621,
+      "normalized_gain_bayes": 0.7971455082052621
+     },
+     {
+      "pdr": 0.6404275217031021,
+      "expected_return": 0.20808853621630155,
+      "mean_hops": 2.2133333333333334,
+      "episode": 2100,
+      "normalized_gain": 0.7902707283431576,
+      "normalized_gain_bayes": 0.7902707283431576
+     },
+     {
+      "pdr": 0.6585000217683684,
+      "expected_return": 0.23685668715878505,
+      "mean_hops": 2.24,
+      "episode": 2200,
+      "normalized_gain": 0.8361222016025238,
+      "normalized_gain_bayes": 0.8361222016025238
+     },
+     {
+      "pdr": 0.655603769437265,
+      "expected_return": 0.22797026120685984,
+      "mean_hops": 2.276666666666667,
+      "episode": 2300,
+      "normalized_gain": 0.8219587705665609,
+      "normalized_gain_bayes": 0.8219587705665609
+     },
+     {
+      "pdr": 0.6680056590656462,
+      "expected_return": 0.25005054072952315,
+      "mean_hops": 2.3266666666666667,
+      "episode": 2400,
+      "normalized_gain": 0.857150929705216,
+      "normalized_gain_bayes": 0.857150929705216
+     },
+     {
+      "pdr": 0.658075224792814,
+      "expected_return": 0.23816050780237594,
+      "mean_hops": 2.26,
+      "episode": 2500,
+      "normalized_gain": 0.838200266942703,
+      "normalized_gain_bayes": 0.838200266942703
+     },
+     {
+      "pdr": 0.6575943558372961,
+      "expected_return": 0.2397525599506373,
+      "mean_hops": 2.16,
+      "episode": 2600,
+      "normalized_gain": 0.8407377236130836,
+      "normalized_gain_bayes": 0.8407377236130836
+     },
+     {
+      "pdr": 0.6578643480580483,
+      "expected_return": 0.23452436236604238,
+      "mean_hops": 2.243333333333333,
+      "episode": 2700,
+      "normalized_gain": 0.8324048779524774,
+      "normalized_gain_bayes": 0.8324048779524774
+     },
+     {
+      "pdr": 0.6462534426393114,
+      "expected_return": 0.2209436628652194,
+      "mean_hops": 2.1333333333333333,
+      "episode": 2800,
+      "normalized_gain": 0.8107595841256189,
+      "normalized_gain_bayes": 0.8107595841256189
+     },
+     {
+      "pdr": 0.6704978862364566,
+      "expected_return": 0.262561279977292,
+      "mean_hops": 2.2066666666666666,
+      "episode": 2900,
+      "normalized_gain": 0.8770908913392068,
+      "normalized_gain_bayes": 0.8770908913392068
+     },
+     {
+      "pdr": 0.6704007651634,
+      "expected_return": 0.26102648054547906,
+      "mean_hops": 2.1766666666666667,
+      "episode": 3000,
+      "normalized_gain": 0.8746446856290463,
+      "normalized_gain_bayes": 0.8746446856290463
+     }
+    ],
+    "tldqn": [
+     {
+      "pdr": 0.6274104407992908,
+      "expected_return": 0.18818024988397994,
+      "mean_hops": 2.0733333333333333,
+      "episode": 0,
+      "normalized_gain": 0.7585403519198947,
+      "normalized_gain_bayes": 0.7585403519198947
+     },
+     {
+      "pdr": 0.6274104407992908,
+      "expected_return": 0.18818024988397994,
+      "mean_hops": 2.0733333333333333,
+      "episode": 100,
+      "normalized_gain": 0.7585403519198947,
+      "normalized_gain_bayes": 0.7585403519198947
+     },
+     {
+      "pdr": 0.6274104407992908,
+      "expected_return": 0.18818024988397994,
+      "mean_hops": 2.0733333333333333,
+      "episode": 200,
+      "normalized_gain": 0.7585403519198947,
+      "normalized_gain_bayes": 0.7585403519198947
+     },
+     {
+      "pdr": 0.6230987621673768,
+      "expected_return": 0.19150361557931353,
+      "mean_hops": 1.8866666666666667,
+      "episode": 300,
+      "normalized_gain": 0.7638372239230811,
+      "normalized_gain_bayes": 0.7638372239230811
+     },
+     {
+      "pdr": 0.6225551245930264,
+      "expected_return": 0.18957261040120216,
+      "mean_hops": 1.9,
+      "episode": 400,
+      "normalized_gain": 0.760759534555249,
+      "normalized_gain_bayes": 0.760759534555249
+     },
+     {
+      "pdr": 0.6323195273777373,
+      "expected_return": 0.20554405533982,
+      "mean_hops": 1.9633333333333334,
+      "episode": 500,
+      "normalized_gain": 0.7862152644692292,
+      "normalized_gain_bayes": 0.7862152644692292
+     },
+     {
+      "pdr": 0.6437228659720124,
+      "expected_return": 0.2249546782600143,
+      "mean_hops": 1.9333333333333333,
+      "episode": 600,
+      "normalized_gain": 0.8171524512057813,
+      "normalized_gain_bayes": 0.8171524512057813
+     },
+     {
+      "pdr": 0.634838087814633,
+      "expected_return": 0.21176671393516286,
+      "mean_hops": 1.9366666666666668,
+      "episode": 700,
+      "normalized_gain": 0.7961331095457852,
+      "normalized_gain_bayes": 0.7961331095457852
+     },
+     {
+      "pdr": 0.6487758453009751,
+      "expected_return": 0.23026654112030692,
+      "mean_hops": 2.0,
+      "episode": 800,
+      "normalized_gain": 0.8256186448927886,
+      "normalized_gain_bayes": 0.8256186448927886
+     },
+     {
+      "pdr": 0.637710031624942,
+      "expected_return": 0.21678421711096235,
+      "mean_hops": 1.9,
+      "episode": 900,
+      "normalized_gain": 0.804130144640391,
+      "normalized_gain_bayes": 0.804130144640391
+     },
+     {
+      "pdr": 0.6519859408627501,
+      "expected_return": 0.22644953626092562,
+      "mean_hops": 2.2466666666666666,
+      "episode": 1000,
+      "normalized_gain": 0.8195349971605898,
+      "normalized_gain_bayes": 0.8195349971605898
+     },
+     {
+      "pdr": 0.6473888402449617,
+      "expected_return": 0.2313437228723408,
+      "mean_hops": 1.97,
+      "episode": 1100,
+      "normalized_gain": 0.8273354869101156,
+      "normalized_gain_bayes": 0.8273354869101156
+     },
+     {
+      "pdr": 0.6341674889102977,
+      "expected_return": 0.2069052198814857,
+      "mean_hops": 1.9833333333333334,
+      "episode": 1200,
+      "normalized_gain": 0.7883847260974222,
+      "normalized_gain_bayes": 0.7883847260974222
+     },
+     {
+      "pdr": 0.6465728363889108,
+      "expected_return": 0.21780041362331018,
+      "mean_hops": 2.17,
+      "episode": 1300,
+      "normalized_gain": 0.8057497866989066,
+      "normalized_gain_bayes": 0.8057497866989066
+     },
+     {
+      "pdr": 0.6301595387750583,
+      "expected_return": 0.1901217036164257,
+      "mean_hops": 2.0533333333333332,
+      "episode": 1400,
+      "normalized_gain": 0.761634694482109,
+      "normalized_gain_bayes": 0.761634694482109
+     },
+     {
+      "pdr": 0.6630569880318595,
+      "expected_return": 0.2385843428264523,
+      "mean_hops": 2.3333333333333335,
+      "episode": 1500,
+      "normalized_gain": 0.8388757869061401,
+      "normalized_gain_bayes": 0.8388757869061401
+     },
+     {
+      "pdr": 0.6429719036631185,
+      "expected_return": 0.20851606151770033,
+      "mean_hops": 2.27,
+      "episode": 1600,
+      "normalized_gain": 0.7909521299724795,
+      "normalized_gain_bayes": 0.7909521299724795
+     },
+     {
+      "pdr": 0.6353436405928563,
+      "expected_return": 0.20374838919832317,
+      "mean_hops": 2.1,
+      "episode": 1700,
+      "normalized_gain": 0.7833532821946575,
+      "normalized_gain_bayes": 0.7833532821946575
+     },
+     {
+      "pdr": 0.6462847564841383,
+      "expected_return": 0.21763856244808613,
+      "mean_hops": 2.1733333333333333,
+      "episode": 1800,
+      "normalized_gain": 0.8054918238271316,
+      "normalized_gain_bayes": 0.8054918238271316
+     },
+     {
+      "pdr": 0.6437220799781898,
+      "expected_return": 0.2191392005453409,
+      "mean_hops": 2.0433333333333334,
+      "episode": 1900,
+      "normalized_gain": 0.8078835822590804,
+      "normalized_gain_bayes": 0.8078835822590804
+     },
+     {
+      "pdr": 0.6503814113620773,
+      "expected_return": 0.22623701253653,
+      "mean_hops": 2.14,
+      "episode": 2000,
+      "normalized_gain": 0.8191962709808785,
+      "normalized_gain_bayes": 0.8191962709808785
+     },
+     {
+      "pdr": 0.6437396150543663,
+      "expected_return": 0.22154707974996982,
+      "mean_hops": 2.006666666666667,
+      "episode": 2100,
+      "normalized_gain": 0.8117213266168447,
+      "normalized_gain_bayes": 0.8117213266168447
+     },
+     {
+      "pdr": 0.6622621035380066,
+      "expected_return": 0.2444431380083527,
+      "mean_hops": 2.19,
+      "episode": 2200,
+      "normalized_gain": 0.8482136964281005,
+      "normalized_gain_bayes": 0.8482136964281005
+     },
+     {
+      "pdr": 0.6545440131559029,
+      "expected_return": 0.23604290287991658,
+      "mean_hops": 2.1233333333333335,
+      "episode": 2300,
+      "normalized_gain": 0.8348251697503193,
+      "normalized_gain_bayes": 0.8348251697503193
+     },
+     {
+      "pdr": 0.6635608590047857,
+      "expected_return": 0.2522541150768428,
+      "mean_hops": 2.15,
+      "episode": 2400,
+      "normalized_gain": 0.8606630473405537,
+      "normalized_gain_bayes": 0.8606630473405537
+     },
+     {
+      "pdr": 0.6542519300416372,
+      "expected_return": 0.22821941372262888,
+      "mean_hops": 2.23,
+      "episode": 2500,
+      "normalized_gain": 0.8223558767252823,
+      "normalized_gain_bayes": 0.8223558767252823
+     },
+     {
+      "pdr": 0.663987086986184,
+      "expected_return": 0.24798126014811506,
+      "mean_hops": 2.21,
+      "episode": 2600,
+      "normalized_gain": 0.8538528531818325,
+      "normalized_gain_bayes": 0.8538528531818325
+     },
+     {
+      "pdr": 0.6495182130781604,
+      "expected_return": 0.21606244538286082,
+      "mean_hops": 2.2866666666666666,
+      "episode": 2700,
+      "normalized_gain": 0.8029797649320606,
+      "normalized_gain_bayes": 0.8029797649320606
+     },
+     {
+      "pdr": 0.6625845183067146,
+      "expected_return": 0.2510311211634611,
+      "mean_hops": 2.1333333333333333,
+      "episode": 2800,
+      "normalized_gain": 0.8587138058746039,
+      "normalized_gain_bayes": 0.8587138058746039
+     },
+     {
+      "pdr": 0.671195837872278,
+      "expected_return": 0.2560100777113541,
+      "mean_hops": 2.29,
+      "episode": 2900,
+      "normalized_gain": 0.8666494042893818,
+      "normalized_gain_bayes": 0.8666494042893818
+     },
+     {
+      "pdr": 0.659682102874206,
+      "expected_return": 0.24301070058430702,
+      "mean_hops": 2.1566666666666667,
+      "episode": 3000,
+      "normalized_gain": 0.8459306381121294,
+      "normalized_gain_bayes": 0.8459306381121294
+     }
+    ]
+   },
+   "dqn": {
+    "episodes_to_gain": {
+     "0.5": 500,
+     "0.6": 600,
+     "0.7": 900,
+     "0.8": 1000,
+     "0.9": null
+    },
+    "initial_gain": -0.09635801768505763,
+    "final_gain": 0.8541650536979574,
+    "final_gain_bayes": 0.8541650536979574,
+    "final_pdr": 0.6623840313463893,
+    "auc_gain": 0.6685898041186069,
+    "episodes_to_threshold": null
+   },
+   "tldqn": {
+    "episodes_to_gain": {
+     "0.5": 0,
+     "0.6": 0,
+     "0.7": 0,
+     "0.8": 600,
+     "0.9": null
+    },
+    "initial_gain": 0.7585403519198947,
+    "final_gain": 0.8570979494253717,
+    "final_gain_bayes": 0.8570979494253717,
+    "final_pdr": 0.6644874863510662,
+    "auc_gain": 0.8091537283784713,
+    "episodes_to_threshold": null
+   }
+  },
+  {
+   "seed": 4,
+   "refs": {
+    "random": {
+     "pdr": 0.3950377027939954,
+     "expected_return": -0.27444562961115254
+    },
+    "oracle": {
+     "pdr": 0.7031255388262656,
+     "expected_return": 0.3110935911833028
+    },
+    "bayes": {
+     "pdr": 0.7031255388262656,
+     "expected_return": 0.3110935911833028
+    },
+    "greedy": {
+     "pdr": 0.43815472303656566,
+     "expected_return": -0.16504890633974006,
+     "mean_hops": 2.11
+    }
+   },
+   "seconds": {
+    "source": 1.9212350845336914,
+    "dqn": 2.1757380962371826,
+    "tldqn": 2.1343302726745605
+   },
+   "scenario_seeds": {
+    "source": 1004,
+    "target": 2004
+   },
+   "curves": {
+    "dqn": [
+     {
+      "pdr": 0.3825459297073859,
+      "expected_return": -0.3156621320838383,
+      "mean_hops": 3.39,
+      "episode": 0,
+      "normalized_gain": -0.07039067753098334,
+      "normalized_gain_bayes": -0.07039067753098334
+     },
+     {
+      "pdr": 0.3825459297073859,
+      "expected_return": -0.3156621320838383,
+      "mean_hops": 3.39,
+      "episode": 100,
+      "normalized_gain": -0.07039067753098334,
+      "normalized_gain_bayes": -0.07039067753098334
+     },
+     {
+      "pdr": 0.3825459297073859,
+      "expected_return": -0.3156621320838383,
+      "mean_hops": 3.39,
+      "episode": 200,
+      "normalized_gain": -0.07039067753098334,
+      "normalized_gain_bayes": -0.07039067753098334
+     },
+     {
+      "pdr": 0.4894480114591433,
+      "expected_return": -0.061602838775997586,
+      "mean_hops": 2.0166666666666666,
+      "episode": 300,
+      "normalized_gain": 0.36349877732591745,
+      "normalized_gain_bayes": 0.36349877732591745
+     },
+     {
+      "pdr": 0.5133575193576504,
+      "expected_return": -0.031159090157796273,
+      "mean_hops": 2.28,
+      "episode": 400,
+      "normalized_gain": 0.4154914492717786,
+      "normalized_gain_bayes": 0.4154914492717786
+     },
+     {
+      "pdr": 0.5529301435516308,
+      "expected_return": 0.059258798778361016,
+      "mean_hops": 1.8566666666666667,
+      "episode": 500,
+      "normalized_gain": 0.5699096090211442,
+      "normalized_gain_bayes": 0.5699096090211442
+     },
+     {
+      "pdr": 0.5531721788339787,
+      "expected_return": 0.049833848878871934,
+      "mean_hops": 1.9766666666666666,
+      "episode": 600,
+      "normalized_gain": 0.5538134201327187,
+      "normalized_gain_bayes": 0.5538134201327187
+     },
+     {
+      "pdr": 0.5355512348413743,
+      "expected_return": 0.013126017567445475,
+      "mean_hops": 2.02,
+      "episode": 700,
+      "normalized_gain": 0.4911227753256611,
+      "normalized_gain_bayes": 0.4911227753256611
+     },
+     {
+      "pdr": 0.6162380915505796,
+      "expected_return": 0.15519317654154535,
+      "mean_hops": 2.3266666666666667,
+      "episode": 800,
+      "normalized_gain": 0.7337489802472447,
+      "normalized_gain_bayes": 0.7337489802472447
+     },
+     {
+      "pdr": 0.6107640255134176,
+      "expected_return": 0.15096401933640052,
+      "mean_hops": 2.2133333333333334,
+      "episode": 900,
+      "normalized_gain": 0.7265263091520331,
+      "normalized_gain_bayes": 0.7265263091520331
+     },
+     {
+      "pdr": 0.5996446062365178,
+      "expected_return": 0.1309063837038661,
+      "mean_hops": 2.2066666666666666,
+      "episode": 1000,
+      "normalized_gain": 0.6922713268720752,
+      "normalized_gain_bayes": 0.6922713268720752
+     },
+     {
+      "pdr": 0.6168677492910443,
+      "expected_return": 0.17984578151333616,
+      "mean_hops": 1.9766666666666666,
+      "episode": 1100,
+      "normalized_gain": 0.7758513776551285,
+      "normalized_gain_bayes": 0.7758513776551285
+     },
+     {
+      "pdr": 0.6357780050722225,
+      "expected_return": 0.20446771422782106,
+      "mean_hops": 2.1433333333333335,
+      "episode": 1200,
+      "normalized_gain": 0.8179013921376392,
+      "normalized_gain_bayes": 0.8179013921376392
+     },
+     {
+      "pdr": 0.6043415104076042,
+      "expected_return": 0.12535594609074868,
+      "mean_hops": 2.44,
+      "episode": 1300,
+      "normalized_gain": 0.6827921367239129,
+      "normalized_gain_bayes": 0.6827921367239129
+     },
+     {
+      "pdr": 0.6244727541343894,
+      "expected_return": 0.17778146875325088,
+      "mean_hops": 2.2466666666666666,
+      "episode": 1400,
+      "normalized_gain": 0.7723258874970407,
+      "normalized_gain_bayes": 0.7723258874970407
+     },
+     {
+      "pdr": 0.6367004768358606,
+      "expected_return": 0.19820272801843702,
+      "mean_hops": 2.2733333333333334,
+      "episode": 1500,
+      "normalized_gain": 0.8072018762266747,
+      "normalized_gain_bayes": 0.8072018762266747
+     },
+     {
+      "pdr": 0.6305023367735608,
+      "expected_return": 0.18646663628383653,
+      "mean_hops": 2.24,
+      "episode": 1600,
+      "normalized_gain": 0.7871586556911194,
+      "normalized_gain_bayes": 0.7871586556911194
+     },
+     {
+      "pdr": 0.6265248566523282,
+      "expected_return": 0.16930545237184913,
+      "mean_hops": 2.3866666666666667,
+      "episode": 1700,
+      "normalized_gain": 0.7578503133930523,
+      "normalized_gain_bayes": 0.7578503133930523
+     },
+     {
+      "pdr": 0.6351269055780938,
+      "expected_return": 0.2057119109338527,
+      "mean_hops": 2.0833333333333335,
+      "episode": 1800,
+      "normalized_gain": 0.8200262655224546,
+      "normalized_gain_bayes": 0.8200262655224546
+     },
+     {
+      "pdr": 0.6439356163642636,
+      "expected_return": 0.2129506866871871,
+      "mean_hops": 2.23,
+      "episode": 1900,
+      "normalized_gain": 0.8323888460230621,
+      "normalized_gain_bayes": 0.8323888460230621
+     },
+     {
+      "pdr": 0.6391637922332355,
+      "expected_return": 0.20608573339357272,
+      "mean_hops": 2.1766666666666667,
+      "episode": 2000,
+      "normalized_gain": 0.8206646898097514,
+      "normalized_gain_bayes": 0.8206646898097514
+     },
+     {
+      "pdr": 0.6481153698384557,
+      "expected_return": 0.2133094302201346,
+      "mean_hops": 2.3433333333333333,
+      "episode": 2100,
+      "normalized_gain": 0.8330015181041239,
+      "normalized_gain_bayes": 0.8330015181041239
+     },
+     {
+      "pdr": 0.6333228922075792,
+      "expected_return": 0.20397065372229836,
+      "mean_hops": 2.0533333333333332,
+      "episode": 2200,
+      "normalized_gain": 0.8170524985232229,
+      "normalized_gain_bayes": 0.8170524985232229
+     },
+     {
+      "pdr": 0.6341834150835918,
+      "expected_return": 0.20143047685064175,
+      "mean_hops": 2.11,
+      "episode": 2300,
+      "normalized_gain": 0.8127143145358035,
+      "normalized_gain_bayes": 0.8127143145358035
+     },
+     {
+      "pdr": 0.6381891320396508,
+      "expected_return": 0.20385606197667758,
+      "mean_hops": 2.1966666666666668,
+      "episode": 2400,
+      "normalized_gain": 0.8168567955855695,
+      "normalized_gain_bayes": 0.8168567955855695
+     },
+     {
+      "pdr": 0.6431075345836171,
+      "expected_return": 0.2182124891497989,
+      "mean_hops": 2.1266666666666665,
+      "episode": 2500,
+      "normalized_gain": 0.8413750971156406,
+      "normalized_gain_bayes": 0.8413750971156406
+     },
+     {
+      "pdr": 0.6309362215715318,
+      "expected_return": 0.19983135201216976,
+      "mean_hops": 2.04,
+      "episode": 2600,
+      "normalized_gain": 0.8099832851159428,
+      "normalized_gain_bayes": 0.8099832851159428
+     },
+     {
+      "pdr": 0.6377946491022455,
+      "expected_return": 0.20332289054835798,
+      "mean_hops": 2.24,
+      "episode": 2700,
+      "normalized_gain": 0.815946230743139,
+      "normalized_gain_bayes": 0.815946230743139
+     },
+     {
+      "pdr": 0.6261574416604477,
+      "expected_return": 0.16852541861907172,
+      "mean_hops": 2.39,
+      "episode": 2800,
+      "normalized_gain": 0.7565181502772851,
+      "normalized_gain_bayes": 0.7565181502772851
+     },
+     {
+      "pdr": 0.6371237036027488,
+      "expected_return": 0.2094629617357708,
+      "mean_hops": 2.0966666666666667,
+      "episode": 2900,
+      "normalized_gain": 0.8264324133409195,
+      "normalized_gain_bayes": 0.8264324133409195
+     },
+     {
+      "pdr": 0.6403139483519071,
+      "expected_return": 0.20304925112128552,
+      "mean_hops": 2.28,
+      "episode": 3000,
+      "normalized_gain": 0.8154789017968368,
+      "normalized_gain_bayes": 0.8154789017968368
+     }
+    ],
+    "tldqn": [
+     {
+      "pdr": 0.5992244436224704,
+      "expected_return": 0.11988028769889761,
+      "mean_hops": 2.41,
+      "episode": 0,
+      "normalized_gain": 0.6734406565883522,
+      "normalized_gain_bayes": 0.6734406565883522
+     },
+     {
+      "pdr": 0.5992244436224704,
+      "expected_return": 0.11988028769889761,
+      "mean_hops": 2.41,
+      "episode": 100,
+      "normalized_gain": 0.6734406565883522,
+      "normalized_gain_bayes": 0.6734406565883522
+     },
+     {
+      "pdr": 0.5992244436224704,
+      "expected_return": 0.11988028769889761,
+      "mean_hops": 2.41,
+      "episode": 200,
+      "normalized_gain": 0.6734406565883522,
+      "normalized_gain_bayes": 0.6734406565883522
+     },
+     {
+      "pdr": 0.6107749146594952,
+      "expected_return": 0.1536401332400278,
+      "mean_hops": 2.1433333333333335,
+      "episode": 300,
+      "normalized_gain": 0.7310966501447275,
+      "normalized_gain_bayes": 0.7310966501447275
+     },
+     {
+      "pdr": 0.5876228704523855,
+      "expected_return": 0.10019670392734047,
+      "mean_hops": 2.4166666666666665,
+      "episode": 400,
+      "normalized_gain": 0.6398244903734732,
+      "normalized_gain_bayes": 0.6398244903734732
+     },
+     {
+      "pdr": 0.6032502101787984,
+      "expected_return": 0.14722504047650908,
+      "mean_hops": 2.0433333333333334,
+      "episode": 500,
+      "normalized_gain": 0.7201407781284777,
+      "normalized_gain_bayes": 0.7201407781284777
+     },
+     {
+      "pdr": 0.6086942625900469,
+      "expected_return": 0.15385715973977152,
+      "mean_hops": 2.07,
+      "episode": 600,
+      "normalized_gain": 0.7314672939752966,
+      "normalized_gain_bayes": 0.7314672939752966
+     },
+     {
+      "pdr": 0.5960908913172898,
+      "expected_return": 0.12155035960854832,
+      "mean_hops": 2.256666666666667,
+      "episode": 700,
+      "normalized_gain": 0.6762928513694033,
+      "normalized_gain_bayes": 0.6762928513694033
+     },
+     {
+      "pdr": 0.6071992615691625,
+      "expected_return": 0.15199296976845525,
+      "mean_hops": 2.09,
+      "episode": 800,
+      "normalized_gain": 0.72828357902485,
+      "normalized_gain_bayes": 0.72828357902485
+     },
+     {
+      "pdr": 0.6284730842854424,
+      "expected_return": 0.1725234447315076,
+      "mean_hops": 2.44,
+      "episode": 900,
+      "normalized_gain": 0.7633460893297902,
+      "normalized_gain_bayes": 0.7633460893297902
+     },
+     {
+      "pdr": 0.6135005441800068,
+      "expected_return": 0.15653867141355565,
+      "mean_hops": 2.203333333333333,
+      "episode": 1000,
+      "normalized_gain": 0.7360468534284549,
+      "normalized_gain_bayes": 0.7360468534284549
+     },
+     {
+      "pdr": 0.6331210995308211,
+      "expected_return": 0.20037721889994897,
+      "mean_hops": 2.0533333333333332,
+      "episode": 1100,
+      "normalized_gain": 0.810915531613519,
+      "normalized_gain_bayes": 0.810915531613519
+     },
+     {
+      "pdr": 0.619609324575134,
+      "expected_return": 0.15965687354298205,
+      "mean_hops": 2.3133333333333335,
+      "episode": 1200,
+      "normalized_gain": 0.7413722048629764,
+      "normalized_gain_bayes": 0.7413722048629764
+     },
+     {
+      "pdr": 0.6359760213006996,
+      "expected_return": 0.19105560268230837,
+      "mean_hops": 2.276666666666667,
+      "episode": 1300,
+      "normalized_gain": 0.7949958188315245,
+      "normalized_gain_bayes": 0.7949958188315245
+     },
+     {
+      "pdr": 0.635456039840128,
+      "expected_return": 0.19474981810931088,
+      "mean_hops": 2.2133333333333334,
+      "episode": 1400,
+      "normalized_gain": 0.8013049016321441,
+      "normalized_gain_bayes": 0.8013049016321441
+     },
+     {
+      "pdr": 0.631423186986206,
+      "expected_return": 0.18828139356377552,
+      "mean_hops": 2.2266666666666666,
+      "episode": 1500,
+      "normalized_gain": 0.7902579481304487,
+      "normalized_gain_bayes": 0.7902579481304487
+     },
+     {
+      "pdr": 0.6276363493807994,
+      "expected_return": 0.18564561483385195,
+      "mean_hops": 2.11,
+      "episode": 1600,
+      "normalized_gain": 0.7857564926577523,
+      "normalized_gain_bayes": 0.7857564926577523
+     },
+     {
+      "pdr": 0.6393232045472514,
+      "expected_return": 0.20534165561366996,
+      "mean_hops": 2.1466666666666665,
+      "episode": 1700,
+      "normalized_gain": 0.8193939332942558,
+      "normalized_gain_bayes": 0.8193939332942558
+     },
+     {
+      "pdr": 0.6465953476674284,
+      "expected_return": 0.21366196024456116,
+      "mean_hops": 2.236666666666667,
+      "episode": 1800,
+      "normalized_gain": 0.8336035785842881,
+      "normalized_gain_bayes": 0.8336035785842881
+     },
+     {
+      "pdr": 0.6363597796385512,
+      "expected_return": 0.20222365971892273,
+      "mean_hops": 2.1233333333333335,
+      "episode": 1900,
+      "normalized_gain": 0.8140689340729964,
+      "normalized_gain_bayes": 0.8140689340729964
+     },
+     {
+      "pdr": 0.6359131299744519,
+      "expected_return": 0.19173504238987563,
+      "mean_hops": 2.28,
+      "episode": 2000,
+      "normalized_gain": 0.7961561846677283,
+      "normalized_gain_bayes": 0.7961561846677283
+     },
+     {
+      "pdr": 0.6433516818303597,
+      "expected_return": 0.21489786294340157,
+      "mean_hops": 2.1366666666666667,
+      "episode": 2100,
+      "normalized_gain": 0.8357142872353048,
+      "normalized_gain_bayes": 0.8357142872353048
+     },
+     {
+      "pdr": 0.6463366139382306,
+      "expected_return": 0.21044800168394404,
+      "mean_hops": 2.2933333333333334,
+      "episode": 2200,
+      "normalized_gain": 0.8281146916805955,
+      "normalized_gain_bayes": 0.8281146916805955
+     },
+     {
+      "pdr": 0.6415925220845015,
+      "expected_return": 0.21028193812601256,
+      "mean_hops": 2.1766666666666667,
+      "episode": 2300,
+      "normalized_gain": 0.8278310837649614,
+      "normalized_gain_bayes": 0.8278310837649614
+     },
+     {
+      "pdr": 0.6356927279297694,
+      "expected_return": 0.20439295713758562,
+      "mean_hops": 2.0733333333333333,
+      "episode": 2400,
+      "normalized_gain": 0.8177737199210214,
+      "normalized_gain_bayes": 0.8177737199210214
+     },
+     {
+      "pdr": 0.6454735040548248,
+      "expected_return": 0.21790810538306335,
+      "mean_hops": 2.1566666666666667,
+      "episode": 2500,
+      "normalized_gain": 0.8408552621397314,
+      "normalized_gain_bayes": 0.8408552621397314
+     },
+     {
+      "pdr": 0.6449039475314126,
+      "expected_return": 0.21466975768139301,
+      "mean_hops": 2.2,
+      "episode": 2600,
+      "normalized_gain": 0.8353247227895636,
+      "normalized_gain_bayes": 0.8353247227895636
+     },
+     {
+      "pdr": 0.6406853014517081,
+      "expected_return": 0.21497117737410135,
+      "mean_hops": 2.1033333333333335,
+      "episode": 2700,
+      "normalized_gain": 0.8358394956382541,
+      "normalized_gain_bayes": 0.8358394956382541
+     },
+     {
+      "pdr": 0.6415260326029716,
+      "expected_return": 0.20547140130882924,
+      "mean_hops": 2.216666666666667,
+      "episode": 2800,
+      "normalized_gain": 0.819615516564089,
+      "normalized_gain_bayes": 0.819615516564089
+     },
+     {
+      "pdr": 0.6506750101815667,
+      "expected_return": 0.22695821813298256,
+      "mean_hops": 2.1766666666666667,
+      "episode": 2900,
+      "normalized_gain": 0.8563112938256023,
+      "normalized_gain_bayes": 0.8563112938256023
+     },
+     {
+      "pdr": 0.6413069203584912,
+      "expected_return": 0.19905405308202562,
+      "mean_hops": 2.32,
+      "episode": 3000,
+      "normalized_gain": 0.8086557926055529,
+      "normalized_gain_bayes": 0.8086557926055529
+     }
+    ]
+   },
+   "dqn": {
+    "episodes_to_gain": {
+     "0.5": 500,
+     "0.6": 800,
+     "0.7": 800,
+     "0.8": 1200,
+     "0.9": null
+    },
+    "initial_gain": -0.07039067753098334,
+    "final_gain": 0.7994764884716804,
+    "final_gain_bayes": 0.7994764884716804,
+    "final_pdr": 0.6345316978717013,
+    "auc_gain": 0.6566042342120627,
+    "episodes_to_threshold": null
+   },
+   "tldqn": {
+    "episodes_to_gain": {
+     "0.5": 0,
+     "0.6": 0,
+     "0.7": 300,
+     "0.8": 1100,
+     "0.9": null
+    },
+    "initial_gain": 0.6734406565883522,
+    "final_gain": 0.8281942009984148,
+    "final_gain_bayes": 0.8281942009984148,
+    "final_pdr": 0.6445026543810098,
+    "auc_gain": 0.7755058693565109,
+    "episodes_to_threshold": null
+   }
+  },
+  {
+   "seed": 5,
+   "refs": {
+    "random": {
+     "pdr": 0.4099270154693863,
+     "expected_return": -0.24710991977456642
+    },
+    "oracle": {
+     "pdr": 0.7332691887457854,
+     "expected_return": 0.36084190808266325
+    },
+    "bayes": {
+     "pdr": 0.7309978842537345,
+     "expected_return": 0.3579654054661309
+    },
+    "greedy": {
+     "pdr": 0.42373865957170265,
+     "expected_return": -0.1906954264668652,
+     "mean_hops": 2.11
+    }
+   },
+   "seconds": {
+    "source": 1.8628928661346436,
+    "dqn": 2.096486806869507,
+    "tldqn": 2.371373176574707
+   },
+   "scenario_seeds": {
+    "source": 1005,
+    "target": 2005
+   },
+   "curves": {
+    "dqn": [
+     {
+      "pdr": 0.3868717839063664,
+      "expected_return": -0.30785134618648036,
+      "mean_hops": 3.28,
+      "episode": 0,
+      "normalized_gain": -0.09991157790577174,
+      "normalized_gain_bayes": -0.10038655333986915
+     },
+     {
+      "pdr": 0.3868717839063664,
+      "expected_return": -0.30785134618648036,
+      "mean_hops": 3.28,
+      "episode": 100,
+      "normalized_gain": -0.09991157790577174,
+      "normalized_gain_bayes": -0.10038655333986915
+     },
+     {
+      "pdr": 0.3868717839063664,
+      "expected_return": -0.30785134618648036,
+      "mean_hops": 3.28,
+      "episode": 200,
+      "normalized_gain": -0.09991157790577174,
+      "normalized_gain_bayes": -0.10038655333986915
+     },
+     {
+      "pdr": 0.43789773114837316,
+      "expected_return": -0.18512924375066517,
+      "mean_hops": 2.6033333333333335,
+      "episode": 300,
+      "normalized_gain": 0.10194997890269801,
+      "normalized_gain_bayes": 0.10243464480929794
+     },
+     {
+      "pdr": 0.5594150929623999,
+      "expected_return": 0.07403404138153327,
+      "mean_hops": 1.88,
+      "episode": 400,
+      "normalized_gain": 0.5282391571845336,
+      "normalized_gain_bayes": 0.5307503838936904
+     },
+     {
+      "pdr": 0.5805509304397057,
+      "expected_return": 0.11752652796475786,
+      "mean_hops": 1.8033333333333332,
+      "episode": 500,
+      "normalized_gain": 0.5997785203220984,
+      "normalized_gain_bayes": 0.6026298421510957
+     },
+     {
+      "pdr": 0.5863939516845753,
+      "expected_return": 0.12615742122702064,
+      "mean_hops": 1.9033333333333333,
+      "episode": 600,
+      "normalized_gain": 0.6139751932602866,
+      "normalized_gain_bayes": 0.6168940054746116
+     },
+     {
+      "pdr": 0.5925111793895418,
+      "expected_return": 0.13376155057732447,
+      "mean_hops": 1.95,
+      "episode": 700,
+      "normalized_gain": 0.6264829759527165,
+      "normalized_gain_bayes": 0.6294612496392599
+     },
+     {
+      "pdr": 0.6164238583844498,
+      "expected_return": 0.1743529472377076,
+      "mean_hops": 2.026666666666667,
+      "episode": 800,
+      "normalized_gain": 0.6932504315313114,
+      "normalized_gain_bayes": 0.6965461148901044
+     },
+     {
+      "pdr": 0.6183965841263349,
+      "expected_return": 0.1771561740674197,
+      "mean_hops": 2.02,
+      "episode": 900,
+      "normalized_gain": 0.697861367301654,
+      "normalized_gain_bayes": 0.7011789708549332
+     },
+     {
+      "pdr": 0.6307422625267823,
+      "expected_return": 0.1944918758638934,
+      "mean_hops": 2.1233333333333335,
+      "episode": 1000,
+      "normalized_gain": 0.7263762939819054,
+      "normalized_gain_bayes": 0.7298294562958617
+     },
+     {
+      "pdr": 0.6012629051264575,
+      "expected_return": 0.1427502243244718,
+      "mean_hops": 2.0433333333333334,
+      "episode": 1100,
+      "normalized_gain": 0.6412681502630374,
+      "normalized_gain_bayes": 0.6443167120456498
+     },
+     {
+      "pdr": 0.6337538929863841,
+      "expected_return": 0.20183390415431726,
+      "mean_hops": 2.09,
+      "episode": 1200,
+      "normalized_gain": 0.7384529552468305,
+      "normalized_gain_bayes": 0.7419635294998933
+     },
+     {
+      "pdr": 0.6241244469479978,
+      "expected_return": 0.18728461466269755,
+      "mean_hops": 2.033333333333333,
+      "episode": 1300,
+      "normalized_gain": 0.714521306677075,
+      "normalized_gain_bayes": 0.7179181108805965
+     },
+     {
+      "pdr": 0.6307266355567487,
+      "expected_return": 0.1979157821475718,
+      "mean_hops": 2.03,
+      "episode": 1400,
+      "normalized_gain": 0.7320081650065328,
+      "normalized_gain_bayes": 0.7354881009981826
+     },
+     {
+      "pdr": 0.6422624733211396,
+      "expected_return": 0.21562322616128293,
+      "mean_hops": 2.08,
+      "episode": 1500,
+      "normalized_gain": 0.7611345582540411,
+      "normalized_gain_bayes": 0.7647529598926801
+     },
+     {
+      "pdr": 0.6632864003461644,
+      "expected_return": 0.24884503860247237,
+      "mean_hops": 2.1933333333333334,
+      "episode": 1600,
+      "normalized_gain": 0.8157800267252555,
+      "normalized_gain_bayes": 0.8196582106198914
+     },
+     {
+      "pdr": 0.6478554136300676,
+      "expected_return": 0.2259302324634995,
+      "mean_hops": 2.09,
+      "episode": 1700,
+      "normalized_gain": 0.7780882144977346,
+      "normalized_gain_bayes": 0.7817872131042394
+     },
+     {
+      "pdr": 0.6511652982811414,
+      "expected_return": 0.23448472476372928,
+      "mean_hops": 2.08,
+      "episode": 1800,
+      "normalized_gain": 0.7921592180020429,
+      "normalized_gain_bayes": 0.7959251095666786
+     },
+     {
+      "pdr": 0.6585023791941793,
+      "expected_return": 0.24917067069143603,
+      "mean_hops": 2.0633333333333335,
+      "episode": 1900,
+      "normalized_gain": 0.8163156482565065,
+      "normalized_gain_bayes": 0.820196378473347
+     },
+     {
+      "pdr": 0.6574565099639795,
+      "expected_return": 0.24123664275992104,
+      "mean_hops": 2.13,
+      "episode": 2000,
+      "normalized_gain": 0.8032652262198148,
+      "normalized_gain_bayes": 0.8070839152798448
+     },
+     {
+      "pdr": 0.6598798763062729,
+      "expected_return": 0.2341734183215196,
+      "mean_hops": 2.29,
+      "episode": 2100,
+      "normalized_gain": 0.7916471602567658,
+      "normalized_gain_bayes": 0.7954106175204432
+     },
+     {
+      "pdr": 0.6659070564833742,
+      "expected_return": 0.25155510437717354,
+      "mean_hops": 2.21,
+      "episode": 2200,
+      "normalized_gain": 0.8202377249350841,
+      "normalized_gain_bayes": 0.8241371005392963
+     },
+     {
+      "pdr": 0.6613849320653613,
+      "expected_return": 0.24738224550883198,
+      "mean_hops": 2.1866666666666665,
+      "episode": 2300,
+      "normalized_gain": 0.8133739263952408,
+      "normalized_gain_bayes": 0.8172406717902284
+     },
+     {
+      "pdr": 0.6614947305200842,
+      "expected_return": 0.25126222916613,
+      "mean_hops": 2.09,
+      "episode": 2400,
+      "normalized_gain": 0.8197559841167765,
+      "normalized_gain_bayes": 0.8236530695454245
+     },
+     {
+      "pdr": 0.6397322841526841,
+      "expected_return": 0.21348354305934,
+      "mean_hops": 2.0366666666666666,
+      "episode": 2500,
+      "normalized_gain": 0.7576150637745453,
+      "normalized_gain_bayes": 0.7612167338846344
+     },
+     {
+      "pdr": 0.6595942633852392,
+      "expected_return": 0.24161397053518976,
+      "mean_hops": 2.1966666666666668,
+      "episode": 2600,
+      "normalized_gain": 0.8038858802880797,
+      "normalized_gain_bayes": 0.8077075199114145
+     },
+     {
+      "pdr": 0.6572043303773231,
+      "expected_return": 0.237638697111538,
+      "mean_hops": 2.1866666666666665,
+      "episode": 2700,
+      "normalized_gain": 0.7973470835586367,
+      "normalized_gain_bayes": 0.8011376380176679
+     },
+     {
+      "pdr": 0.651962151898302,
+      "expected_return": 0.23422432357015993,
+      "mean_hops": 2.0966666666666667,
+      "episode": 2800,
+      "normalized_gain": 0.7917308926288187,
+      "normalized_gain_bayes": 0.7954947479526667
+     },
+     {
+      "pdr": 0.6349292730796049,
+      "expected_return": 0.20209181288552083,
+      "mean_hops": 2.1066666666666665,
+      "episode": 2900,
+      "normalized_gain": 0.7388771808505475,
+      "normalized_gain_bayes": 0.7423897718542662
+     },
+     {
+      "pdr": 0.6771682534048822,
+      "expected_return": 0.2683667951290346,
+      "mean_hops": 2.27,
+      "episode": 3000,
+      "normalized_gain": 0.8478907230535618,
+      "normalized_gain_bayes": 0.8519215598463643
+     }
+    ],
+    "tldqn": [
+     {
+      "pdr": 0.6458913569485426,
+      "expected_return": 0.22023937927459608,
+      "mean_hops": 2.16,
+      "episode": 0,
+      "normalized_gain": 0.7687275169422041,
+      "normalized_gain_bayes": 0.7723820151867079
+     },
+     {
+      "pdr": 0.6458913569485426,
+      "expected_return": 0.22023937927459608,
+      "mean_hops": 2.16,
+      "episode": 100,
+      "normalized_gain": 0.7687275169422041,
+      "normalized_gain_bayes": 0.7723820151867079
+     },
+     {
+      "pdr": 0.6458913569485426,
+      "expected_return": 0.22023937927459608,
+      "mean_hops": 2.16,
+      "episode": 200,
+      "normalized_gain": 0.7687275169422041,
+      "normalized_gain_bayes": 0.7723820151867079
+     },
+     {
+      "pdr": 0.6298489834141163,
+      "expected_return": 0.18545729646249506,
+      "mean_hops": 2.223333333333333,
+      "episode": 300,
+      "normalized_gain": 0.7115156109681848,
+      "normalized_gain_bayes": 0.7148981262208758
+     },
+     {
+      "pdr": 0.6560378485012807,
+      "expected_return": 0.2345401901904448,
+      "mean_hops": 2.203333333333333,
+      "episode": 400,
+      "normalized_gain": 0.7922504512612817,
+      "normalized_gain_bayes": 0.7960167765449899
+     },
+     {
+      "pdr": 0.6458624565638804,
+      "expected_return": 0.2170795141474532,
+      "mean_hops": 2.1633333333333336,
+      "episode": 500,
+      "normalized_gain": 0.7635299585463686,
+      "normalized_gain_bayes": 0.7671597478171273
+     },
+     {
+      "pdr": 0.6251692705920969,
+      "expected_return": 0.17075581351209293,
+      "mean_hops": 2.2533333333333334,
+      "episode": 600,
+      "normalized_gain": 0.6873336243752362,
+      "normalized_gain_bayes": 0.6906011794819653
+     },
+     {
+      "pdr": 0.6587043930953811,
+      "expected_return": 0.23532728128554473,
+      "mean_hops": 2.276666666666667,
+      "episode": 700,
+      "normalized_gain": 0.7935451115600656,
+      "normalized_gain_bayes": 0.7973175916043163
+     },
+     {
+      "pdr": 0.6463233561813904,
+      "expected_return": 0.22051862908834569,
+      "mean_hops": 2.11,
+      "episode": 800,
+      "normalized_gain": 0.7691868457918827,
+      "normalized_gain_bayes": 0.7728435276663955
+     },
+     {
+      "pdr": 0.6291612000268011,
+      "expected_return": 0.17289568919939755,
+      "mean_hops": 2.35,
+      "episode": 900,
+      "normalized_gain": 0.6908534356320701,
+      "normalized_gain_bayes": 0.6941377237732954
+     },
+     {
+      "pdr": 0.6632758800280139,
+      "expected_return": 0.24882104823191478,
+      "mean_hops": 2.183333333333333,
+      "episode": 1000,
+      "normalized_gain": 0.8157405657524311,
+      "normalized_gain_bayes": 0.8196185620512639
+     },
+     {
+      "pdr": 0.6340278721420344,
+      "expected_return": 0.20233233528297978,
+      "mean_hops": 2.046666666666667,
+      "episode": 1100,
+      "normalized_gain": 0.7392728082447553,
+      "normalized_gain_bayes": 0.7427872800444463
+     },
+     {
+      "pdr": 0.63874874324087,
+      "expected_return": 0.20920389626295174,
+      "mean_hops": 2.066666666666667,
+      "episode": 1200,
+      "normalized_gain": 0.7505756132781595,
+      "normalized_gain_bayes": 0.7541438181370193
+     },
+     {
+      "pdr": 0.6339302745557526,
+      "expected_return": 0.1914037195814487,
+      "mean_hops": 2.216666666666667,
+      "episode": 1300,
+      "normalized_gain": 0.7212966871102078,
+      "normalized_gain_bayes": 0.7247257011869979
+     },
+     {
+      "pdr": 0.6609421442568109,
+      "expected_return": 0.2361778938446272,
+      "mean_hops": 2.3366666666666664,
+      "episode": 1400,
+      "normalized_gain": 0.7949442562292749,
+      "normalized_gain_bayes": 0.7987233877483652
+     },
+     {
+      "pdr": 0.6283554173321215,
+      "expected_return": 0.17904148219631005,
+      "mean_hops": 2.24,
+      "episode": 1500,
+      "normalized_gain": 0.7009624487401872,
+      "normalized_gain_bayes": 0.7042947947040389
+     },
+     {
+      "pdr": 0.6574791862385028,
+      "expected_return": 0.22667286457042882,
+      "mean_hops": 2.3533333333333335,
+      "episode": 1600,
+      "normalized_gain": 0.7793097456666542,
+      "normalized_gain_bayes": 0.7830145513808975
+     },
+     {
+      "pdr": 0.6532006567900387,
+      "expected_return": 0.2275018004251257,
+      "mean_hops": 2.22,
+      "episode": 1700,
+      "normalized_gain": 0.7806732350365579,
+      "normalized_gain_bayes": 0.7843845227218493
+     },
+     {
+      "pdr": 0.6684202444627035,
+      "expected_return": 0.2560171715964273,
+      "mean_hops": 2.216666666666667,
+      "episode": 1800,
+      "normalized_gain": 0.8275772327954037,
+      "normalized_gain_bayes": 0.8315115001109179
+     },
+     {
+      "pdr": 0.6607384389642853,
+      "expected_return": 0.2391433462506375,
+      "mean_hops": 2.27,
+      "episode": 1900,
+      "normalized_gain": 0.7998220315235153,
+      "normalized_gain_bayes": 0.8036243517809517
+     },
+     {
+      "pdr": 0.6686801105841251,
+      "expected_return": 0.2504242332096355,
+      "mean_hops": 2.3033333333333332,
+      "episode": 2000,
+      "normalized_gain": 0.8183775920829076,
+      "normalized_gain_bayes": 0.8222681246938706
+     },
+     {
+      "pdr": 0.6679247990257485,
+      "expected_return": 0.25009874821364375,
+      "mean_hops": 2.3066666666666666,
+      "episode": 2100,
+      "normalized_gain": 0.8178422125000564,
+      "normalized_gain_bayes": 0.8217301999390273
+     },
+     {
+      "pdr": 0.6406707239232583,
+      "expected_return": 0.1932549763172554,
+      "mean_hops": 2.39,
+      "episode": 2200,
+      "normalized_gain": 0.7243417585303097,
+      "normalized_gain_bayes": 0.7277852487484032
+     },
+     {
+      "pdr": 0.6703610582834636,
+      "expected_return": 0.24351171874179744,
+      "mean_hops": 2.45,
+      "episode": 2300,
+      "normalized_gain": 0.8070074240019894,
+      "normalized_gain_bayes": 0.8108439033126924
+     },
+     {
+      "pdr": 0.6690446988294614,
+      "expected_return": 0.2448850914195916,
+      "mean_hops": 2.4433333333333334,
+      "episode": 2400,
+      "normalized_gain": 0.8092664396260311,
+      "normalized_gain_bayes": 0.8131136582018837
+     },
+     {
+      "pdr": 0.6738704286088223,
+      "expected_return": 0.2412707065836227,
+      "mean_hops": 2.5866666666666664,
+      "episode": 2500,
+      "normalized_gain": 0.8033212566849615,
+      "normalized_gain_bayes": 0.8071402121114635
+     },
+     {
+      "pdr": 0.6626528976005468,
+      "expected_return": 0.22898224504453168,
+      "mean_hops": 2.4633333333333334,
+      "episode": 2600,
+      "normalized_gain": 0.78310836978173,
+      "normalized_gain_bayes": 0.7868312339950566
+     },
+     {
+      "pdr": 0.6700076876817328,
+      "expected_return": 0.2511837333943869,
+      "mean_hops": 2.35,
+      "episode": 2700,
+      "normalized_gain": 0.819626868999186,
+      "normalized_gain_bayes": 0.8235233406200021
+     },
+     {
+      "pdr": 0.6741928921803244,
+      "expected_return": 0.2626502975856556,
+      "mean_hops": 2.2933333333333334,
+      "episode": 2800,
+      "normalized_gain": 0.8384878439413677,
+      "normalized_gain_bayes": 0.842473979842825
+     },
+     {
+      "pdr": 0.6571259212476782,
+      "expected_return": 0.23484722817114356,
+      "mean_hops": 2.2133333333333334,
+      "episode": 2900,
+      "normalized_gain": 0.7927554879543712,
+      "normalized_gain_bayes": 0.7965242141612513
+     },
+     {
+      "pdr": 0.6685406349033158,
+      "expected_return": 0.25445016604267845,
+      "mean_hops": 2.2466666666666666,
+      "episode": 3000,
+      "normalized_gain": 0.8249997168114944,
+      "normalized_gain_bayes": 0.82892173072456
+     }
+    ]
+   },
+   "dqn": {
+    "episodes_to_gain": {
+     "0.5": 400,
+     "0.6": 600,
+     "0.7": 1000,
+     "0.8": 1600,
+     "0.9": null
+    },
+    "initial_gain": -0.09991157790577174,
+    "final_gain": 0.7928329321776427,
+    "final_gain_bayes": 0.7966020265510991,
+    "final_pdr": 0.6546865594609297,
+    "auc_gain": 0.64075917012022,
+    "episodes_to_threshold": null
+   },
+   "tldqn": {
+    "episodes_to_gain": {
+     "0.5": 0,
+     "0.6": 0,
+     "0.7": 0,
+     "0.8": 1000,
+     "0.9": null
+    },
+    "initial_gain": 0.7687275169422041,
+    "final_gain": 0.8187476829024112,
+    "final_gain_bayes": 0.8226399749095453,
+    "final_pdr": 0.6666198161104395,
+    "auc_gain": 0.7762486188468791,
+    "episodes_to_threshold": null
+   }
+  }
+ ],
+ "dqn_pdr_mean": [
+  0.3557979532612324,
+  0.3557979532612324,
+  0.3557979532612324,
+  0.46962271863236466,
+  0.5298709115790932,
+  0.5641210039490059,
+  0.5845608654471917,
+  0.591323584229422,
+  0.619295219962677,
+  0.6203522733800682,
+  0.630108396136619,
+  0.6260551820573911,
+  0.6448746410483793,
+  0.6332312681901856,
+  0.6399461348098641,
+  0.6479621502354553,
+  0.652698566825037,
+  0.6444429189883462,
+  0.6558299011450905,
+  0.653274066411812,
+  0.6545328590965511,
+  0.6564575612971113,
+  0.6493928550380156,
+  0.6569076375935524,
+  0.657359520164143,
+  0.6530571576776969,
+  0.6577639188166005,
+  0.6608564462085639,
+  0.6521004533097661,
+  0.6585038706177078,
+  0.6643756608850999
+ ],
+ "dqn_pdr_std": [
+  0.02970716895467171,
+  0.02970716895467171,
+  0.02970716895467171,
+  0.029296841812717415,
+  0.02325305141086641,
+  0.01485596727689012,
+  0.021092473081319302,
+  0.033985069477462555,
+  0.02380617991656808,
+  0.011711170207202418,
+  0.01807353795455314,
+  0.01695600909844617,
+  0.020495962316309787,
+  0.02801348908903637,
+  0.013944637656785506,
+  0.008987249254822471,
+  0.011622563323748036,
+  0.011824445240427889,
+  0.01800790571824588,
+  0.01129690369711556,
+  0.016176765036938576,
+  0.017015703232244047,
+  0.017163741581280523,
+  0.023038074844299268,
+  0.010135635170813161,
+  0.018020431192781364,
+  0.019934694325450537,
+  0.016520366896720196,
+  0.018396130232225427,
+  0.019711967882772824,
+  0.01657352999265477
+ ],
+ "dqn_expected_return_mean": [
+  -0.3647076128740114,
+  -0.3647076128740114,
+  -0.3647076128740114,
+  -0.10721437408997354,
+  0.012595523782131149,
+  0.07977218286833027,
+  0.11530869845393896,
+  0.12126117050453092,
+  0.16262866406732862,
+  0.17862411245273907,
+  0.19221491480912772,
+  0.1880802543940036,
+  0.21818856144329182,
+  0.19186442654962696,
+  0.21083252571518366,
+  0.2197468108171705,
+  0.22925270488946756,
+  0.21588628202331228,
+  0.2388053508977908,
+  0.23281720988329196,
+  0.23429825428948656,
+  0.23480531882070643,
+  0.2274095620352039,
+  0.23775251857058718,
+  0.2404186200323318,
+  0.23287758638451522,
+  0.2394292007481697,
+  0.24264998016888928,
+  0.22830107367682922,
+  0.24211283703393388,
+  0.24916712665647758
+ ],
+ "dqn_expected_return_std": [
+  0.05238026295306364,
+  0.05238026295306364,
+  0.05238026295306364,
+  0.0628788030045783,
+  0.052757688872120234,
+  0.02874617509917483,
+  0.04183036432559847,
+  0.06104249936186501,
+  0.0442843800010053,
+  0.023545420485710875,
+  0.03714767732209313,
+  0.03006091278250307,
+  0.03259431589781349,
+  0.050174072917510755,
+  0.025197231046070957,
+  0.015115468310214713,
+  0.022076805895260638,
+  0.026389636387238173,
+  0.028757016303986548,
+  0.02002686180116737,
+  0.02899950103864318,
+  0.030711641178268412,
+  0.030639722525561075,
+  0.036890650543681555,
+  0.01861412540733867,
+  0.030479228213376078,
+  0.03355116269403153,
+  0.027957255124502953,
+  0.03685530856412255,
+  0.032063240372920236,
+  0.02901035638810926
+ ],
+ "dqn_normalized_gain_mean": [
+  -0.17446850680749046,
+  -0.17446850680749046,
+  -0.17446850680749046,
+  0.25422821443307153,
+  0.4530065464611778,
+  0.5647724488009105,
+  0.6230456121079891,
+  0.6327387411657736,
+  0.7031306443286222,
+  0.7292702272253903,
+  0.7506396898478371,
+  0.744991936137142,
+  0.7943743716775958,
+  0.751126943765288,
+  0.7827667679868147,
+  0.7974469789194447,
+  0.8131378078565831,
+  0.7908817882312937,
+  0.8292183427775761,
+  0.8196348775948813,
+  0.8217378506461307,
+  0.822698143309928,
+  0.809416412992182,
+  0.8268697106461458,
+  0.8317915453146144,
+  0.8189359855608981,
+  0.8296576972689824,
+  0.8356129685959897,
+  0.8114811957811952,
+  0.8345610251472297,
+  0.845756356290352
+ ],
+ "dqn_normalized_gain_std": [
+  0.10580429888921389,
+  0.10580429888921389,
+  0.10580429888921389,
+  0.10393174124218664,
+  0.05758727306707816,
+  0.022061994295445413,
+  0.04278045624085677,
+  0.07691551464152575,
+  0.052060097419721,
+  0.01935139484077215,
+  0.04529442358206051,
+  0.052064381793874376,
+  0.03969687206850597,
+  0.05860479824417452,
+  0.02929375171152427,
+  0.021562464630962768,
+  0.02776803818283538,
+  0.02057780525753167,
+  0.026058053085555914,
+  0.018146130878889912,
+  0.02147266586159461,
+  0.029129419555219013,
+  0.02839349736680985,
+  0.03005268773998417,
+  0.023428575754531042,
+  0.03752334911434428,
+  0.02682372423129601,
+  0.027417196143892576,
+  0.03543735621991088,
+  0.0510619951091582,
+  0.01921695496448241
+ ],
+ "tldqn_pdr_mean": [
+  0.6214080421154287,
+  0.6214080421154287,
+  0.6214080421154287,
+  0.6268598595342194,
+  0.6242921559771263,
+  0.6295527440042793,
+  0.6347964385732656,
+  0.6379210436114159,
+  0.645789822467865,
+  0.6412491536963227,
+  0.648975428913609,
+  0.6443308946390254,
+  0.6398752757247234,
+  0.6494339397245498,
+  0.655874480789408,
+  0.6510686712601619,
+  0.6474793751395171,
+  0.6531878478501627,
+  0.6580999029769387,
+  0.6538274538191208,
+  0.657477447914801,
+  0.6522488598846492,
+  0.6586471190162001,
+  0.6566074757546022,
+  0.6629602810086066,
+  0.6620282173385731,
+  0.6629130739501872,
+  0.6636277858027186,
+  0.6661905529092931,
+  0.6623973664279539,
+  0.663881462509419
+ ],
+ "tldqn_pdr_std": [
+  0.016124777956716282,
+  0.016124777956716282,
+  0.016124777956716282,
+  0.010798537010588366,
+  0.023430832258693874,
+  0.014275101719289123,
+  0.015926568167959523,
+  0.022702281633913912,
+  0.020904679616601533,
+  0.015695070822724196,
+  0.019907635186311366,
+  0.01149832110379793,
+  0.02181924548983897,
+  0.01591570592012808,
+  0.02125002245578076,
+  0.024757070634383396,
+  0.016027842448551197,
+  0.017999282357572022,
+  0.015844099734258064,
+  0.015966294492986238,
+  0.01288112355818586,
+  0.008931252794267595,
+  0.01402040846207098,
+  0.010707301951971322,
+  0.01423994309993408,
+  0.011193969754572918,
+  0.01410290068104427,
+  0.017289564527429416,
+  0.013349476318389142,
+  0.01403293533448701,
+  0.014587241055575384
+ ],
+ "tldqn_expected_return_mean": [
+  0.16910447164603842,
+  0.16910447164603842,
+  0.16910447164603842,
+  0.18558533033656543,
+  0.17998883765689877,
+  0.18919593959180842,
+  0.19547792703873632,
+  0.20556292773800613,
+  0.21765465088144068,
+  0.20539480121055087,
+  0.22061424726179807,
+  0.2193446334568292,
+  0.2080048930060741,
+  0.2178862086204049,
+  0.22745955600717327,
+  0.22231013069990563,
+  0.21620749248510057,
+  0.2285625700221945,
+  0.23617489306443842,
+  0.22900398647666592,
+  0.23413149168794112,
+  0.2279927492848884,
+  0.232778431294315,
+  0.2323208105027171,
+  0.2453138954358754,
+  0.24125440721445557,
+  0.24114213166438878,
+  0.2446129468488547,
+  0.24940294142942054,
+  0.24062430964008524,
+  0.24321600232937177
+ ],
+ "tldqn_expected_return_std": [
+  0.03381610516665793,
+  0.03381610516665793,
+  0.03381610516665793,
+  0.018447330933743403,
+  0.04615635371610065,
+  0.02370711168244518,
+  0.02844209604541648,
+  0.0440337954806677,
+  0.034780729703487286,
+  0.03299192280699827,
+  0.03758790515635894,
+  0.02024039188683716,
+  0.04382206457151592,
+  0.031104058001183998,
+  0.03611473241508962,
+  0.04688357307477719,
+  0.03027167324374662,
+  0.030642768960124883,
+  0.03022135538007068,
+  0.028224858406080456,
+  0.02445884903793627,
+  0.011979964151655266,
+  0.029616813208274886,
+  0.020126138983062744,
+  0.02339555119199988,
+  0.01876401076503732,
+  0.02557953881317521,
+  0.02886509809448812,
+  0.022943919232412985,
+  0.025140347932491196,
+  0.028683302736994497
+ ],
+ "tldqn_normalized_gain_mean": [
+  0.7126548979040473,
+  0.7126548979040473,
+  0.7126548979040473,
+  0.7406614563425521,
+  0.7304178146437329,
+  0.7464418973270556,
+  0.7568991308901233,
+  0.7732981048865646,
+  0.7936674124392572,
+  0.7734058836922988,
+  0.7981965740170611,
+  0.7966821981887733,
+  0.7771221953793337,
+  0.794318366629656,
+  0.8105846299852141,
+  0.8010303159020129,
+  0.7912081674721833,
+  0.8122818467980135,
+  0.8245664070252305,
+  0.8125922839573999,
+  0.8214486681737911,
+  0.8115042917490687,
+  0.819187234854834,
+  0.818089211291546,
+  0.8398605952046747,
+  0.8335646938624605,
+  0.8327703010559235,
+  0.8391556089357184,
+  0.8467802120700071,
+  0.8316499484972765,
+  0.8361429948182064
+ ],
+ "tldqn_normalized_gain_std": [
+  0.04414736329065276,
+  0.04414736329065276,
+  0.04414736329065276,
+  0.020276328924534813,
+  0.050961140343344445,
+  0.032694266070108405,
+  0.04621603684433536,
+  0.048922763411495,
+  0.04038571190602763,
+  0.04484262772630622,
+  0.03206589875487792,
+  0.03005619295696927,
+  0.043714466331348095,
+  0.03941167401530118,
+  0.0344998602093831,
+  0.06278472333180829,
+  0.019911409379478225,
+  0.028394143397556946,
+  0.02023472899161366,
+  0.01712759690899176,
+  0.018918789834775285,
+  0.02561512276731015,
+  0.04805988674338696,
+  0.011824186371337565,
+  0.023619670016792493,
+  0.020783087043205823,
+  0.0267582806607817,
+  0.026240355795499565,
+  0.02320350600247154,
+  0.030625601622371452,
+  0.017264556259871076
+ ],
+ "refs_mean": {
+  "random_pdr": 0.4028354405816611,
+  "random_expected_return": -0.26030555908677694,
+  "greedy_pdr": 0.43848893987001836,
+  "greedy_expected_return": -0.16429890472363748,
+  "bayes_pdr": 0.7204675409861588,
+  "bayes_expected_return": 0.3411548977515469,
+  "oracle_pdr": 0.7209218018845689,
+  "oracle_expected_return": 0.34173019827485335
+ },
+ "config": {
+  "dqn": {
+   "hidden": 128,
+   "n_hidden": 2,
+   "gamma": 0.9,
+   "lr": 0.05,
+   "optimizer": "sgd",
+   "batch_size": 64,
+   "buffer_size": 20000,
+   "min_buffer": 500,
+   "target_update_steps": 200,
+   "eps_start": 1.0,
+   "eps_end": 0.05,
+   "eps_decay_episodes": 1500,
+   "seed": 1
+  },
+  "env": {
+   "prr_d50": 120.0,
+   "prr_width": 10.0,
+   "stability_min": 0.8,
+   "malicious_fraction": 0.1,
+   "p_fwd_normal": 0.98,
+   "p_fwd_malicious": 0.3,
+   "trust_obs": 10,
+   "energy_min": 0.3,
+   "r_success": 1.0,
+   "r_fail": 1.0,
+   "c_hop": 0.05,
+   "c_energy": 0.1,
+   "max_hops": 12
+  },
+  "n_source": 50,
+  "n_target": 100,
+  "source_episodes": 3000,
+  "target_episodes": 3000,
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "state_dim": 44,
+  "action_dim": 6,
+  "slot_features": [
+   "valid",
+   "trust",
+   "link_quality",
+   "stability",
+   "energy",
+   "progress",
+   "is_dest"
+  ],
+  "node_features": [
+   "remaining",
+   "own_energy"
+  ],
+  "total_seconds": 31.7
+ }
+}

@@ -1,0 +1,709 @@
+{
+ "n_scenarios": 27,
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "nodes": [
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  100
+ ],
+ "stage2_vs_stage1": {
+  "pdr_percent": {
+   "label": "PDR (%)",
+   "mean_stage2": 97.07704814814815,
+   "mean_stage1": 92.72648518518518,
+   "mean_diff": 4.350562962962963,
+   "sd_diff": 4.523328355072873,
+   "better": 22,
+   "tie": 1,
+   "worse": 4,
+   "p_sign_test": 0.0005335211753845215
+  },
+  "packet_drop_ratio_percent": {
+   "label": "Packet drop ratio (%)",
+   "mean_stage2": 2.922958888888889,
+   "mean_stage1": 7.273520629629629,
+   "mean_diff": -4.350561740740741,
+   "sd_diff": 4.5233251950481295,
+   "better": 22,
+   "tie": 1,
+   "worse": 4,
+   "p_sign_test": 0.0005335211753845215
+  },
+  "throughput_kbps": {
+   "label": "Throughput (kbps)",
+   "mean_stage2": 22.4712162962963,
+   "mean_stage1": 21.498512222222217,
+   "mean_diff": 0.9727040740740743,
+   "sd_diff": 1.2454898042514444,
+   "better": 23,
+   "tie": 1,
+   "worse": 3,
+   "p_sign_test": 8.797645568847656e-05
+  },
+  "latency_ms": {
+   "label": "Latency (ms)",
+   "mean_stage2": 0.8059914814814815,
+   "mean_stage1": 0.6323373703703704,
+   "mean_diff": 0.1736541111111111,
+   "sd_diff": 0.5018810613533644,
+   "better": 8,
+   "tie": 0,
+   "worse": 19,
+   "p_sign_test": 0.052238985896110535
+  },
+  "grayhole_drops": {
+   "label": "Paket dijatuhkan grayhole",
+   "mean_stage2": 105.96296296296296,
+   "mean_stage1": 232.59259259259258,
+   "mean_diff": -126.62962962962963,
+   "sd_diff": 143.7864731382958,
+   "better": 22,
+   "tie": 1,
+   "worse": 4,
+   "p_sign_test": 0.0005335211753845215
+  },
+  "energy_consumption_J": {
+   "label": "Energi (J)",
+   "mean_stage2": 54.25939259259259,
+   "mean_stage1": 54.248055555555545,
+   "mean_diff": 0.011337037037036932,
+   "sd_diff": 0.010241850349204428,
+   "better": 2,
+   "tie": 0,
+   "worse": 25,
+   "p_sign_test": 5.647540092468262e-06
+  },
+  "benign_hops_per_rx_est": {
+   "label": "Hop per paket (sensor normal)",
+   "mean_stage2": 1.9226622222222223,
+   "mean_stage1": 1.8732244444444446,
+   "mean_diff": 0.049437777777777775,
+   "sd_diff": 0.06778573768377336
+  },
+  "dto_TP": {
+   "label": "DTO TP",
+   "mean_stage2": 5.111111111111111,
+   "mean_stage1": 5.074074074074074,
+   "mean_diff": 0.037037037037037035,
+   "sd_diff": 0.3375797890278889,
+   "better": 2,
+   "tie": 24,
+   "worse": 1,
+   "p_sign_test": 1.0
+  },
+  "dto_FP": {
+   "label": "DTO FP",
+   "mean_stage2": 0.8888888888888888,
+   "mean_stage1": 0.9259259259259259,
+   "mean_diff": -0.037037037037037035,
+   "sd_diff": 0.3375797890278889,
+   "better": 2,
+   "tie": 24,
+   "worse": 1,
+   "p_sign_test": 1.0
+  }
+ },
+ "stage2_vs_step1_label_trust": {
+  "pdr_percent": {
+   "label": "PDR (%)",
+   "mean_stage2": 97.07704814814815,
+   "mean_step1": 98.08596296296298,
+   "mean_diff": -1.008914814814816,
+   "sd_diff": 3.128699913665751,
+   "better": 3,
+   "tie": 6,
+   "worse": 18,
+   "p_sign_test": 0.0014896392822265625
+  },
+  "packet_drop_ratio_percent": {
+   "label": "Packet drop ratio (%)",
+   "mean_stage2": 2.922958888888889,
+   "mean_step1": 1.914038851851852,
+   "mean_diff": 1.0089200370370373,
+   "sd_diff": 3.128692967212795,
+   "better": 3,
+   "tie": 6,
+   "worse": 18,
+   "p_sign_test": 0.0014896392822265625
+  },
+  "throughput_kbps": {
+   "label": "Throughput (kbps)",
+   "mean_stage2": 22.4712162962963,
+   "mean_step1": 22.799339629629625,
+   "mean_diff": -0.32812333333333304,
+   "sd_diff": 0.6032416982054924,
+   "better": 4,
+   "tie": 5,
+   "worse": 18,
+   "p_sign_test": 0.004343509674072266
+  },
+  "latency_ms": {
+   "label": "Latency (ms)",
+   "mean_stage2": 0.8059914814814815,
+   "mean_step1": 0.7544562592592593,
+   "mean_diff": 0.051535222222222205,
+   "sd_diff": 0.3223029095720996,
+   "better": 17,
+   "tie": 0,
+   "worse": 10,
+   "p_sign_test": 0.24778856337070465
+  },
+  "grayhole_drops": {
+   "label": "Paket dijatuhkan grayhole",
+   "mean_stage2": 105.96296296296296,
+   "mean_step1": 63.48148148148148,
+   "mean_diff": 42.48148148148148,
+   "sd_diff": 61.714211285925664,
+   "better": 3,
+   "tie": 7,
+   "worse": 17,
+   "p_sign_test": 0.0025768280029296875
+  },
+  "energy_consumption_J": {
+   "label": "Energi (J)",
+   "mean_stage2": 54.25939259259259,
+   "mean_step1": 54.26742592592592,
+   "mean_diff": -0.008033333333333295,
+   "sd_diff": 0.01073799866756439,
+   "better": 20,
+   "tie": 0,
+   "worse": 7,
+   "p_sign_test": 0.0191572904586792
+  },
+  "benign_hops_per_rx_est": {
+   "label": "Hop per paket (sensor normal)",
+   "mean_stage2": 1.9226622222222223,
+   "mean_step1": 2.0161355555555556,
+   "mean_diff": -0.09347333333333338,
+   "sd_diff": 0.0820067372935813
+  },
+  "dto_TP": {
+   "label": "DTO TP",
+   "mean_stage2": 5.111111111111111,
+   "mean_step1": 5.037037037037037,
+   "mean_diff": 0.07407407407407407,
+   "sd_diff": 0.3849001794597505,
+   "better": 3,
+   "tie": 23,
+   "worse": 1,
+   "p_sign_test": 0.625
+  },
+  "dto_FP": {
+   "label": "DTO FP",
+   "mean_stage2": 0.8888888888888888,
+   "mean_step1": 0.9629629629629629,
+   "mean_diff": -0.07407407407407407,
+   "sd_diff": 0.3849001794597505,
+   "better": 3,
+   "tie": 23,
+   "worse": 1,
+   "p_sign_test": 0.625
+  }
+ },
+ "stage2_vs_step1_greedy": {
+  "pdr_percent": {
+   "label": "PDR (%)",
+   "mean_stage2": 97.07704814814815,
+   "mean_greedy": 92.03919259259258,
+   "mean_diff": 5.037855555555554,
+   "sd_diff": 7.974905357930508,
+   "better": 19,
+   "tie": 1,
+   "worse": 7,
+   "p_sign_test": 0.028959274291992188
+  },
+  "packet_drop_ratio_percent": {
+   "label": "Packet drop ratio (%)",
+   "mean_stage2": 2.922958888888889,
+   "mean_greedy": 7.960799629629629,
+   "mean_diff": -5.03784074074074,
+   "sd_diff": 7.974901768854356,
+   "better": 19,
+   "tie": 1,
+   "worse": 7,
+   "p_sign_test": 0.028959274291992188
+  },
+  "throughput_kbps": {
+   "label": "Throughput (kbps)",
+   "mean_stage2": 22.4712162962963,
+   "mean_greedy": 21.489836296296293,
+   "mean_diff": 0.9813800000000006,
+   "sd_diff": 1.8062202025500649,
+   "better": 17,
+   "tie": 1,
+   "worse": 9,
+   "p_sign_test": 0.16863754391670227
+  },
+  "latency_ms": {
+   "label": "Latency (ms)",
+   "mean_stage2": 0.8059914814814815,
+   "mean_greedy": 0.6660168518518519,
+   "mean_diff": 0.13997462962962964,
+   "sd_diff": 0.6571292461942762,
+   "better": 11,
+   "tie": 0,
+   "worse": 16,
+   "p_sign_test": 0.44206833839416504
+  },
+  "grayhole_drops": {
+   "label": "Paket dijatuhkan grayhole",
+   "mean_stage2": 105.96296296296296,
+   "mean_greedy": 241.11111111111111,
+   "mean_diff": -135.14814814814815,
+   "sd_diff": 236.0388989623571,
+   "better": 19,
+   "tie": 1,
+   "worse": 7,
+   "p_sign_test": 0.028959274291992188
+  },
+  "energy_consumption_J": {
+   "label": "Energi (J)",
+   "mean_stage2": 54.25939259259259,
+   "mean_greedy": 54.2448,
+   "mean_diff": 0.014592592592591479,
+   "sd_diff": 0.025434757048118328,
+   "better": 5,
+   "tie": 0,
+   "worse": 22,
+   "p_sign_test": 0.0015137195587158203
+  },
+  "benign_hops_per_rx_est": {
+   "label": "Hop per paket (sensor normal)",
+   "mean_stage2": 1.9226622222222223,
+   "mean_greedy": 1.9144840740740738,
+   "mean_diff": 0.008178148148148146,
+   "sd_diff": 0.18614504913015953
+  },
+  "dto_TP": {
+   "label": "DTO TP",
+   "mean_stage2": 5.111111111111111,
+   "mean_greedy": 4.7407407407407405,
+   "mean_diff": 0.37037037037037035,
+   "sd_diff": 0.7916947813271392,
+   "better": 7,
+   "tie": 19,
+   "worse": 1,
+   "p_sign_test": 0.0703125
+  },
+  "dto_FP": {
+   "label": "DTO FP",
+   "mean_stage2": 0.8888888888888888,
+   "mean_greedy": 1.2592592592592593,
+   "mean_diff": -0.37037037037037035,
+   "sd_diff": 0.7916947813271392,
+   "better": 7,
+   "tie": 19,
+   "worse": 1,
+   "p_sign_test": 0.0703125
+  }
+ },
+ "per_n": {
+  "20": {
+   "pdr_percent": {
+    "stage1": 93.2052,
+    "stage2": 99.6091,
+    "step1": 95.59346666666666,
+    "greedy": 98.00630000000001
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 6.7947999999999995,
+    "stage2": 0.3909033333333333,
+    "step1": 4.406533333333333,
+    "greedy": 1.9937033333333334
+   },
+   "throughput_kbps": {
+    "stage1": 6.069686666666667,
+    "stage2": 6.593686666666667,
+    "step1": 6.19989,
+    "greedy": 6.531926666666666
+   },
+   "latency_ms": {
+    "stage1": 0.3325626666666667,
+    "stage2": 0.33367233333333335,
+    "step1": 0.33806633333333336,
+    "greedy": 0.28197066666666665
+   },
+   "grayhole_drops": {
+    "stage1": 64.0,
+    "stage2": 3.6666666666666665,
+    "step1": 41.333333333333336,
+    "greedy": 19.0
+   },
+   "energy_consumption_J": {
+    "stage1": 18.038299999999996,
+    "stage2": 18.03833333333333,
+    "step1": 18.038566666666668,
+    "greedy": 18.032033333333334
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 1.6852933333333333,
+    "stage2": 1.66815,
+    "step1": 1.7138499999999999,
+    "greedy": 1.3803633333333334
+   }
+  },
+  "30": {
+   "pdr_percent": {
+    "stage1": 93.2977,
+    "stage2": 98.26483333333333,
+    "step1": 100.0,
+    "greedy": 87.44183333333335
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 6.702283333333333,
+    "stage2": 1.73517,
+    "step1": 0.0,
+    "greedy": 12.558143333333334
+   },
+   "throughput_kbps": {
+    "stage1": 10.051923333333335,
+    "stage2": 10.523293333333333,
+    "step1": 10.731466666666668,
+    "greedy": 9.735966666666666
+   },
+   "latency_ms": {
+    "stage1": 0.3417396666666667,
+    "stage2": 0.3599946666666667,
+    "step1": 0.36802466666666667,
+    "greedy": 0.343882
+   },
+   "grayhole_drops": {
+    "stage1": 96.0,
+    "stage2": 25.0,
+    "step1": 0.0,
+    "greedy": 177.33333333333334
+   },
+   "energy_consumption_J": {
+    "stage1": 27.068233333333335,
+    "stage2": 27.0746,
+    "step1": 27.076633333333334,
+    "greedy": 27.068866666666665
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 1.64448,
+    "stage2": 1.7420266666666666,
+    "step1": 1.7953400000000002,
+    "greedy": 1.65233
+   }
+  },
+  "40": {
+   "pdr_percent": {
+    "stage1": 91.96600000000001,
+    "stage2": 97.77069999999999,
+    "step1": 98.92073333333333,
+    "greedy": 88.68726666666667
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 8.034006666666667,
+    "stage2": 2.2293,
+    "step1": 1.0792633333333332,
+    "greedy": 11.312733333333334
+   },
+   "throughput_kbps": {
+    "stage1": 14.417333333333334,
+    "stage2": 14.926233333333334,
+    "step1": 15.192599999999999,
+    "greedy": 13.636600000000001
+   },
+   "latency_ms": {
+    "stage1": 0.33885666666666664,
+    "stage2": 0.35070399999999996,
+    "step1": 0.38741733333333334,
+    "greedy": 0.9259806666666668
+   },
+   "grayhole_drops": {
+    "stage1": 154.0,
+    "stage2": 42.0,
+    "step1": 20.333333333333332,
+    "greedy": 215.33333333333334
+   },
+   "energy_consumption_J": {
+    "stage1": 36.1155,
+    "stage2": 36.120599999999996,
+    "step1": 36.1336,
+    "greedy": 36.125166666666665
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 1.6187566666666668,
+    "stage2": 1.7010766666666666,
+    "step1": 1.90785,
+    "greedy": 1.9011166666666668
+   }
+  },
+  "50": {
+   "pdr_percent": {
+    "stage1": 97.17099999999999,
+    "stage2": 96.2097,
+    "step1": 100.0,
+    "greedy": 89.9239
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 2.829003333333333,
+    "stage2": 3.790293333333333,
+    "step1": 0.0,
+    "greedy": 10.07608
+   },
+   "throughput_kbps": {
+    "stage1": 17.894566666666666,
+    "stage2": 17.461333333333332,
+    "step1": 18.4211,
+    "greedy": 16.689466666666664
+   },
+   "latency_ms": {
+    "stage1": 0.7142706666666667,
+    "stage2": 0.6486976666666666,
+    "step1": 0.6359043333333333,
+    "greedy": 0.6832683333333334
+   },
+   "grayhole_drops": {
+    "stage1": 68.0,
+    "stage2": 93.0,
+    "step1": 0.0,
+    "greedy": 249.66666666666666
+   },
+   "energy_consumption_J": {
+    "stage1": 45.168733333333336,
+    "stage2": 45.17770000000001,
+    "step1": 45.18216666666667,
+    "greedy": 45.18273333333334
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 1.84387,
+    "stage2": 1.8848766666666668,
+    "step1": 1.9290033333333332,
+    "greedy": 2.10491
+   }
+  },
+  "60": {
+   "pdr_percent": {
+    "stage1": 88.99723333333334,
+    "stage2": 97.61099999999999,
+    "step1": 98.3524,
+    "greedy": 88.67280000000001
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 11.002766666666666,
+    "stage2": 2.389016666666667,
+    "step1": 1.6475993333333332,
+    "greedy": 11.327193333333334
+   },
+   "throughput_kbps": {
+    "stage1": 21.51556666666667,
+    "stage2": 23.922066666666666,
+    "step1": 24.1147,
+    "greedy": 21.713866666666664
+   },
+   "latency_ms": {
+    "stage1": 0.3795853333333333,
+    "stage2": 1.0171976666666669,
+    "step1": 0.7384423333333333,
+    "greedy": 0.6774213333333332
+   },
+   "grayhole_drops": {
+    "stage1": 331.3333333333333,
+    "stage2": 66.33333333333333,
+    "step1": 46.0,
+    "greedy": 341.6666666666667
+   },
+   "energy_consumption_J": {
+    "stage1": 54.24073333333333,
+    "stage2": 54.2528,
+    "step1": 54.271800000000006,
+    "greedy": 54.24113333333333
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 1.8454766666666664,
+    "stage2": 1.9775566666666666,
+    "step1": 2.111103333333333,
+    "greedy": 2.02617
+   }
+  },
+  "70": {
+   "pdr_percent": {
+    "stage1": 93.42403333333334,
+    "stage2": 97.06036666666667,
+    "step1": 98.68903333333333,
+    "greedy": 95.7989
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 6.575972333333333,
+    "stage2": 2.939643333333333,
+    "step1": 1.3109766666666667,
+    "greedy": 4.20109
+   },
+   "throughput_kbps": {
+    "stage1": 24.202866666666665,
+    "stage2": 25.878500000000003,
+    "step1": 26.05003333333333,
+    "greedy": 24.754
+   },
+   "latency_ms": {
+    "stage1": 0.8350086666666666,
+    "stage2": 0.621263,
+    "step1": 0.8972470000000001,
+    "greedy": 0.8600136666666667
+   },
+   "grayhole_drops": {
+    "stage1": 238.33333333333334,
+    "stage2": 106.33333333333333,
+    "step1": 45.666666666666664,
+    "greedy": 148.66666666666666
+   },
+   "energy_consumption_J": {
+    "stage1": 63.3016,
+    "stage2": 63.312900000000006,
+    "step1": 63.328399999999995,
+    "greedy": 63.30956666666666
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 1.95428,
+    "stage2": 1.9873766666666668,
+    "step1": 2.103756666666667,
+    "greedy": 2.052013333333333
+   }
+  },
+  "80": {
+   "pdr_percent": {
+    "stage1": 93.77276666666667,
+    "stage2": 97.32173333333333,
+    "step1": 98.10156666666667,
+    "greedy": 96.08323333333334
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 6.227250000000001,
+    "stage2": 2.67829,
+    "step1": 1.8984313333333336,
+    "greedy": 3.9167699999999996
+   },
+   "throughput_kbps": {
+    "stage1": 29.5177,
+    "stage2": 30.55836666666666,
+    "step1": 30.944266666666667,
+    "greedy": 30.185399999999998
+   },
+   "latency_ms": {
+    "stage1": 0.8332496666666667,
+    "stage2": 1.3770563333333332,
+    "step1": 0.8374906666666666,
+    "greedy": 0.8425433333333334
+   },
+   "grayhole_drops": {
+    "stage1": 251.66666666666666,
+    "stage2": 99.66666666666667,
+    "step1": 66.66666666666667,
+    "greedy": 143.33333333333334
+   },
+   "energy_consumption_J": {
+    "stage1": 72.3664,
+    "stage2": 72.3793,
+    "step1": 72.3897,
+    "greedy": 72.3657
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 2.04853,
+    "stage2": 2.02256,
+    "step1": 2.1322566666666667,
+    "greedy": 2.0796666666666668
+   }
+  },
+  "90": {
+   "pdr_percent": {
+    "stage1": 93.34410000000001,
+    "stage2": 96.09833333333331,
+    "step1": 98.09236666666668,
+    "greedy": 98.07866666666666
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 6.655936666666666,
+    "stage2": 3.9016666666666673,
+    "step1": 1.9076556666666669,
+    "greedy": 1.9213233333333335
+   },
+   "throughput_kbps": {
+    "stage1": 34.93513333333333,
+    "stage2": 35.95263333333333,
+    "step1": 36.68646666666667,
+    "greedy": 36.5881
+   },
+   "latency_ms": {
+    "stage1": 1.133102,
+    "stage2": 1.4819733333333331,
+    "step1": 1.61688,
+    "greedy": 0.5751006666666667
+   },
+   "grayhole_drops": {
+    "stage1": 318.6666666666667,
+    "stage2": 179.33333333333334,
+    "step1": 84.33333333333333,
+    "greedy": 93.66666666666667
+   },
+   "energy_consumption_J": {
+    "stage1": 81.43886666666667,
+    "stage2": 81.4524,
+    "step1": 81.4586,
+    "greedy": 81.42796666666668
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 2.0558133333333335,
+    "stage2": 2.0599266666666667,
+    "step1": 2.1225833333333335,
+    "greedy": 2.0445466666666667
+   }
+  },
+  "100": {
+   "pdr_percent": {
+    "stage1": 89.36033333333334,
+    "stage2": 93.74766666666666,
+    "step1": 95.02409999999999,
+    "greedy": 85.65983333333334
+   },
+   "packet_drop_ratio_percent": {
+    "stage1": 10.639666666666665,
+    "stage2": 6.252346666666668,
+    "step1": 4.97589,
+    "greedy": 14.34016
+   },
+   "throughput_kbps": {
+    "stage1": 34.88183333333333,
+    "stage2": 36.42483333333334,
+    "step1": 36.85353333333333,
+    "greedy": 33.5732
+   },
+   "latency_ms": {
+    "stage1": 0.782661,
+    "stage2": 1.0633643333333334,
+    "step1": 0.9706336666666666,
+    "greedy": 0.8039710000000001
+   },
+   "grayhole_drops": {
+    "stage1": 571.3333333333334,
+    "stage2": 338.3333333333333,
+    "step1": 267.0,
+    "greedy": 781.3333333333334
+   },
+   "energy_consumption_J": {
+    "stage1": 90.49413333333332,
+    "stage2": 90.5259,
+    "step1": 90.52736666666665,
+    "greedy": 90.45003333333334
+   },
+   "benign_hops_per_rx_est": {
+    "stage1": 2.16252,
+    "stage2": 2.26041,
+    "step1": 2.329476666666667,
+    "greedy": 1.98924
+   }
+  }
+ },
+ "note": "step1 = trust tersimulasi dari label (referensi batas atas, bukan metode)"
+}

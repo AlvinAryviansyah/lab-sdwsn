@@ -1,0 +1,154 @@
+{
+ "name": "phase2_tldqn",
+ "base_commit": "9afeed6911399fe72928456af3d7c488b45b3eee",
+ "branch": "feat/ai-ns3-integration",
+ "working_tree_dirty": false,
+ "environment": {
+  "python": "3.14.6",
+  "torch": "2.15.0",
+  "numpy": "2.5.4",
+  "sklearn": "1.9.1",
+  "platform": "macOS-15.6-arm64-arm-64bit-Mach-O"
+ },
+ "commands": {
+  "bigan_train": "python bigan_ids.py --out checkpoints/bigan_v2_h<H>[_s<S>] --n-hidden <H> --epochs 20 --seed <S> [--allow-inverted-direction]",
+  "bigan_eval": "python detector_eval.py --ckpt checkpoints/bigan_v2_h2 --ablation-recon",
+  "tldqn": "python tldqn_routing.py   (default = konfigurasi yang dilaporkan)"
+ },
+ "bigan": {
+  "runs": [
+   {
+    "dir": "bigan_v2_h1_s2",
+    "seed": 2,
+    "n_hidden": 1,
+    "val_auc": 0.06645311214068017,
+    "direction_ok": false,
+    "weights_archived": false
+   },
+   {
+    "dir": "bigan_v2_h2",
+    "seed": 1,
+    "n_hidden": 2,
+    "val_auc": 0.7652802253529488,
+    "direction_ok": true,
+    "weights_archived": true
+   },
+   {
+    "dir": "bigan_v2_h2_s2",
+    "seed": 2,
+    "n_hidden": 2,
+    "val_auc": 0.18257723527004932,
+    "direction_ok": false,
+    "weights_archived": false
+   },
+   {
+    "dir": "bigan_v2_h2_s3",
+    "seed": 3,
+    "n_hidden": 2,
+    "val_auc": 0.16108618261348379,
+    "direction_ok": false,
+    "weights_archived": false
+   }
+  ],
+  "mainline_checkpoint": "bigan_v2_h2 (satu-satunya yang lolos verifikasi arah)",
+  "comparison_experiment": "reconstruction error (--ablation-recon), bukan mainline",
+  "not_archived": "run kode lama (seed 2: AUC 0.694, seed 3: 0.221) dan run 1 lapisan seed 1 (AUC 0.071, tidak disimpan karena gagal verifikasi) hanya tercatat di docs/PAPER_DEVIATIONS.md 2a.4"
+ },
+ "tldqn": {
+  "config": {
+   "dqn": {
+    "hidden": 128,
+    "n_hidden": 2,
+    "gamma": 0.9,
+    "lr": 0.05,
+    "optimizer": "sgd",
+    "batch_size": 64,
+    "buffer_size": 20000,
+    "min_buffer": 500,
+    "target_update_steps": 200,
+    "eps_start": 1.0,
+    "eps_end": 0.05,
+    "eps_decay_episodes": 1500,
+    "seed": 1
+   },
+   "env": {
+    "prr_d50": 120.0,
+    "prr_width": 10.0,
+    "stability_min": 0.8,
+    "malicious_fraction": 0.1,
+    "p_fwd_normal": 0.98,
+    "p_fwd_malicious": 0.3,
+    "trust_obs": 10,
+    "energy_min": 0.3,
+    "r_success": 1.0,
+    "r_fail": 1.0,
+    "c_hop": 0.05,
+    "c_energy": 0.1,
+    "max_hops": 12
+   },
+   "n_source": 50,
+   "n_target": 100,
+   "source_episodes": 3000,
+   "target_episodes": 3000,
+   "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "state_dim": 44,
+   "action_dim": 6,
+   "slot_features": [
+    "valid",
+    "trust",
+    "link_quality",
+    "stability",
+    "energy",
+    "progress",
+    "is_dest"
+   ],
+   "node_features": [
+    "remaining",
+    "own_energy"
+   ],
+   "total_seconds": 31.7
+  }
+ },
+ "files": {
+  "bigan/bigan_v2_h1_s2/inference_config.json": "b8ad92c0ee4f834956d0d89b7e5b8ca8c14be242ba5f93b9f5f6c99c4b2c9d2b",
+  "bigan/bigan_v2_h1_s2/train_log.json": "79ce0c97eef8c627f1577214f0b4b428cb36c97f2a036a637ba6296ac6839466",
+  "bigan/bigan_v2_h2/inference_config.json": "ef8b4af9425b27a8a3f7f96b73df8fcfcaa806c10b84518b43f74fbc10a0b6a0",
+  "bigan/bigan_v2_h2/model.pt": "e2b83fe561b2d4584d7ac69763b0023c9f6aacb257c01e36796610f66bcdbac1",
+  "bigan/bigan_v2_h2/preprocessor/scaler.npz": "26d08cc1ae8b8ece6dd04884afbc4bfd4da85f953acbab6d35e946924eb91ff7",
+  "bigan/bigan_v2_h2/preprocessor/schema.json": "6e5540a910baa2f82af3fed5500b200f41df391821c0f22ded60aa0abbeb8221",
+  "bigan/bigan_v2_h2/splits.npz": "a780123b205f869ed4e12a6a57a5f15962e69bf2efde1f671f4b208bacf4cef8",
+  "bigan/bigan_v2_h2/train_log.json": "2604c2e557ec7c347ec9646b9d2cb531f49044697927bd2d7c07333472212d70",
+  "bigan/bigan_v2_h2_s2/inference_config.json": "a67bcea48c5cf34fe3757bf23e368313054857e4a9d5497cc49ff9779471a45b",
+  "bigan/bigan_v2_h2_s2/train_log.json": "0aa728d31fd62f5578dfd42e1d07b099fc9638aec7ab11a6c43784923694e664",
+  "bigan/bigan_v2_h2_s3/inference_config.json": "eeb7bd00f930d3ddb056c0d00cdf693d25b2238f1b0e7a9afc6d153737337a66",
+  "bigan/bigan_v2_h2_s3/train_log.json": "0942f95d7622ca9ee4a2e738392a2bc1f060b4789f3f78053fd4679965792dde",
+  "bigan/reports/bigan_confusion_bigan_v2_h2.png": "278f4cdb0af2a74853f57843d24cffe43b9104bb9e1ddd28a10a97f3ca6dbd8c",
+  "bigan/reports/bigan_eval_bigan_v2_h2.json": "931d4bc2080e535c14a2903649ae628ee8a216dc80da60ebbadff424111d6ff9",
+  "tldqn/checkpoints/config.json": "ed87363e7b4cdbf46d5abdc0ed09d898bab0d00c34649d5b4b7d0d17b40cac1a",
+  "tldqn/checkpoints/dqn_seed1.pt": "a4b5a491ec13c8740ac202cab608d946914e5bbc975be5b58f72e8beed46dd45",
+  "tldqn/checkpoints/dqn_seed2.pt": "329b73566f1aafd21f7f37c515708728b4e9f8e4a2d951a401a5f2f39bfae605",
+  "tldqn/checkpoints/dqn_seed3.pt": "9947a44a965d02e7072131679bff230901cef50aef1937575bfdd6dc474e3763",
+  "tldqn/checkpoints/dqn_seed4.pt": "994182dbe20cffa34fd691c6b1dc1acf6b1be070ff82c8dd090d6b0c1ec41ee7",
+  "tldqn/checkpoints/dqn_seed5.pt": "3e851ce2f4b2e2ef56804ce3f5d705b7d007132426a3184f16b8d200ebff3674",
+  "tldqn/checkpoints/routing_schema.json": "57dc847222b619ffc99474285b6b31bf9559c0cb3e177dd9d7ecd1ab8450242c",
+  "tldqn/checkpoints/source_seed1.pt": "3dd87adf1e3ae1cc185e1978f23c5c330834256ba9fcfd030e32c1a5840cf31c",
+  "tldqn/checkpoints/source_seed2.pt": "4dbf801abeed2639fa6f99fed0f98457bc1a44fdeb43d3b3ebe58ef8741fb02d",
+  "tldqn/checkpoints/source_seed3.pt": "85e87e35cb8db5dc0558c0ab388c470287912bddb8d27201b83b8691b2eb9f1d",
+  "tldqn/checkpoints/source_seed4.pt": "3dc449b52878538180491aede3517a02891d93b325e2252833fdbb4f57899f19",
+  "tldqn/checkpoints/source_seed5.pt": "cdceaac7b310234899c86a2de39fadfbc9c5517af46a2d9539caa32549cbb064",
+  "tldqn/checkpoints/tldqn_seed1.pt": "523cbc1df67626d1b5fcf23ecd7011eac6fc639d9d66b2835a581b3be98f19a5",
+  "tldqn/checkpoints/tldqn_seed2.pt": "d1cec730cc6491d0d0ab1fa0f7c7cb98b39c38897f714990f6924dc68f5c221f",
+  "tldqn/checkpoints/tldqn_seed3.pt": "caec9b66add2898e41b8870982ebd99883881adabe5f06e340b227eb28c198ee",
+  "tldqn/checkpoints/tldqn_seed4.pt": "d2eee8dc5fb78eacd582b4bff2cd90f196f4cc3b774bf9c83bdabdc807f3d864",
+  "tldqn/checkpoints/tldqn_seed5.pt": "8a76d9565bc8b7b4a1433edfc84f417d3dee59f988b01ca095cd8afee1797925",
+  "tldqn/reports/tldqn_eval.json": "0af0cd06332266fe237ef7845c3f5de849b8e72e68b96e0a87969c28b0ffda51",
+  "tldqn/reports/tldqn_metrics.csv": "7a598b88334da63e2f29f4aa7dd4ab3f5ee1f598e943701ed669340b71bf0c3e",
+  "tldqn/reports/tldqn_reward.png": "3582200a0fc99d2d422d32abc59878cfc4e6745d71113890b968048eef01631b"
+ }
+}

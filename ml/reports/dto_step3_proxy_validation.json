@@ -1,0 +1,93 @@
+{
+ "note": "evaluasi saja: memakai label dan self_* sebagai alat ukur",
+ "auc_4_1": {
+  "plr": {
+   "median": 1.0,
+   "min": 1.0,
+   "n_scenarios": 27
+  },
+  "tx_raw": {
+   "median": 0.6597222222222222,
+   "min": 0.0,
+   "n_scenarios": 27
+  },
+  "A_j": {
+   "median": 0.8671875,
+   "min": 0.0,
+   "n_scenarios": 27
+  },
+  "coverage_stage1": {
+   "malicious": 162,
+   "with_plr": 71,
+   "with_tx": 162
+  }
+ },
+ "spearman_10_2": {
+  "stage1": {
+   "A_vs_orig_pkts": {
+    "median": 0.4051681022506252,
+    "min": 0.14436090225563908,
+    "n_scenarios": 27
+   },
+   "rx_vs_tx_mpdu": {
+    "median": 0.9873326918029918,
+    "min": 0.8992481203007519,
+    "n_scenarios": 27
+   },
+   "A_vs_energy": {
+    "median": 0.09437148217636025,
+    "min": -0.29172932330827067,
+    "n_scenarios": 27
+   },
+   "rx_vs_energy": {
+    "median": 0.13421368547418966,
+    "min": -0.42255639097744363,
+    "n_scenarios": 27
+   }
+  },
+  "stage2": {
+   "A_vs_orig_pkts": {
+    "median": 0.4458460683523202,
+    "min": 0.3169010782934834,
+    "n_scenarios": 27
+   },
+   "rx_vs_tx_mpdu": {
+    "median": 0.9976904907707113,
+    "min": 0.863157894736842,
+    "n_scenarios": 27
+   },
+   "A_vs_energy": {
+    "median": 0.07306610407876231,
+    "min": -0.6496240601503759,
+    "n_scenarios": 27
+   },
+   "rx_vs_energy": {
+    "median": 0.09090036014405761,
+    "min": -0.6451127819548872,
+    "n_scenarios": 27
+   }
+  },
+  "ctrl0": {
+   "A_vs_orig_pkts": {
+    "median": 0.3857182550708531,
+    "min": 0.316143373159211,
+    "n_scenarios": 9
+   },
+   "rx_vs_tx_mpdu": {
+    "median": 0.9949834983498349,
+    "min": 0.8992481203007519,
+    "n_scenarios": 9
+   },
+   "A_vs_energy": {
+    "median": 0.039066407335370944,
+    "min": -0.5864661654135337,
+    "n_scenarios": 9
+   },
+   "rx_vs_energy": {
+    "median": 0.12509030286190612,
+    "min": -0.5413533834586466,
+    "n_scenarios": 9
+   }
+  }
+ }
+}

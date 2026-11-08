@@ -1,0 +1,2295 @@
+{
+ "scenarios": [
+  {
+   "n": 20,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 2,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 24,
+     "forwarded": 6,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 18,
+     "est": 0.25,
+     "lo": 0.25,
+     "hi": 0.25,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.25
+    },
+    "normal": {
+     "watched": 652,
+     "forwarded": 652,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 24,
+     "causes": {
+      "j_tx_heard": 6,
+      "j_ip_drop_route_error": 18
+     },
+     "true_tx_ratio": 0.25
+    },
+    "normal": {
+     "watches": 652,
+     "causes": {
+      "j_tx_heard": 652
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 658
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 18
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 658.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 658.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 945.0,
+    "flowmon_udp_tx_packets": 945.0,
+    "telemetry_ip_local_udp_total": 927.0,
+    "flowmon_udp_rx_packets": 927.0
+   },
+   "grayhole_drop_prob": 0.7,
+   "repeat_identical": true,
+   "passive": {
+    "identical": true,
+    "differences": {}
+   }
+  },
+  {
+   "n": 20,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 2,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 50,
+     "forwarded": 8,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 1,
+     "unobserved_clean": 41,
+     "est": 0.16326530612244897,
+     "lo": 0.16,
+     "hi": 0.18,
+     "ambiguous_frac": 0.02,
+     "est_corrected": 0.18000000000000005
+    },
+    "normal": {
+     "watched": 624,
+     "forwarded": 624,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 50,
+     "causes": {
+      "j_tx_heard": 8,
+      "j_ip_drop_route_error": 42
+     },
+     "true_tx_ratio": 0.16
+    },
+    "normal": {
+     "watches": 624,
+     "causes": {
+      "j_tx_heard": 624
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 632
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 1
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 41
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.0,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0015822784810126582,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 632.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 632.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 953.0,
+    "flowmon_udp_tx_packets": 953.0,
+    "telemetry_ip_local_udp_total": 911.0,
+    "flowmon_udp_rx_packets": 911.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 20,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 2,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 187,
+     "forwarded": 55,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 132,
+     "est": 0.29411764705882354,
+     "lo": 0.29411764705882354,
+     "hi": 0.29411764705882354,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.2941176470588235
+    },
+    "normal": {
+     "watched": 450,
+     "forwarded": 450,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 187,
+     "causes": {
+      "j_tx_heard": 55,
+      "j_ip_drop_route_error": 132
+     },
+     "true_tx_ratio": 0.29411764705882354
+    },
+    "normal": {
+     "watches": 450,
+     "causes": {
+      "j_tx_heard": 450
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 505
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 132
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 505.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 494.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 938.0,
+    "flowmon_udp_tx_packets": 938.0,
+    "telemetry_ip_local_udp_total": 806.0,
+    "flowmon_udp_rx_packets": 806.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 30,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 3,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 251,
+     "forwarded": 79,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 172,
+     "est": 0.3147410358565737,
+     "lo": 0.3147410358565737,
+     "hi": 0.3147410358565737,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.31474103585657376
+    },
+    "normal": {
+     "watched": 727,
+     "forwarded": 727,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 251,
+     "causes": {
+      "j_tx_heard": 79,
+      "j_ip_drop_route_error": 172
+     },
+     "true_tx_ratio": 0.3147410358565737
+    },
+    "normal": {
+     "watches": 727,
+     "causes": {
+      "j_tx_heard": 727
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 806
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 172
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.016129032258064516,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 806.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 774.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 1446.0,
+    "flowmon_udp_tx_packets": 1446.0,
+    "telemetry_ip_local_udp_total": 1274.0,
+    "flowmon_udp_rx_packets": 1274.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 30,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 3,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 100,
+     "forwarded": 23,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 77,
+     "est": 0.23,
+     "lo": 0.23,
+     "hi": 0.23,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.22999999999999998
+    },
+    "normal": {
+     "watched": 849,
+     "forwarded": 849,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 100,
+     "causes": {
+      "j_tx_heard": 23,
+      "j_ip_drop_route_error": 77
+     },
+     "true_tx_ratio": 0.23
+    },
+    "normal": {
+     "watches": 849,
+     "causes": {
+      "j_tx_heard": 849
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 872
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 77
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0022935779816513763,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 872.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 872.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 1401.0,
+    "flowmon_udp_tx_packets": 1401.0,
+    "telemetry_ip_local_udp_total": 1324.0,
+    "flowmon_udp_rx_packets": 1324.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 30,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 3,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 51,
+     "forwarded": 12,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 39,
+     "est": 0.23529411764705882,
+     "lo": 0.23529411764705882,
+     "hi": 0.23529411764705882,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.23529411764705888
+    },
+    "normal": {
+     "watched": 866,
+     "forwarded": 866,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 51,
+     "causes": {
+      "j_tx_heard": 12,
+      "j_ip_drop_route_error": 39
+     },
+     "true_tx_ratio": 0.23529411764705882
+    },
+    "normal": {
+     "watches": 866,
+     "causes": {
+      "j_tx_heard": 866
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 878
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 39
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0011389521640091116,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 878.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 878.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 1436.0,
+    "flowmon_udp_tx_packets": 1436.0,
+    "telemetry_ip_local_udp_total": 1397.0,
+    "flowmon_udp_rx_packets": 1397.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 40,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 4,
+   "malicious_watched": 3,
+   "watchdog": {
+    "malicious": {
+     "watched": 400,
+     "forwarded": 135,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 3,
+     "unobserved_clean": 262,
+     "est": 0.34005037783375314,
+     "lo": 0.3375,
+     "hi": 0.345,
+     "ambiguous_frac": 0.0075,
+     "est_corrected": 0.3375
+    },
+    "normal": {
+     "watched": 878,
+     "forwarded": 878,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 400,
+     "causes": {
+      "j_tx_heard": 135,
+      "j_ip_drop_route_error": 265
+     },
+     "true_tx_ratio": 0.3375
+    },
+    "normal": {
+     "watches": 878,
+     "causes": {
+      "j_tx_heard": 878
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 1013
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 3
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 262
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.0,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.013820335636722606,
+   "cap_hit": {
+    "malicious": 2,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 1013.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 880.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 1884.0,
+    "flowmon_udp_tx_packets": 1884.0,
+    "telemetry_ip_local_udp_total": 1619.0,
+    "flowmon_udp_rx_packets": 1619.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 40,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 4,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 50,
+     "forwarded": 15,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 35,
+     "est": 0.3,
+     "lo": 0.3,
+     "hi": 0.3,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.30000000000000004
+    },
+    "normal": {
+     "watched": 1225,
+     "forwarded": 1225,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 50,
+     "causes": {
+      "j_tx_heard": 15,
+      "j_ip_drop_route_error": 35
+     },
+     "true_tx_ratio": 0.3
+    },
+    "normal": {
+     "watches": 1225,
+     "causes": {
+      "j_tx_heard": 1225
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 1240
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 35
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.012903225806451613,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 1240.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 1240.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 2010.0,
+    "flowmon_udp_tx_packets": 2010.0,
+    "telemetry_ip_local_udp_total": 1975.0,
+    "flowmon_udp_rx_packets": 1975.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 40,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 4,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 240,
+     "forwarded": 78,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 162,
+     "est": 0.325,
+     "lo": 0.325,
+     "hi": 0.325,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.32499999999999996
+    },
+    "normal": {
+     "watched": 1038,
+     "forwarded": 1038,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 240,
+     "causes": {
+      "j_tx_heard": 78,
+      "j_ip_drop_route_error": 162
+     },
+     "true_tx_ratio": 0.325
+    },
+    "normal": {
+     "watches": 1038,
+     "causes": {
+      "j_tx_heard": 1038
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 1116
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 162
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": null,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 1116.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 1048.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 1953.0,
+    "flowmon_udp_tx_packets": 1953.0,
+    "telemetry_ip_local_udp_total": 1791.0,
+    "flowmon_udp_rx_packets": 1791.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 50,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 5,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 151,
+     "forwarded": 42,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 109,
+     "est": 0.2781456953642384,
+     "lo": 0.2781456953642384,
+     "hi": 0.2781456953642384,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.2781456953642384
+    },
+    "normal": {
+     "watched": 1902,
+     "forwarded": 1901,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 1,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9994742376445847,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0005257623554153522,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 151,
+     "causes": {
+      "j_tx_heard": 42,
+      "j_ip_drop_route_error": 109
+     },
+     "true_tx_ratio": 0.2781456953642384
+    },
+    "normal": {
+     "watches": 1902,
+     "causes": {
+      "j_tx_heard": 1901,
+      "j_tx_rxfail_at_observer": 1
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 1943
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 109
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 1
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 1.0,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.019042717447246525,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 1944.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 1909.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 2405.0,
+    "flowmon_udp_tx_packets": 2405.0,
+    "telemetry_ip_local_udp_total": 2296.0,
+    "flowmon_udp_rx_packets": 2296.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 50,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 5,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 50,
+     "forwarded": 14,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 36,
+     "est": 0.28,
+     "lo": 0.28,
+     "hi": 0.28,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.28
+    },
+    "normal": {
+     "watched": 2082,
+     "forwarded": 2078,
+     "forwarded_late": 1,
+     "unobserved_rxfail": 2,
+     "unobserved_clean": 1,
+     "est": 0.9995192307692308,
+     "lo": 0.9985590778097982,
+     "hi": 0.9995196926032661,
+     "ambiguous_frac": 0.0009606147934678194,
+     "est_corrected": 0.9995196926032661
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 50,
+     "causes": {
+      "j_tx_heard": 14,
+      "j_ip_drop_route_error": 36
+     },
+     "true_tx_ratio": 0.28
+    },
+    "normal": {
+     "watches": 2082,
+     "causes": {
+      "j_tx_heard": 2079,
+      "j_tx_rxfail_at_observer": 1,
+      "j_tx_after_wdlate": 1,
+      "j_ip_forwarded_not_tx": 1
+     },
+     "true_tx_ratio": 0.9995196926032661
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 2092
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 1,
+      "j_tx_after_wdlate": 1
+     },
+     "forwarded_late": {
+      "j_tx_heard": 1
+     },
+     "unobserved_clean": {
+      "j_ip_forwarded_not_tx": 1,
+      "j_ip_drop_route_error": 36
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.5,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.01098901098901099,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 2096.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 2095.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 2469.0,
+    "flowmon_udp_tx_packets": 2469.0,
+    "telemetry_ip_local_udp_total": 2430.0,
+    "flowmon_udp_rx_packets": 2430.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 50,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 5,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 90,
+     "forwarded": 31,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 59,
+     "est": 0.34444444444444444,
+     "lo": 0.34444444444444444,
+     "hi": 0.34444444444444444,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.34444444444444444
+    },
+    "normal": {
+     "watched": 1992,
+     "forwarded": 1973,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 19,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9904618473895582,
+     "hi": 1.0,
+     "ambiguous_frac": 0.009538152610441768,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 90,
+     "causes": {
+      "j_tx_heard": 31,
+      "j_ip_drop_route_error": 59
+     },
+     "true_tx_ratio": 0.34444444444444444
+    },
+    "normal": {
+     "watches": 1992,
+     "causes": {
+      "j_tx_heard": 1973,
+      "j_tx_rxfail_at_observer": 19
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 2004
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 59
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 19
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 1.0,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.3258483033932136,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 2023.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 2000.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 2484.0,
+    "flowmon_udp_tx_packets": 2484.0,
+    "telemetry_ip_local_udp_total": 2425.0,
+    "flowmon_udp_rx_packets": 2425.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 60,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 6,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 150,
+     "forwarded": 46,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 104,
+     "est": 0.30666666666666664,
+     "lo": 0.30666666666666664,
+     "hi": 0.30666666666666664,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 0.30666666666666664
+    },
+    "normal": {
+     "watched": 2547,
+     "forwarded": 2546,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 1,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9996073812328229,
+     "hi": 1.0,
+     "ambiguous_frac": 0.00039261876717707107,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 150,
+     "causes": {
+      "j_tx_heard": 46,
+      "j_ip_drop_route_error": 104
+     },
+     "true_tx_ratio": 0.30666666666666664
+    },
+    "normal": {
+     "watches": 2547,
+     "causes": {
+      "j_tx_heard": 2546,
+      "j_tx_rxfail_at_observer": 1
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 2592
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 104
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 1
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 1.0,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.10069444444444445,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 2593.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 2562.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 2929.0,
+    "flowmon_udp_tx_packets": 2929.0,
+    "telemetry_ip_local_udp_total": 2825.0,
+    "flowmon_udp_rx_packets": 2825.0
+   },
+   "grayhole_drop_prob": 0.7,
+   "repeat_identical": true,
+   "passive": {
+    "identical": true,
+    "differences": {}
+   }
+  },
+  {
+   "n": 60,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 6,
+   "malicious_watched": 3,
+   "watchdog": {
+    "malicious": {
+     "watched": 800,
+     "forwarded": 236,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 6,
+     "unobserved_clean": 558,
+     "est": 0.2972292191435768,
+     "lo": 0.295,
+     "hi": 0.3025,
+     "ambiguous_frac": 0.0075,
+     "est_corrected": 0.29625
+    },
+    "normal": {
+     "watched": 2309,
+     "forwarded": 2308,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 1,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9995669120831528,
+     "hi": 1.0,
+     "ambiguous_frac": 0.00043308791684711995,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 800,
+     "causes": {
+      "j_tx_heard": 236,
+      "j_ip_drop_route_error": 564
+     },
+     "true_tx_ratio": 0.295
+    },
+    "normal": {
+     "watches": 2309,
+     "causes": {
+      "j_tx_heard": 2308,
+      "j_tx_rxfail_at_observer": 1
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 2544
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 1,
+      "j_ip_drop_route_error": 6
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 558
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.14285714285714285,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.0330188679245283,
+   "cap_hit": {
+    "malicious": 1,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 2545.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 1861.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 3014.0,
+    "flowmon_udp_tx_packets": 3014.0,
+    "telemetry_ip_local_udp_total": 2450.0,
+    "flowmon_udp_rx_packets": 2450.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 60,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 6,
+   "malicious_watched": 3,
+   "watchdog": {
+    "malicious": {
+     "watched": 450,
+     "forwarded": 124,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 11,
+     "unobserved_clean": 315,
+     "est": 0.2824601366742597,
+     "lo": 0.27555555555555555,
+     "hi": 0.3,
+     "ambiguous_frac": 0.024444444444444446,
+     "est_corrected": 0.2949794238683128
+    },
+    "normal": {
+     "watched": 2381,
+     "forwarded": 2381,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 0,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 450,
+     "causes": {
+      "j_tx_heard": 124,
+      "j_ip_drop_route_error": 326
+     },
+     "true_tx_ratio": 0.27555555555555555
+    },
+    "normal": {
+     "watches": 2381,
+     "causes": {
+      "j_tx_heard": 2381
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 2505
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 11
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 315
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.0,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.046706586826347304,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 2505.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 2217.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 3034.0,
+    "flowmon_udp_tx_packets": 3034.0,
+    "telemetry_ip_local_udp_total": 2708.0,
+    "flowmon_udp_rx_packets": 2708.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 70,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 7,
+   "malicious_watched": 1,
+   "watchdog": {
+    "malicious": {
+     "watched": 50,
+     "forwarded": 21,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 5,
+     "unobserved_clean": 24,
+     "est": 0.4666666666666667,
+     "lo": 0.42,
+     "hi": 0.52,
+     "ambiguous_frac": 0.1,
+     "est_corrected": 0.46947368421052627
+    },
+    "normal": {
+     "watched": 3569,
+     "forwarded": 3560,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 9,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9974782852339591,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0025217147660409078,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 50,
+     "causes": {
+      "j_tx_heard": 21,
+      "j_ip_drop_route_error": 29
+     },
+     "true_tx_ratio": 0.42
+    },
+    "normal": {
+     "watches": 3569,
+     "causes": {
+      "j_tx_heard": 3560,
+      "j_tx_rxfail_at_observer": 9
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 3581
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 9,
+      "j_ip_drop_route_error": 5
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 24
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.6428571428571429,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.15135437028762916,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 3590.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 3590.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 3518.0,
+    "flowmon_udp_tx_packets": 3518.0,
+    "telemetry_ip_local_udp_total": 3488.0,
+    "flowmon_udp_rx_packets": 3488.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 70,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 7,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 487,
+     "forwarded": 153,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 195,
+     "unobserved_clean": 139,
+     "est": 0.523972602739726,
+     "lo": 0.3141683778234086,
+     "hi": 0.7145790554414785,
+     "ambiguous_frac": 0.4004106776180698,
+     "est_corrected": 0.39835728952772076
+    },
+    "normal": {
+     "watched": 3134,
+     "forwarded": 3095,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 39,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9875558391831525,
+     "hi": 1.0,
+     "ambiguous_frac": 0.01244416081684748,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 487,
+     "causes": {
+      "j_tx_heard": 153,
+      "j_ip_drop_route_error": 334
+     },
+     "true_tx_ratio": 0.3141683778234086
+    },
+    "normal": {
+     "watches": 3134,
+     "causes": {
+      "j_tx_heard": 3095,
+      "j_tx_rxfail_at_observer": 39
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 3248
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 195,
+      "j_tx_rxfail_at_observer": 39
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 139
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.16666666666666666,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.2952586206896552,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 3287.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 3149.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 3749.0,
+    "flowmon_udp_tx_packets": 3749.0,
+    "telemetry_ip_local_udp_total": 3415.0,
+    "flowmon_udp_rx_packets": 3415.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 70,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 7,
+   "malicious_watched": 5,
+   "watchdog": {
+    "malicious": {
+     "watched": 491,
+     "forwarded": 139,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 86,
+     "unobserved_clean": 266,
+     "est": 0.3432098765432099,
+     "lo": 0.2830957230142566,
+     "hi": 0.45824847250509165,
+     "ambiguous_frac": 0.17515274949083504,
+     "est_corrected": 0.36420504139445076
+    },
+    "normal": {
+     "watched": 3049,
+     "forwarded": 3032,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 17,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9944244014430961,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0055755985569039025,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 491,
+     "causes": {
+      "j_tx_heard": 139,
+      "j_ip_drop_route_error": 352
+     },
+     "true_tx_ratio": 0.2830957230142566
+    },
+    "normal": {
+     "watches": 3049,
+     "causes": {
+      "j_tx_heard": 3032,
+      "j_tx_rxfail_at_observer": 17
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 3171
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 86,
+      "j_tx_rxfail_at_observer": 17
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 266
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.1650485436893204,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.14758751182592242,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 3188.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 3030.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 3542.0,
+    "flowmon_udp_tx_packets": 3542.0,
+    "telemetry_ip_local_udp_total": 3189.0,
+    "flowmon_udp_rx_packets": 3189.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 80,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 8,
+   "malicious_watched": 5,
+   "watchdog": {
+    "malicious": {
+     "watched": 400,
+     "forwarded": 113,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 13,
+     "unobserved_clean": 274,
+     "est": 0.29198966408268734,
+     "lo": 0.2825,
+     "hi": 0.315,
+     "ambiguous_frac": 0.0325,
+     "est_corrected": 0.28365384615384615
+    },
+    "normal": {
+     "watched": 4004,
+     "forwarded": 4000,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 4,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.999000999000999,
+     "hi": 1.0,
+     "ambiguous_frac": 0.000999000999000999,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 400,
+     "causes": {
+      "j_tx_heard": 113,
+      "j_ip_drop_route_error": 287
+     },
+     "true_tx_ratio": 0.2825
+    },
+    "normal": {
+     "watches": 4004,
+     "causes": {
+      "j_tx_heard": 4000,
+      "j_tx_rxfail_at_observer": 4
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 4113
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 4,
+      "j_ip_drop_route_error": 13
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 274
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.23529411764705882,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.20034038414782399,
+   "cap_hit": {
+    "malicious": 1,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 4117.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 4077.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 4180.0,
+    "flowmon_udp_tx_packets": 4180.0,
+    "telemetry_ip_local_udp_total": 3893.0,
+    "flowmon_udp_rx_packets": 3893.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 80,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 8,
+   "malicious_watched": 2,
+   "watchdog": {
+    "malicious": {
+     "watched": 338,
+     "forwarded": 99,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 175,
+     "unobserved_clean": 64,
+     "est": 0.6073619631901841,
+     "lo": 0.29289940828402367,
+     "hi": 0.8106508875739645,
+     "ambiguous_frac": 0.5177514792899408,
+     "est_corrected": 0.3126550868486353
+    },
+    "normal": {
+     "watched": 4280,
+     "forwarded": 4275,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 4,
+     "unobserved_clean": 1,
+     "est": 0.9997661365762395,
+     "lo": 0.9988317757009346,
+     "hi": 0.999766355140187,
+     "ambiguous_frac": 0.0009345794392523365,
+     "est_corrected": 0.9992990654205608
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 338,
+     "causes": {
+      "j_tx_heard": 99,
+      "j_ip_drop_route_error": 239
+     },
+     "true_tx_ratio": 0.29289940828402367
+    },
+    "normal": {
+     "watches": 4280,
+     "causes": {
+      "j_tx_heard": 4275,
+      "j_tx_rxfail_at_observer": 4,
+      "j_ip_forwarded_not_tx": 1
+     },
+     "true_tx_ratio": 0.999766355140187
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 4374
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 175,
+      "j_tx_rxfail_at_observer": 4
+     },
+     "unobserved_clean": {
+      "j_ip_forwarded_not_tx": 1,
+      "j_ip_drop_route_error": 64
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.0223463687150838,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.15637860082304528,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 4379.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 4288.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 4258.0,
+    "flowmon_udp_tx_packets": 4258.0,
+    "telemetry_ip_local_udp_total": 4016.0,
+    "flowmon_udp_rx_packets": 4016.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 80,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 8,
+   "malicious_watched": 4,
+   "watchdog": {
+    "malicious": {
+     "watched": 326,
+     "forwarded": 97,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 27,
+     "unobserved_clean": 202,
+     "est": 0.32441471571906355,
+     "lo": 0.29754601226993865,
+     "hi": 0.3803680981595092,
+     "ambiguous_frac": 0.08282208588957055,
+     "est_corrected": 0.3237530008002134
+    },
+    "normal": {
+     "watched": 3888,
+     "forwarded": 3858,
+     "forwarded_late": 1,
+     "unobserved_rxfail": 11,
+     "unobserved_clean": 18,
+     "est": 0.9953572349754966,
+     "lo": 0.9925411522633745,
+     "hi": 0.9953703703703703,
+     "ambiguous_frac": 0.002829218106995885,
+     "est_corrected": 0.9943415637860082
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 326,
+     "causes": {
+      "j_tx_heard": 97,
+      "j_ip_drop_route_error": 229
+     },
+     "true_tx_ratio": 0.29754601226993865
+    },
+    "normal": {
+     "watches": 3888,
+     "causes": {
+      "j_tx_heard": 3859,
+      "j_tx_rxfail_at_observer": 7,
+      "j_ip_forwarded_not_tx": 22
+     },
+     "true_tx_ratio": 0.9943415637860082
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 3955
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 7,
+      "j_ip_forwarded_not_tx": 4,
+      "j_ip_drop_route_error": 27
+     },
+     "unobserved_clean": {
+      "j_ip_forwarded_not_tx": 18,
+      "j_ip_drop_route_error": 202
+     },
+     "forwarded_late": {
+      "j_tx_heard": 1
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.18421052631578946,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.12917087967644084,
+   "cap_hit": {
+    "malicious": 1,
+    "normal": 1
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 3985.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 3751.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 4142.0,
+    "flowmon_udp_tx_packets": 4142.0,
+    "telemetry_ip_local_udp_total": 3888.0,
+    "flowmon_udp_rx_packets": 3888.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 90,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 9,
+   "malicious_watched": 3,
+   "watchdog": {
+    "malicious": {
+     "watched": 389,
+     "forwarded": 121,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 55,
+     "unobserved_clean": 213,
+     "est": 0.36227544910179643,
+     "lo": 0.3110539845758355,
+     "hi": 0.4524421593830334,
+     "ambiguous_frac": 0.14138817480719795,
+     "est_corrected": 0.33049485861182515
+    },
+    "normal": {
+     "watched": 4924,
+     "forwarded": 4914,
+     "forwarded_late": 1,
+     "unobserved_rxfail": 4,
+     "unobserved_clean": 5,
+     "est": 0.9989837398373984,
+     "lo": 0.9981722177091795,
+     "hi": 0.9989845653939886,
+     "ambiguous_frac": 0.0008123476848090983,
+     "est_corrected": 0.9989845653939886
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 389,
+     "causes": {
+      "j_tx_heard": 121,
+      "j_ip_drop_route_error": 267,
+      "j_tx_rxfail_at_observer": 1
+     },
+     "true_tx_ratio": 0.31362467866323906
+    },
+    "normal": {
+     "watches": 4924,
+     "causes": {
+      "j_tx_heard": 4915,
+      "j_ip_forwarded_not_tx": 5,
+      "j_tx_rxfail_at_observer": 4
+     },
+     "true_tx_ratio": 0.9989845653939886
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 5035
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 54,
+      "j_tx_rxfail_at_observer": 5
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 213,
+      "j_ip_forwarded_not_tx": 5
+     },
+     "forwarded_late": {
+      "j_tx_heard": 1
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.0847457627118644,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.210087370929309,
+   "cap_hit": {
+    "malicious": 2,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 5046.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 4972.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 4844.0,
+    "flowmon_udp_tx_packets": 4844.0,
+    "telemetry_ip_local_udp_total": 4569.0,
+    "flowmon_udp_rx_packets": 4569.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 90,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 9,
+   "malicious_watched": 5,
+   "watchdog": {
+    "malicious": {
+     "watched": 401,
+     "forwarded": 114,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 12,
+     "unobserved_clean": 275,
+     "est": 0.2930591259640103,
+     "lo": 0.28428927680798005,
+     "hi": 0.314214463840399,
+     "ambiguous_frac": 0.029925187032418952,
+     "est_corrected": 0.3052646162371848
+    },
+    "normal": {
+     "watched": 4881,
+     "forwarded": 4867,
+     "forwarded_late": 1,
+     "unobserved_rxfail": 6,
+     "unobserved_clean": 7,
+     "est": 0.9985641025641026,
+     "lo": 0.9973366113501332,
+     "hi": 0.9985658676500717,
+     "ambiguous_frac": 0.001229256299938537,
+     "est_corrected": 0.9985658676500717
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 401,
+     "causes": {
+      "j_tx_heard": 114,
+      "j_ip_drop_route_error": 287
+     },
+     "true_tx_ratio": 0.28428927680798005
+    },
+    "normal": {
+     "watches": 4881,
+     "causes": {
+      "j_tx_heard": 4868,
+      "j_ip_forwarded_not_tx": 7,
+      "j_tx_rxfail_at_observer": 6
+     },
+     "true_tx_ratio": 0.9985658676500717
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 4981
+     },
+     "unobserved_clean": {
+      "j_ip_forwarded_not_tx": 7,
+      "j_ip_drop_route_error": 275
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 6,
+      "j_ip_drop_route_error": 12
+     },
+     "forwarded_late": {
+      "j_tx_heard": 1
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.3333333333333333,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.2242071457246086,
+   "cap_hit": {
+    "malicious": 0,
+    "normal": 1
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 4995.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 4828.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 4936.0,
+    "flowmon_udp_tx_packets": 4936.0,
+    "telemetry_ip_local_udp_total": 4637.0,
+    "flowmon_udp_rx_packets": 4637.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 90,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 9,
+   "malicious_watched": 5,
+   "watchdog": {
+    "malicious": {
+     "watched": 567,
+     "forwarded": 165,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 108,
+     "unobserved_clean": 294,
+     "est": 0.35947712418300654,
+     "lo": 0.291005291005291,
+     "hi": 0.48148148148148145,
+     "ambiguous_frac": 0.19047619047619047,
+     "est_corrected": 0.2982935540406806
+    },
+    "normal": {
+     "watched": 5094,
+     "forwarded": 5089,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 5,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9990184530820573,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0009815469179426776,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 567,
+     "causes": {
+      "j_tx_heard": 165,
+      "j_ip_drop_route_error": 402
+     },
+     "true_tx_ratio": 0.291005291005291
+    },
+    "normal": {
+     "watches": 5094,
+     "causes": {
+      "j_tx_heard": 5089,
+      "j_tx_rxfail_at_observer": 5
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 5254
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 108,
+      "j_tx_rxfail_at_observer": 5
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 294
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.04424778761061947,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.24457556147696993,
+   "cap_hit": {
+    "malicious": 3,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 5259.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 5074.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 4907.0,
+    "flowmon_udp_tx_packets": 4907.0,
+    "telemetry_ip_local_udp_total": 4503.0,
+    "flowmon_udp_rx_packets": 4503.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 100,
+   "seed": 1,
+   "validation_errors": [],
+   "n_malicious": 10,
+   "malicious_watched": 3,
+   "watchdog": {
+    "malicious": {
+     "watched": 250,
+     "forwarded": 72,
+     "forwarded_late": 1,
+     "unobserved_rxfail": 52,
+     "unobserved_clean": 125,
+     "est": 0.3686868686868687,
+     "lo": 0.292,
+     "hi": 0.5,
+     "ambiguous_frac": 0.208,
+     "est_corrected": 0.31714285714285706
+    },
+    "normal": {
+     "watched": 6067,
+     "forwarded": 6045,
+     "forwarded_late": 2,
+     "unobserved_rxfail": 14,
+     "unobserved_clean": 6,
+     "est": 0.9990087559887659,
+     "lo": 0.9967034778308884,
+     "hi": 0.9990110433492665,
+     "ambiguous_frac": 0.002307565518378111,
+     "est_corrected": 0.9989059368453238
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 250,
+     "causes": {
+      "j_tx_heard": 73,
+      "j_ip_drop_route_error": 176,
+      "j_tx_rxfail_at_observer": 1
+     },
+     "true_tx_ratio": 0.296
+    },
+    "normal": {
+     "watches": 6067,
+     "causes": {
+      "j_tx_heard": 6047,
+      "j_tx_rxfail_at_observer": 7,
+      "j_ip_forwarded_not_tx": 12,
+      "j_tx_after_wdlate": 1
+     },
+     "true_tx_ratio": 0.9980220866985331
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 6117
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 8,
+      "j_ip_forwarded_not_tx": 6,
+      "j_tx_after_wdlate": 1,
+      "j_ip_drop_route_error": 51
+     },
+     "forwarded_late": {
+      "j_tx_heard": 3
+     },
+     "unobserved_clean": {
+      "j_ip_forwarded_not_tx": 6,
+      "j_ip_drop_route_error": 125
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.12121212121212122,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.31781045751633985,
+   "cap_hit": {
+    "malicious": 2,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 6141.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 6114.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 5357.0,
+    "flowmon_udp_tx_packets": 5357.0,
+    "telemetry_ip_local_udp_total": 5165.0,
+    "flowmon_udp_rx_packets": 5165.0
+   },
+   "grayhole_drop_prob": 0.7,
+   "repeat_identical": true,
+   "passive": {
+    "identical": true,
+    "differences": {}
+   }
+  },
+  {
+   "n": 100,
+   "seed": 2,
+   "validation_errors": [],
+   "n_malicious": 10,
+   "malicious_watched": 3,
+   "watchdog": {
+    "malicious": {
+     "watched": 760,
+     "forwarded": 217,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 261,
+     "unobserved_clean": 282,
+     "est": 0.4348697394789579,
+     "lo": 0.2855263157894737,
+     "hi": 0.6289473684210526,
+     "ambiguous_frac": 0.34342105263157896,
+     "est_corrected": 0.32549342105263157
+    },
+    "normal": {
+     "watched": 5643,
+     "forwarded": 5592,
+     "forwarded_late": 1,
+     "unobserved_rxfail": 46,
+     "unobserved_clean": 4,
+     "est": 0.9992853314275505,
+     "lo": 0.9911394648236753,
+     "hi": 0.999291157185894,
+     "ambiguous_frac": 0.008151692362218677,
+     "est_corrected": 0.9991233725836189
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 760,
+     "causes": {
+      "j_tx_heard": 217,
+      "j_ip_drop_route_error": 542,
+      "j_tx_rxfail_at_observer": 1
+     },
+     "true_tx_ratio": 0.2868421052631579
+    },
+    "normal": {
+     "watches": 5643,
+     "causes": {
+      "j_tx_heard": 5593,
+      "j_tx_rxfail_at_observer": 25,
+      "j_ip_forwarded_not_tx": 24,
+      "j_tx_after_wdlate": 1
+     },
+     "true_tx_ratio": 0.9957469431153642
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 5809
+     },
+     "unobserved_rxfail": {
+      "j_tx_rxfail_at_observer": 26,
+      "j_ip_drop_route_error": 260,
+      "j_ip_forwarded_not_tx": 20,
+      "j_tx_after_wdlate": 1
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 282,
+      "j_ip_forwarded_not_tx": 4
+     },
+     "forwarded_late": {
+      "j_tx_heard": 1
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.08469055374592833,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.30309810671256454,
+   "cap_hit": {
+    "malicious": 1,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 5861.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 5409.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 5594.0,
+    "flowmon_udp_tx_packets": 5594.0,
+    "telemetry_ip_local_udp_total": 5024.0,
+    "flowmon_udp_rx_packets": 5024.0
+   },
+   "grayhole_drop_prob": 0.7
+  },
+  {
+   "n": 100,
+   "seed": 3,
+   "validation_errors": [],
+   "n_malicious": 10,
+   "malicious_watched": 7,
+   "watchdog": {
+    "malicious": {
+     "watched": 1404,
+     "forwarded": 399,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 471,
+     "unobserved_clean": 534,
+     "est": 0.42765273311897106,
+     "lo": 0.2841880341880342,
+     "hi": 0.6196581196581197,
+     "ambiguous_frac": 0.33547008547008544,
+     "est_corrected": 0.2952279202279202
+    },
+    "normal": {
+     "watched": 4677,
+     "forwarded": 4672,
+     "forwarded_late": 0,
+     "unobserved_rxfail": 5,
+     "unobserved_clean": 0,
+     "est": 1.0,
+     "lo": 0.9989309386358777,
+     "hi": 1.0,
+     "ambiguous_frac": 0.0010690613641223007,
+     "est_corrected": 1.0
+    }
+   },
+   "audit": {
+    "malicious": {
+     "watches": 1404,
+     "causes": {
+      "j_tx_heard": 399,
+      "j_ip_drop_route_error": 996,
+      "j_tx_rxfail_at_observer": 9
+     },
+     "true_tx_ratio": 0.2905982905982906
+    },
+    "normal": {
+     "watches": 4677,
+     "causes": {
+      "j_tx_heard": 4672,
+      "j_tx_rxfail_at_observer": 5
+     },
+     "true_tx_ratio": 1.0
+    },
+    "category_x_cause": {
+     "forwarded": {
+      "j_tx_heard": 5071
+     },
+     "unobserved_rxfail": {
+      "j_ip_drop_route_error": 462,
+      "j_tx_rxfail_at_observer": 14
+     },
+     "unobserved_clean": {
+      "j_ip_drop_route_error": 534
+     }
+    },
+    "unobserved_rxfail_observer_miss_frac": 0.029411764705882353,
+    "unobserved_clean_observer_miss_frac": 0.0
+   },
+   "b_pooled": 0.1942417669098797,
+   "cap_hit": {
+    "malicious": 3,
+    "normal": 0
+   },
+   "forward_definition": "legacy_total",
+   "flowmon_check": {
+    "telemetry_ip_forward_udp_total": 5085.0,
+    "telemetry_ip_forward_udp_delivered": null,
+    "flowmon_udp_times_forwarded": 4256.0,
+    "telemetry_ip_forward_tcp_total": 0.0,
+    "flowmon_tcp_times_forwarded": 0.0,
+    "telemetry_ip_orig_udp_total": 5489.0,
+    "flowmon_udp_tx_packets": 5489.0,
+    "telemetry_ip_local_udp_total": 4493.0,
+    "flowmon_udp_rx_packets": 4493.0
+   },
+   "grayhole_drop_prob": 0.7
+  }
+ ],
+ "pooled": {
+  "malicious": {
+   "watched": 8907,
+   "forwarded": 2614,
+   "forwarded_late": 1,
+   "unobserved_rxfail": 1481,
+   "unobserved_clean": 4811,
+   "est": 0.3521411257743065,
+   "lo": 0.29358931177725384,
+   "hi": 0.45986302907825305,
+   "ambiguous_frac": 0.1662737173009992,
+   "est_corrected": 0.3140213659920378
+  },
+  "normal": {
+   "watched": 73732,
+   "forwarded": 73495,
+   "forwarded_late": 7,
+   "unobserved_rxfail": 188,
+   "unobserved_clean": 42,
+   "est": 0.9994289133036006,
+   "lo": 0.9968805945857973,
+   "hi": 0.9994303694461021,
+   "ambiguous_frac": 0.002549774860304888,
+   "est_corrected": 0.9993275038020119
+  }
+ },
+ "all_valid": true,
+ "repeat_checked": 3,
+ "repeat_all_identical": true,
+ "passive_checked": 3,
+ "passive_all_identical": true,
+ "forward_check": {
+  "exact_delivered": 0,
+  "legacy_necessary_only": 27
+ }
+}

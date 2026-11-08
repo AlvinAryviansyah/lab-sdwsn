@@ -1,0 +1,1820 @@
+{
+ "meta_file": "dto_meta_stage2_w0.json",
+ "config": {
+  "m": 30,
+  "Y": 100,
+  "n_min": 10,
+  "delta": 0.1,
+  "alpha": 0.01,
+  "z_thr": 3.5,
+  "dto_seed": 0,
+  "b_max_observer": 0.8,
+  "note": "konfigurasi reproduksi (K5); bukan nilai dari paper"
+ },
+ "results": [
+  {
+   "run": "stage2",
+   "variant": "main",
+   "windows": "w0",
+   "seed_suffix": "",
+   "pooled": {
+    "all": {
+     "TP": 31,
+     "FP": 0,
+     "FN": 131,
+     "TN": 1458,
+     "precision": 1.0,
+     "recall": 0.19135802469135801,
+     "f1": 0.32124352331606215,
+     "accuracy": 0.9191358024691358,
+     "fpr": 0.0
+    },
+    "evidence": {
+     "TP": 31,
+     "FP": 0,
+     "FN": 0,
+     "TN": 534,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "accuracy": 1.0,
+     "fpr": 0.0
+    },
+    "cpp_dto": {
+     "TP": 138,
+     "FP": 24,
+     "FN": 24,
+     "TN": 1434,
+     "precision": 0.8518518518518519,
+     "recall": 0.8518518518518519,
+     "f1": 0.8518518518518519,
+     "accuracy": 0.9703703703703703,
+     "fpr": 0.01646090534979424
+    },
+    "trust_thresh": {
+     "TP": 32,
+     "FP": 0,
+     "FN": 130,
+     "TN": 1458,
+     "precision": 1.0,
+     "recall": 0.19753086419753085,
+     "f1": 0.32989690721649484,
+     "accuracy": 0.9197530864197531,
+     "fpr": 0.0
+    },
+    "bigan_ns3": {
+     "TP": 92,
+     "FP": 17,
+     "FN": 70,
+     "TN": 1441,
+     "precision": 0.8440366972477065,
+     "recall": 0.5679012345679012,
+     "f1": 0.6789667896678967,
+     "accuracy": 0.9462962962962963,
+     "fpr": 0.011659807956104253
+    }
+   },
+   "coverage": {
+    "malicious_with_evidence": 31,
+    "malicious_total": 162,
+    "fraction": 0.19135802469135801
+   },
+   "dto_argmax_equivalence": {
+    "steps": 58,
+    "found_argmax": 58
+   },
+   "f1_all_per_scenario": {
+    "median": 0.3636363636363636,
+    "min": 0.2222222222222222
+   },
+   "scenarios": [
+    {
+     "n": 20,
+     "seed": 1,
+     "all": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 2,
+      "TN": 18,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [],
+     "malicious_with_evidence": 0,
+     "n_malicious": 2,
+     "cpp_dto": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 2,
+      "TN": 18,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 1,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.95,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 20,
+     "seed": 2,
+     "all": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 2,
+      "TN": 18,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 6,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [],
+     "malicious_with_evidence": 0,
+     "n_malicious": 2,
+     "cpp_dto": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 2,
+      "TN": 18,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 2,
+      "TN": 18,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 20,
+     "seed": 3,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 1,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.95,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      15
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 2,
+     "cpp_dto": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 1,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.95,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 30,
+     "seed": 1,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 2,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      16
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 3,
+     "cpp_dto": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 0,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 2,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 2,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 30,
+     "seed": 2,
+     "all": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 3,
+      "TN": 27,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 10,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [],
+     "malicious_with_evidence": 0,
+     "n_malicious": 3,
+     "cpp_dto": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 0,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 3,
+      "TN": 27,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 2,
+      "FN": 1,
+      "TN": 25,
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285715,
+      "accuracy": 0.9,
+      "fpr": 0.07407407407407407
+     }
+    },
+    {
+     "n": 30,
+     "seed": 3,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 2,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      19
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 3,
+     "cpp_dto": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 0,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 2,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 1,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "accuracy": 0.9666666666666667,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 40,
+     "seed": 1,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 3,
+      "TN": 36,
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "accuracy": 0.925,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      15
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 4,
+     "cpp_dto": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 1,
+      "TN": 35,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "accuracy": 0.95,
+      "fpr": 0.027777777777777776
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 3,
+      "TN": 36,
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "accuracy": 0.925,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 1,
+      "TN": 35,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "accuracy": 0.95,
+      "fpr": 0.027777777777777776
+     }
+    },
+    {
+     "n": 40,
+     "seed": 2,
+     "all": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 4,
+      "TN": 36,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 12,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [],
+     "malicious_with_evidence": 0,
+     "n_malicious": 4,
+     "cpp_dto": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 1,
+      "TN": 35,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "accuracy": 0.95,
+      "fpr": 0.027777777777777776
+     },
+     "trust_thresh": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 4,
+      "TN": 36,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 2,
+      "TN": 36,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.95,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 40,
+     "seed": 3,
+     "all": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 4,
+      "TN": 36,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 10,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [],
+     "malicious_with_evidence": 0,
+     "n_malicious": 4,
+     "cpp_dto": {
+      "TP": 4,
+      "FP": 0,
+      "FN": 0,
+      "TN": 36,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 4,
+      "TN": 36,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 2,
+      "TN": 36,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.95,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 50,
+     "seed": 1,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 3,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "accuracy": 0.94,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 18,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      34,
+      36
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 5,
+     "cpp_dto": {
+      "TP": 5,
+      "FP": 0,
+      "FN": 0,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 3,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "accuracy": 0.94,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 1,
+      "FN": 3,
+      "TN": 44,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "accuracy": 0.92,
+      "fpr": 0.022222222222222223
+     }
+    },
+    {
+     "n": 50,
+     "seed": 2,
+     "all": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 5,
+      "TN": 45,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 19,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [],
+     "malicious_with_evidence": 0,
+     "n_malicious": 5,
+     "cpp_dto": {
+      "TP": 4,
+      "FP": 1,
+      "FN": 1,
+      "TN": 44,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8000000000000002,
+      "accuracy": 0.96,
+      "fpr": 0.022222222222222223
+     },
+     "trust_thresh": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 5,
+      "TN": 45,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null,
+      "accuracy": 0.9,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 2,
+      "TN": 44,
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6666666666666665,
+      "accuracy": 0.94,
+      "fpr": 0.022222222222222223
+     }
+    },
+    {
+     "n": 50,
+     "seed": 3,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 4,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 16,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      36
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 5,
+     "cpp_dto": {
+      "TP": 5,
+      "FP": 0,
+      "FN": 0,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 4,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 4,
+      "FP": 0,
+      "FN": 1,
+      "TN": 45,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "accuracy": 0.98,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 60,
+     "seed": 1,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "accuracy": 0.9166666666666666,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      44
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 6,
+     "cpp_dto": {
+      "TP": 3,
+      "FP": 3,
+      "FN": 3,
+      "TN": 51,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "accuracy": 0.9,
+      "fpr": 0.05555555555555555
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "accuracy": 0.9166666666666666,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "accuracy": 0.9833333333333333,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 60,
+     "seed": 2,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "accuracy": 0.9166666666666666,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 21,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      15
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 6,
+     "cpp_dto": {
+      "TP": 4,
+      "FP": 2,
+      "FN": 2,
+      "TN": 52,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.037037037037037035
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "accuracy": 0.9166666666666666,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 5,
+      "FP": 1,
+      "FN": 1,
+      "TN": 53,
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1": 0.8333333333333334,
+      "accuracy": 0.9666666666666667,
+      "fpr": 0.018518518518518517
+     }
+    },
+    {
+     "n": 60,
+     "seed": 3,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "accuracy": 0.9166666666666666,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 20,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      39
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 6,
+     "cpp_dto": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "accuracy": 0.9166666666666666,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "TN": 54,
+      "precision": 1.0,
+      "recall": 0.8333333333333334,
+      "f1": 0.9090909090909091,
+      "accuracy": 0.9833333333333333,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 70,
+     "seed": 1,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 5,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 22,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      36,
+      63
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 7,
+     "cpp_dto": {
+      "TP": 6,
+      "FP": 1,
+      "FN": 1,
+      "TN": 62,
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571,
+      "f1": 0.8571428571428571,
+      "accuracy": 0.9714285714285714,
+      "fpr": 0.015873015873015872
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 5,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 4,
+      "FP": 1,
+      "FN": 3,
+      "TN": 62,
+      "precision": 0.8,
+      "recall": 0.5714285714285714,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.9428571428571428,
+      "fpr": 0.015873015873015872
+     }
+    },
+    {
+     "n": 70,
+     "seed": 2,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 5,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 24,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      17,
+      26
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 7,
+     "cpp_dto": {
+      "TP": 5,
+      "FP": 2,
+      "FN": 2,
+      "TN": 61,
+      "precision": 0.7142857142857143,
+      "recall": 0.7142857142857143,
+      "f1": 0.7142857142857143,
+      "accuracy": 0.9428571428571428,
+      "fpr": 0.031746031746031744
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 5,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 5,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 70,
+     "seed": 3,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 6,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.14285714285714285,
+      "f1": 0.25,
+      "accuracy": 0.9142857142857143,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 20,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      6
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 7,
+     "cpp_dto": {
+      "TP": 7,
+      "FP": 0,
+      "FN": 0,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 5,
+      "TN": 63,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 3,
+      "FP": 1,
+      "FN": 4,
+      "TN": 62,
+      "precision": 0.75,
+      "recall": 0.42857142857142855,
+      "f1": 0.5454545454545454,
+      "accuracy": 0.9285714285714286,
+      "fpr": 0.015873015873015872
+     }
+    },
+    {
+     "n": 80,
+     "seed": 1,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 7,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.9125,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 28,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      69
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 8,
+     "cpp_dto": {
+      "TP": 7,
+      "FP": 1,
+      "FN": 1,
+      "TN": 71,
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "accuracy": 0.975,
+      "fpr": 0.013888888888888888
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 7,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.9125,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 2,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "accuracy": 0.975,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 80,
+     "seed": 2,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 7,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.9125,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 29,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      73
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 8,
+     "cpp_dto": {
+      "TP": 7,
+      "FP": 1,
+      "FN": 1,
+      "TN": 71,
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "accuracy": 0.975,
+      "fpr": 0.013888888888888888
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 7,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.9125,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 4,
+      "FP": 2,
+      "FN": 4,
+      "TN": 70,
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285715,
+      "accuracy": 0.925,
+      "fpr": 0.027777777777777776
+     }
+    },
+    {
+     "n": 80,
+     "seed": 3,
+     "all": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 7,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.9125,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 29,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      35
+     ],
+     "malicious_with_evidence": 1,
+     "n_malicious": 8,
+     "cpp_dto": {
+      "TP": 7,
+      "FP": 1,
+      "FN": 1,
+      "TN": 71,
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875,
+      "accuracy": 0.975,
+      "fpr": 0.013888888888888888
+     },
+     "trust_thresh": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 7,
+      "TN": 72,
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.2222222222222222,
+      "accuracy": 0.9125,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 4,
+      "FP": 1,
+      "FN": 4,
+      "TN": 71,
+      "precision": 0.8,
+      "recall": 0.5,
+      "f1": 0.6153846153846154,
+      "accuracy": 0.9375,
+      "fpr": 0.013888888888888888
+     }
+    },
+    {
+     "n": 90,
+     "seed": 1,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 7,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "accuracy": 0.9222222222222223,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 31,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      6,
+      44
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 9,
+     "cpp_dto": {
+      "TP": 6,
+      "FP": 3,
+      "FN": 3,
+      "TN": 78,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.037037037037037035
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 7,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "accuracy": 0.9222222222222223,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 7,
+      "FP": 0,
+      "FN": 2,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.7777777777777778,
+      "f1": 0.8750000000000001,
+      "accuracy": 0.9777777777777777,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 90,
+     "seed": 2,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 7,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "accuracy": 0.9222222222222223,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 32,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      35,
+      66
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 9,
+     "cpp_dto": {
+      "TP": 8,
+      "FP": 1,
+      "FN": 1,
+      "TN": 80,
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1": 0.8888888888888888,
+      "accuracy": 0.9777777777777777,
+      "fpr": 0.012345679012345678
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 7,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "accuracy": 0.9222222222222223,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 6,
+      "FP": 1,
+      "FN": 3,
+      "TN": 80,
+      "precision": 0.8571428571428571,
+      "recall": 0.6666666666666666,
+      "f1": 0.75,
+      "accuracy": 0.9555555555555556,
+      "fpr": 0.012345679012345678
+     }
+    },
+    {
+     "n": 90,
+     "seed": 3,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 7,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636,
+      "accuracy": 0.9222222222222223,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 33,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      56,
+      58
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 9,
+     "cpp_dto": {
+      "TP": 8,
+      "FP": 1,
+      "FN": 1,
+      "TN": 80,
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1": 0.8888888888888888,
+      "accuracy": 0.9777777777777777,
+      "fpr": 0.012345679012345678
+     },
+     "trust_thresh": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 6,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 6,
+      "TN": 81,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "accuracy": 0.9333333333333333,
+      "fpr": 0.0
+     }
+    },
+    {
+     "n": 100,
+     "seed": 1,
+     "all": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 7,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.3,
+      "f1": 0.4615384615384615,
+      "accuracy": 0.93,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 0,
+      "TN": 33,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      16,
+      17,
+      36
+     ],
+     "malicious_with_evidence": 3,
+     "n_malicious": 10,
+     "cpp_dto": {
+      "TP": 7,
+      "FP": 3,
+      "FN": 3,
+      "TN": 87,
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1": 0.7,
+      "accuracy": 0.94,
+      "fpr": 0.03333333333333333
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 8,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 3,
+      "FP": 4,
+      "FN": 7,
+      "TN": 86,
+      "precision": 0.42857142857142855,
+      "recall": 0.3,
+      "f1": 0.3529411764705882,
+      "accuracy": 0.89,
+      "fpr": 0.044444444444444446
+     }
+    },
+    {
+     "n": 100,
+     "seed": 2,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 8,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 32,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      81,
+      82
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 10,
+     "cpp_dto": {
+      "TP": 9,
+      "FP": 1,
+      "FN": 1,
+      "TN": 89,
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1": 0.9,
+      "accuracy": 0.98,
+      "fpr": 0.011111111111111112
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 8,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 7,
+      "FP": 1,
+      "FN": 3,
+      "TN": 89,
+      "precision": 0.875,
+      "recall": 0.7,
+      "f1": 0.7777777777777777,
+      "accuracy": 0.96,
+      "fpr": 0.011111111111111112
+     }
+    },
+    {
+     "n": 100,
+     "seed": 3,
+     "all": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 8,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "evidence": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 27,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "fpr": 0.0
+     },
+     "detected": [
+      15,
+      62
+     ],
+     "malicious_with_evidence": 2,
+     "n_malicious": 10,
+     "cpp_dto": {
+      "TP": 9,
+      "FP": 1,
+      "FN": 1,
+      "TN": 89,
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1": 0.9,
+      "accuracy": 0.98,
+      "fpr": 0.011111111111111112
+     },
+     "trust_thresh": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 8,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "accuracy": 0.92,
+      "fpr": 0.0
+     },
+     "bigan_ns3": {
+      "TP": 4,
+      "FP": 0,
+      "FN": 6,
+      "TN": 90,
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714285714285715,
+      "accuracy": 0.94,
+      "fpr": 0.0
+     }
+    }
+   ]
+  }
+ ]
+}

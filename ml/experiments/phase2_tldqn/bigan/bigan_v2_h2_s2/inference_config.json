@@ -1,0 +1,65 @@
+{
+ "format_version": 1,
+ "model": {
+  "x_dim": 121,
+  "z_dim": 32,
+  "hidden": 128,
+  "n_hidden": 2,
+  "activation": "relu",
+  "lr": 0.0002,
+  "beta1": 0.5,
+  "beta2": 0.999,
+  "batch_size": 256,
+  "epochs": 20,
+  "d_steps": 1,
+  "seed": 2,
+  "latent_prior": "normal"
+ },
+ "score": {
+  "name": "neg_logit_discriminator_pair",
+  "direction": "malicious_if_score_above_threshold",
+  "definition": "-logit D(x, E(x)); malicious jika skor > ambang"
+ },
+ "threshold": {
+  "policy": "f1_weighted",
+  "prevalence": 0.1,
+  "target_fpr": 0.05,
+  "fit_on": "validation",
+  "value": 0.31700158504017895,
+  "val_weighted_f1": 0.1384898848665924
+ },
+ "preprocessing": {
+  "dataset": "NSL-KDD",
+  "schema_hash": "7dfe867f1b721cdd",
+  "n_features": 121,
+  "scaler_fit": "normal"
+ },
+ "data_split": {
+  "seed": 2,
+  "val_fraction": 0.2,
+  "n_train": 100778,
+  "n_train_normal": 53874,
+  "n_val": 25195
+ },
+ "validation": {
+  "auc": 0.18257723527004932,
+  "direction_ok": false,
+  "metrics_at_threshold": {
+   "TP": 1165,
+   "TN": 12967,
+   "FP": 502,
+   "FN": 10561,
+   "accuracy": 0.5609049414566383,
+   "precision": 0.6988602279544092,
+   "recall": 0.09935186764455058,
+   "TPR": 0.09935186764455058,
+   "FPR": 0.03727076991610365,
+   "F1": 0.17397147763757184
+  }
+ },
+ "training": {
+  "torch_version": "2.15.0",
+  "created_at": "2026-11-07T15:29:56",
+  "train_seconds": 12.7
+ }
+}

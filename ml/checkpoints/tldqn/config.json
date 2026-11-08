@@ -1,0 +1,59 @@
+{
+ "dqn": {
+  "hidden": 128,
+  "n_hidden": 2,
+  "gamma": 0.9,
+  "lr": 0.05,
+  "optimizer": "sgd",
+  "batch_size": 64,
+  "buffer_size": 20000,
+  "min_buffer": 500,
+  "target_update_steps": 200,
+  "eps_start": 1.0,
+  "eps_end": 0.05,
+  "eps_decay_episodes": 1500,
+  "seed": 1
+ },
+ "env": {
+  "prr_d50": 120.0,
+  "prr_width": 10.0,
+  "stability_min": 0.8,
+  "malicious_fraction": 0.1,
+  "p_fwd_normal": 0.98,
+  "p_fwd_malicious": 0.3,
+  "trust_obs": 10,
+  "energy_min": 0.3,
+  "r_success": 1.0,
+  "r_fail": 1.0,
+  "c_hop": 0.05,
+  "c_energy": 0.1,
+  "max_hops": 12
+ },
+ "n_source": 50,
+ "n_target": 100,
+ "source_episodes": 3000,
+ "target_episodes": 3000,
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "state_dim": 44,
+ "action_dim": 6,
+ "slot_features": [
+  "valid",
+  "trust",
+  "link_quality",
+  "stability",
+  "energy",
+  "progress",
+  "is_dest"
+ ],
+ "node_features": [
+  "remaining",
+  "own_energy"
+ ],
+ "total_seconds": 31.7
+}

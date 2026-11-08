@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HieMulti-Block · End-to-End Performance Dashboard</title>
+<style>
+:root{--bg:#0b1220;--panel:#111a2e;--panel2:#16213a;--line:#24324f;--ink:#e6edf7;--mute:#93a4c2;
+--acc:#4dabf7;--ok:#51cf66;--warn:#fcc419;--bad:#ff6b6b;--sink:#b197fc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc)}
+header{padding:18px 28px 10px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0f1a33,#0b1220)}
+header h1{margin:0;font-size:20px;letter-spacing:.2px}
+header .sub{color:var(--mute);font-size:12px;margin-top:4px}
+.filters{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.97);border-bottom:1px solid var(--line);
+padding:10px 28px;display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+.fgroup{display:flex;flex-direction:column;gap:4px}
+.fgroup>span{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--mute)}
+.fgroup .opts{display:flex;gap:6px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);
+padding:4px 10px;border-radius:14px;font-size:12px;cursor:pointer}
+.chip input{accent-color:var(--acc);margin:0}
+select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font:inherit}
+:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+main{padding:18px 28px 40px;max-width:1500px;margin:auto}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:22px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--mute)}
+.kpi .v{font-size:22px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.kpi .u{font-size:12px;color:var(--mute);font-weight:400;margin-left:3px}
+.kpi .s{font-size:11px;color:var(--mute);margin-top:2px}
+section{margin-bottom:26px}
+section>h2{font-size:16px;margin:0 0 10px;padding-left:10px;border-left:4px solid var(--acc)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.card h3{margin:0 0 8px;font-size:14px}
+.grid2{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}
+@media(max-width:1000px){.grid2{grid-template-columns:1fr}}
+.mute{color:var(--mute);font-size:12px}
+.na{color:var(--warn);font-weight:600}
+.note{border-left:3px solid var(--warn);background:#2a2412;padding:7px 10px;font-size:12px;margin:8px 0;border-radius:4px}
+.note.info{border-color:var(--acc);background:#10233c}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{border-bottom:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:var(--mute);font-weight:600;position:sticky;top:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.tablewrap{max-height:360px;overflow:auto;border:1px solid var(--line);border-radius:6px}
+.pill{display:inline-block;padding:0 8px;border-radius:10px;font-size:11px;font-weight:600}
+.pill.ok{background:#173d24;color:var(--ok)}.pill.bad{background:#47191c;color:var(--bad)}
+.pill.warn{background:#3d3311;color:var(--warn)}.pill.gt{background:#3a2050;color:#e599f7}
+.flow{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap}
+.fstep{flex:1 1 150px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:10px}
+.fstep .t{font-size:12px;font-weight:700;color:var(--acc)}
+.fstep .m{font-size:18px;font-weight:700;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.fstep .d{font-size:11px;color:var(--mute)}
+.farrow{align-self:center;color:var(--mute);font-size:18px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--mute);margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+svg text{font-family:inherit}
+.cm{display:grid;grid-template-columns:auto 1fr 1fr;gap:4px;font-size:12px;max-width:340px}
+.cm div{padding:8px;border-radius:4px;text-align:center}
+.cm .h{color:var(--mute);background:none}
+button.btn{background:var(--acc);color:#0b1220;border:0;border-radius:6px;padding:5px 12px;font:inherit;font-weight:600;cursor:pointer}
+footer{color:var(--mute);font-size:11.5px;border-top:1px solid var(--line);padding:14px 28px}
+</style>
+</head>
+<body>
+<header>
+<h1>HieMulti-Block · End-to-End Performance Dashboard</h1>
+<div class="sub" id="meta"></div>
+</header>
+
+<div class="filters" role="region" aria-label="Filter eksperimen">
+ <div class="fgroup"><span>Jumlah sensor</span><select id="fN" aria-label="Jumlah sensor"></select></div>
+ <div class="fgroup"><span>Seed</span><select id="fS" aria-label="Seed"></select></div>
+ <div class="fgroup"><span>Tahap</span><div class="opts" id="fStage"></div></div>
+ <div class="fgroup"><span>Routing</span><div class="opts" id="fPolicy"></div></div>
+ <div class="fgroup"><span>Sumber trust</span><div class="opts" id="fTrust"></div></div>
+ <div class="fgroup"><span>Konfigurasi fokus (KPI, peta)</span><select id="fFocus" aria-label="Konfigurasi fokus"></select></div>
+ <div class="fgroup"><span>Ground truth</span><label class="chip"><input type="checkbox" id="fGT" checked>tampilkan label (evaluasi)</label></div>
+</div>
+
+<main>
+<div class="mute" id="filterSummary" aria-live="polite" style="margin-bottom:10px"></div>
+<div class="kpis" id="kpis"></div>
+
+<section id="sec6"><h2>End-to-End Security Effectiveness</h2>
+ <div class="card"><div class="flow" id="flow"></div>
+ <div class="mute" style="margin-top:8px">Metrik untuk konfigurasi fokus, dirata-rata/dijumlah pada skenario terfilter. Panah putus-putus menandai keterkaitan yang
+ <b>belum</b> diimplementasikan (mis. hasil deteksi belum mengubah routing).</div></div>
+</section>
+
+<section id="sec1"><h2>1 · Network Performance</h2>
+ <div class="grid2">
+  <div class="card"><h3>Topologi Modified Honeycomb</h3><div class="mute" id="mapNote"></div>
+   <svg id="map" viewBox="0 0 1000 1000" role="img" aria-label="Peta sensor, sink, dan rute konfigurasi fokus" style="width:100%;background:#0d1628;border:1px solid var(--line);border-radius:8px"></svg>
+   <div class="legend">
+    <span><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#51cf66"/></svg>trust input tinggi</span>
+    <span><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#fcc419"/></svg>trust 0.5</span>
+    <span><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#ff6b6b"/></svg>trust rendah</span>
+    <span><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#6c7a96"/></svg>trust tidak dipakai</span>
+    <span><svg width="16" height="16"><polygon points="8,1 15,15 1,15" fill="none" stroke="#e599f7" stroke-width="2"/></svg>malicious (ground truth)</span>
+    <span><svg width="14" height="14"><rect x="1" y="1" width="12" height="12" fill="#b197fc"/></svg>edge sink</span>
+    <span><svg width="24" height="8"><line x1="0" y1="4" x2="24" y2="4" stroke="#4dabf7" stroke-width="2"/></svg>next-hop</span>
+    <span><svg width="24" height="8"><line x1="0" y1="4" x2="24" y2="4" stroke="#ff6b6b" stroke-width="2"/></svg>next-hop ke malicious</span>
+   </div></div>
+  <div class="card"><h3>Ringkasan jaringan (skenario terfilter)</h3><div id="netSummary"></div></div>
+ </div>
+ <div class="grid3" id="netCharts"></div>
+</section>
+
+<section id="sec2"><h2>2 · Intelligent Routing — TLDQN</h2>
+ <div class="grid2">
+  <div class="card"><h3>Rute & next-hop sensor terpilih</h3><div id="routeDetail" aria-live="polite"><p class="mute">Klik sensor di peta untuk melihat rutenya.</p></div></div>
+  <div class="card"><h3>Perbandingan routing (skenario terfilter)</h3><div id="routeCompare"></div></div>
+ </div>
+ <div class="grid3" id="routeCharts"></div>
+ <div class="card"><h3>Uji berpasangan (uji tanda dua sisi, skenario terfilter)</h3>
+  <div class="mute">Pembanding: <select id="fBase" aria-label="Konfigurasi pembanding"></select> — dibandingkan dengan konfigurasi fokus pada pasangan (n, seed) yang sama.</div>
+  <div id="pairTests"></div></div>
+ <div class="card"><h3>Diagnosis keputusan TLDQN tahap-2 (seluruh 27 skenario)</h3><div id="probe"></div></div>
+</section>
+
+<section id="sec3"><h2>3 · Intrusion Detection — Bi-GAN & DTO</h2>
+ <div class="note">Bi-GAN pada run NS-3 memakai keputusan per node dari <code>ml/export_decisions.py</code> (pipeline lama; fitur = sampel NSL-KDD yang ditugaskan ke node).
+ Hasil NSL-KDD offline (checkpoint refaktor) ditampilkan terpisah di bawah dan <b>tidak</b> dicampur dengan hasil NS-3.</div>
+ <div class="grid3" id="detCards"></div>
+ <div class="grid3" id="detCharts"></div>
+ <div class="card"><h3>Evaluasi offline NSL-KDD (bukan simulasi NS-3)</h3><div id="nslkdd"></div></div>
+</section>
+
+<section id="sec4"><h2>4 · Trust & Behavioral Monitoring</h2>
+ <div class="note info">Trust dihitung <b>hanya</b> dari observasi watchdog tetangga (telemetry NS-3 run Stage 1); trust ini adalah <b>input</b> routing Stage 2.
+ Ground truth (label) hanya dipakai di bagian ini untuk evaluasi. Aturan tampilan: <i>suspicious</i> = trust &lt; 0.5 dengan &ge; 10 observasi;
+ <i>belum cukup terobservasi</i> = &lt; 10 observasi.</div>
+ <div class="grid3" id="trustCards"></div>
+ <div class="grid3" id="trustCharts"></div>
+ <div class="card"><h3>Trust & perilaku per node (skenario peta)</h3><div class="tablewrap" id="trustTable"></div></div>
+</section>
+
+<section id="sec5"><h2>5 · Intrusion Prevention — IPS</h2>
+ <div class="grid2">
+  <div class="card"><h3>Aksi pencegahan (skenario terfilter)</h3><div id="ipsSummary"></div></div>
+  <div class="card"><h3>Dampak pencegahan terhadap jaringan</h3><div id="ipsImpact"></div></div>
+ </div>
+ <div class="grid3" id="ipsCharts"></div>
+</section>
+
+<section id="sec7"><h2>7 · Experiment Comparison</h2>
+ <div class="card"><h3>Ketersediaan run</h3><div id="avail"></div></div>
+ <div class="card"><h3>Tabel perbandingan (rerata ± sd pada skenario terfilter)</h3><div class="tablewrap" id="cmpTable"></div></div>
+</section>
+</main>
+<footer id="footer"></footer>
+
+<script>
+"use strict";
+const D = __DATA__;
+const $ = id => document.getElementById(id);
+const NS = 'http://www.w3.org/2000/svg';
+const NA = '<span class="na">Not Available</span>';
+const COLORS = {step1_tldqn:'#51cf66', step1_greedy:'#ff922b', stage1:'#adb5bd', stage2:'#4dabf7', ctrl0:'#b197fc'};
+const DASH = {step1_tldqn:'6 4', step1_greedy:'2 3', stage1:'', stage2:'', ctrl0:'8 3 2 3'};
+const MARK = {step1_tldqn:'tri', step1_greedy:'sq', stage1:'circ', stage2:'dia', ctrl0:'circ'};
+const FACETS = {
+  stage: {step1:'Langkah-1', stage1:'Stage 1', stage2:'Stage 2', control:'Kontrol'},
+  policy: {TLDQN:'TLDQN', Greedy:'Greedy'},
+  trust: {gt:'Ground-truth (tersimulasi)', uniform:'Trust 0.5', telemetry:'Telemetry', none_used:'Tidak dipakai'}};
+const fmt = (x, d=2) => (x===null || x===undefined || !isFinite(x)) ? '–' : Number(x).toLocaleString('id-ID',{minimumFractionDigits:d, maximumFractionDigits:d});
+const fint = x => (x===null||x===undefined||!isFinite(x)) ? '–' : Math.round(x).toLocaleString('id-ID');
+const mean = a => a.length ? a.reduce((s,x)=>s+x,0)/a.length : NaN;
+const sd = a => { if(a.length<2) return NaN; const m=mean(a); return Math.sqrt(a.reduce((s,x)=>s+(x-m)**2,0)/(a.length-1)); };
+const sum = a => a.reduce((s,x)=>s+x,0);
+function el(tag, attrs, parent){ const e=document.createElementNS(NS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); if(parent) parent.appendChild(e); return e; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+// ---------------- filter ----------------
+$('meta').textContent = `Data: hasil run di repository (commit ${D.meta.git}, dibangun ${D.meta.built_at}). ${D.meta.ns3}; ${D.meta.grayhole}. Tidak ada data dummy; halaman ini tidak menjalankan simulasi.`;
+$('fN').add(new Option('Semua (20–100)','all')); D.nodes.forEach(n=>$('fN').add(new Option(n,n)));
+$('fS').add(new Option('Semua (1–3)','all')); D.seeds.forEach(s=>$('fS').add(new Option(s,s)));
+function chips(box, facet){ Object.entries(FACETS[facet]).forEach(([k,v])=>{ const l=document.createElement('label'); l.className='chip';
+  l.innerHTML=`<input type="checkbox" data-f="${facet}" value="${k}" checked>${v}`; $(box).appendChild(l); }); }
+chips('fStage','stage'); chips('fPolicy','policy'); chips('fTrust','trust');
+function checked(f){ return [...document.querySelectorAll(`input[data-f="${f}"]`)].filter(i=>i.checked).map(i=>i.value); }
+function visibleConfigs(){ const st=checked('stage'), po=checked('policy'), tr=checked('trust');
+  return Object.keys(D.configs).filter(k=>{ const c=D.configs[k]; return st.includes(c.stage)&&po.includes(c.policy)&&tr.includes(c.trust); }); }
+function scenKeys(){ const ns = $('fN').value==='all' ? D.nodes : [+$('fN').value]; const ss = $('fS').value==='all' ? D.seeds : [+$('fS').value];
+  const out=[]; ns.forEach(n=>ss.forEach(s=>out.push(n+'_'+s))); return out; }
+function runsOf(k){ return scenKeys().filter(key=>D.runs[k][key]).map(key=>[key, D.runs[k][key]]); }
+function metricVals(k, m){ return runsOf(k).map(([,r])=>r.m[m]).filter(v=>v!==null&&v!==undefined&&isFinite(v)); }
+const showGT = () => $('fGT').checked;
+let FOCUS=null, SEL=null;
+
+// ---------------- helper statistik ----------------
+function signTest(diffs, better){ let w=0,l=0; diffs.forEach(d=>{ if(d*better>0) w++; else if(d*better<0) l++; });
+  const m=w+l, t=diffs.length-m; if(!m) return {w,l,t,p:1};
+  const lc=[0]; for(let i=1;i<=m;i++) lc.push(lc[i-1]+Math.log(i));
+  let p=0; for(let i=0;i<=Math.min(w,l);i++) p+=Math.exp(lc[m]-lc[i]-lc[m-i]-m*Math.log(2));
+  return {w,l,t,p:Math.min(1,2*p)}; }
+function auc(scores, labels){ const pos=[],neg=[]; scores.forEach((s,i)=>(labels[i]?pos:neg).push(s)); if(!pos.length||!neg.length) return NaN;
+  let g=0; pos.forEach(a=>neg.forEach(b=>{ g+= a>b?1:(a===b?0.5:0); })); return g/(pos.length*neg.length); }
+function conf(tp,tn,fp,fn){ const P=tp+fp, R=tp+fn, N=tp+tn+fp+fn;
+  const prec=P?tp/P:NaN, rec=R?tp/R:NaN; return {tp,tn,fp,fn, acc:N?(tp+tn)/N:NaN, prec, rec, f1:(prec+rec)?2*prec*rec/(prec+rec):NaN, fpr:(fp+tn)?fp/(fp+tn):NaN}; }
+function trustInput(k, key){ const n=+key.split('_')[0];
+  if(k==='step1_tldqn') return D.trust_sim[key];
+  if(k==='stage2') return D.trust[key] ? D.trust[key].map(r=>r[0]) : null;
+  if(k==='stage1'||k==='ctrl0') return Array(n).fill(0.5);
+  return null; }
+function viaMal(paths, gt){ return paths.filter(p=>p.slice(1,-1).some(v=>gt[v])).length; }
+
+// ---------------- charts ----------------
+function lineChart(title, unit, metricFn, opts={}){
+  const box=document.createElement('div'); box.className='card';
+  const W=520,H=270,L=58,R=12,T=30,B=40; const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':title+' terhadap jumlah sensor',style:'width:100%'});
+  const ns = $('fN').value==='all' ? D.nodes : [+$('fN').value];
+  const series = visibleConfigs().map(k=>({k, pts: ns.map(n=>{ const ss=$('fS').value==='all'?D.seeds:[+$('fS').value];
+      const v=ss.map(s=>D.runs[k][n+'_'+s]).filter(Boolean).map(r=>metricFn(r,k,n)).filter(x=>x!==null&&x!==undefined&&isFinite(x));
+      return v.length?[n,mean(v)]:null; }).filter(Boolean)})).filter(s=>s.pts.length);
+  const tl=el('text',{x:L,y:18,'font-size':13,'font-weight':700,fill:'#e6edf7'},svg); tl.textContent=title+(unit?` (${unit})`:'');
+  if(!series.length){ const t=el('text',{x:W/2,y:H/2,'text-anchor':'middle',fill:'#fcc419','font-size':13},svg); t.textContent='Not Available untuk filter ini'; box.appendChild(svg); return box; }
+  const ys=[].concat(...series.map(s=>s.pts.map(p=>p[1]))); let lo=Math.min(...ys), hi=Math.max(...ys);
+  const dmin=lo, dmax=hi; if(opts.zero) lo=Math.min(0,lo); const pad=(hi-lo)*0.12||Math.abs(hi)*0.05||1; lo-=pad; hi+=pad;
+  if(dmin>=0) lo=Math.max(0,lo);                      // besaran non-negatif: sumbu tidak di bawah 0
+  if(unit==='%' && dmax<=100) hi=Math.min(100,hi);    // persentase: tidak lewat 100
+  const dec=Math.min(3,Math.max(0,Math.ceil(-Math.log10((hi-lo)/4||1))+1));
+  const xs = ns.length>1 ? ns : [ns[0]-10, ns[0], ns[0]+10];
+  const x=n=>L+(W-L-R)*(n-xs[0])/(xs[xs.length-1]-xs[0]), y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));
+  for(let i=0;i<=4;i++){ const v=lo+(hi-lo)*i/4; el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'#1d2a45'},svg);
+    const t=el('text',{x:L-6,y:y(v)+4,'text-anchor':'end','font-size':10.5,fill:'#93a4c2'},svg); t.textContent=fmt(v, dec); }
+  ns.forEach(n=>{ const t=el('text',{x:x(n),y:H-B+15,'text-anchor':'middle','font-size':10.5,fill:'#93a4c2'},svg); t.textContent=n; });
+  const xl=el('text',{x:(L+W)/2,y:H-6,'text-anchor':'middle','font-size':10.5,fill:'#93a4c2'},svg); xl.textContent='jumlah sensor';
+  series.forEach(s=>{ if(s.pts.length>1) el('polyline',{points:s.pts.map(p=>x(p[0])+','+y(p[1])).join(' '),fill:'none',stroke:COLORS[s.k],'stroke-width':2.2,'stroke-dasharray':DASH[s.k]},svg);
+    s.pts.forEach(p=>{ const m=marker(svg,x(p[0]),y(p[1]),MARK[s.k],COLORS[s.k]); const ti=el('title',{},m); ti.textContent=`${D.configs[s.k].short}, n=${p[0]}: ${fmt(p[1],3)} ${unit||''}`; }); });
+  box.appendChild(svg); box.appendChild(legendEl(series.map(s=>s.k))); if(opts.note){ const d=document.createElement('div'); d.className='mute'; d.innerHTML=opts.note; box.appendChild(d); }
+  return box; }
+function marker(svg,cx,cy,kind,color){ let m; if(kind==='sq') m=el('rect',{x:cx-4,y:cy-4,width:8,height:8},svg);
+  else if(kind==='tri') m=el('polygon',{points:`${cx},${cy-5} ${cx+5},${cy+4} ${cx-5},${cy+4}`},svg);
+  else if(kind==='dia') m=el('polygon',{points:`${cx},${cy-5.5} ${cx+5.5},${cy} ${cx},${cy+5.5} ${cx-5.5},${cy}`},svg);
+  else m=el('circle',{cx,cy,r:4},svg); m.setAttribute('fill',color); m.setAttribute('stroke','#0b1220'); return m; }
+function legendEl(keys){ const d=document.createElement('div'); d.className='legend';
+  keys.forEach(k=>{ d.innerHTML+=`<span><svg width="26" height="10"><line x1="0" y1="5" x2="26" y2="5" stroke="${COLORS[k]}" stroke-width="3" stroke-dasharray="${DASH[k]}"/></svg>${esc(D.configs[k].short)}</span>`; }); return d; }
+function barChart(title, unit, items, opts={}){ // items: [{label, value, color, note}]
+  const box=document.createElement('div'); box.className='card'; const W=520, rowH=26, L=210, R=70, T=28;
+  const H=T+rowH*Math.max(1,items.length)+10; const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':title,style:'width:100%'});
+  const tl=el('text',{x:0,y:17,'font-size':13,'font-weight':700,fill:'#e6edf7'},svg); tl.textContent=title+(unit?` (${unit})`:'');
+  const vals=items.map(i=>i.value).filter(v=>isFinite(v)); const mx=Math.max(opts.max||0, ...vals, 1e-9);
+  items.forEach((it,i)=>{ const yy=T+i*rowH; const t=el('text',{x:L-8,y:yy+16,'text-anchor':'end','font-size':11.5,fill:'#c9d4e6'},svg); t.textContent=it.label;
+    if(!isFinite(it.value)){ const n=el('text',{x:L,y:yy+16,'font-size':11.5,fill:'#fcc419'},svg); n.textContent='Not Available'; return; }
+    const w=(W-L-R)*it.value/mx; const r=el('rect',{x:L,y:yy+4,width:Math.max(1,w),height:rowH-10,fill:it.color||'#4dabf7',rx:2},svg);
+    const ti=el('title',{},r); ti.textContent=`${it.label}: ${fmt(it.value,3)} ${unit||''}`;
+    const v=el('text',{x:L+w+6,y:yy+16,'font-size':11.5,fill:'#e6edf7'},svg); v.textContent=fmt(it.value, opts.dec??2); });
+  box.appendChild(svg); if(opts.note){ const d=document.createElement('div'); d.className='mute'; d.innerHTML=opts.note; box.appendChild(d); } return box; }
+function histChart(title, groups, bins=10){ // groups: [{label,color,values}]
+  const box=document.createElement('div'); box.className='card'; const W=520,H=260,L=46,R=12,T=30,B=40;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':title,style:'width:100%'});
+  const tl=el('text',{x:L,y:18,'font-size':13,'font-weight':700,fill:'#e6edf7'},svg); tl.textContent=title;
+  if(!groups.some(g=>g.values.length)){ const t=el('text',{x:W/2,y:H/2,'text-anchor':'middle',fill:'#fcc419'},svg); t.textContent='Not Available untuk filter ini'; box.appendChild(svg); return box; }
+  const counts=groups.map(g=>{ const c=Array(bins).fill(0); g.values.forEach(v=>{ c[Math.min(bins-1,Math.max(0,Math.floor(v*bins)))]++; }); return c.map(x=>g.values.length?x/g.values.length:0); });
+  const mx=Math.max(...counts.flat(),1e-9), bw=(W-L-R)/bins, gw=bw/groups.length;
+  for(let i=0;i<=4;i++){ const v=mx*i/4, yy=T+(H-T-B)*(1-i/4); el('line',{x1:L,x2:W-R,y1:yy,y2:yy,stroke:'#1d2a45'},svg); const t=el('text',{x:L-5,y:yy+4,'text-anchor':'end','font-size':10,fill:'#93a4c2'},svg); t.textContent=Math.round(v*100)+'%'; }
+  counts.forEach((c,gi)=>c.forEach((v,b)=>{ const h=(H-T-B)*v/mx; const r=el('rect',{x:L+b*bw+gi*gw+1,y:H-B-h,width:gw-2,height:h,fill:groups[gi].color},svg);
+    const ti=el('title',{},r); ti.textContent=`${groups[gi].label}, trust ${(b/bins).toFixed(1)}–${((b+1)/bins).toFixed(1)}: ${Math.round(v*100)}%`; }));
+  for(let b=0;b<=bins;b+=2){ const t=el('text',{x:L+b*bw,y:H-B+14,'text-anchor':'middle','font-size':10,fill:'#93a4c2'},svg); t.textContent=(b/bins).toFixed(1); }
+  const xl=el('text',{x:(L+W)/2,y:H-6,'text-anchor':'middle','font-size':10.5,fill:'#93a4c2'},svg); xl.textContent='trust (fraksi node per kelas)';
+  box.appendChild(svg); const lg=document.createElement('div'); lg.className='legend';
+  groups.forEach(g=>{ lg.innerHTML+=`<span><svg width="12" height="12"><rect width="12" height="12" fill="${g.color}"/></svg>${esc(g.label)} (${g.values.length} node)</span>`; }); box.appendChild(lg); return box; }
+function scatterChart(title, pts, xl, yl){ // pts [{x,y,color,label,shape}]
+  const box=document.createElement('div'); box.className='card'; const W=520,H=300,L=48,R=14,T=30,B=42;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':title,style:'width:100%'});
+  const tl=el('text',{x:L,y:18,'font-size':13,'font-weight':700,fill:'#e6edf7'},svg); tl.textContent=title;
+  if(!pts.length){ const t=el('text',{x:W/2,y:H/2,'text-anchor':'middle',fill:'#fcc419'},svg); t.textContent='Not Available untuk filter ini'; box.appendChild(svg); return box; }
+  const x=v=>L+(W-L-R)*v, y=v=>T+(H-T-B)*(1-v);
+  for(let i=0;i<=4;i++){ const v=i/4; el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'#1d2a45'},svg); el('line',{x1:x(v),x2:x(v),y1:T,y2:H-B,stroke:'#1d2a45'},svg);
+    const a=el('text',{x:L-5,y:y(v)+4,'text-anchor':'end','font-size':10,fill:'#93a4c2'},svg); a.textContent=v.toFixed(2);
+    const b=el('text',{x:x(v),y:H-B+14,'text-anchor':'middle','font-size':10,fill:'#93a4c2'},svg); b.textContent=v.toFixed(2); }
+  el('line',{x1:x(0),y1:y(0),x2:x(1),y2:y(1),stroke:'#5c6b88','stroke-dasharray':'4 4'},svg);
+  pts.forEach(p=>{ const m=marker(svg,x(p.x),y(p.y),p.shape||'circ',p.color); m.setAttribute('opacity','0.85'); const ti=el('title',{},m); ti.textContent=p.label; });
+  const a=el('text',{x:(L+W)/2,y:H-8,'text-anchor':'middle','font-size':10.5,fill:'#93a4c2'},svg); a.textContent=xl;
+  const b=el('text',{x:12,y:(T+H-B)/2,'text-anchor':'middle','font-size':10.5,fill:'#93a4c2',transform:`rotate(-90 12 ${(T+H-B)/2})`},svg); b.textContent=yl;
+  box.appendChild(svg); return box; }
+function confGrid(title, c, unit){ const d=document.createElement('div'); d.className='card';
+  if(!c){ d.innerHTML=`<h3>${title}</h3>${NA}`; return d; }
+  const mx=Math.max(c.tp,c.tn,c.fp,c.fn,1); const cell=(v,good)=>`<div style="background:rgba(${good?'81,207,102':'255,107,107'},${0.12+0.6*v/mx})"><b>${fint(v)}</b></div>`;
+  d.innerHTML=`<h3>${title}</h3><div class="cm"><div class="h"></div><div class="h">Prediksi: malicious</div><div class="h">Prediksi: normal</div>
+   <div class="h">Aktual: malicious</div>${cell(c.tp,1)}${cell(c.fn,0)}<div class="h">Aktual: normal</div>${cell(c.fp,0)}${cell(c.tn,1)}</div>
+   <table style="margin-top:8px"><tr><th>Precision</th><th>Recall (detection rate)</th><th>F1</th><th>Accuracy</th><th>FPR</th></tr>
+   <tr><td class="n">${fmt(100*c.prec,1)}%</td><td class="n">${fmt(100*c.rec,1)}%</td><td class="n">${fmt(100*c.f1,1)}%</td><td class="n">${fmt(100*c.acc,1)}%</td><td class="n">${fmt(100*c.fpr,1)}%</td></tr></table>
+   <div class="mute">${unit}</div>`; return d; }
+
+// ---------------- KPI ----------------
+function kpi(label, value, unit, sub){ return `<div class="kpi"><div class="l">${label}</div><div class="v">${value}${unit?`<span class="u">${unit}</span>`:''}</div>${sub?`<div class="s">${sub}</div>`:''}</div>`; }
+function detAgg(k){ const r=runsOf(k); if(!r.length) return null;
+  const b=conf(sum(r.map(([,x])=>x.m.TP)),sum(r.map(([,x])=>x.m.TN)),sum(r.map(([,x])=>x.m.FP)),sum(r.map(([,x])=>x.m.FN)));
+  const d=conf(sum(r.map(([,x])=>x.m.dto_TP)),sum(r.map(([,x])=>x.m.dto_TN)),sum(r.map(([,x])=>x.m.dto_FP)),sum(r.map(([,x])=>x.m.dto_FN)));
+  return {bigan:b, dto:d}; }
+function ipsAgg(k){ const r=runsOf(k); if(!r.length) return null;
+  const blocked=sum(r.map(([,x])=>x.m.nodes_blocked)), hit=sum(r.map(([,x])=>x.m.attackers_blocked));
+  const att=sum(r.map(([,x])=>x.m.dto_TP+x.m.dto_FN)), nodes=sum(r.map(([key])=>+key.split('_')[0]));
+  return {blocked, hit, att, false:blocked-hit, normals:nodes-att, mitig:att?hit/att:NaN, fbr:(nodes-att)?(blocked-hit)/(nodes-att):NaN}; }
+function trustEval(){ // trust telemetry (dari Stage 1) pada node teramati, skenario terfilter
+  const sc=[],lab=[]; let obs=0, tot=0, malObs=0, malTot=0;
+  scenKeys().forEach(key=>{ const t=D.trust[key]; if(!t) return; const gt=D.gt[key];
+    t.forEach((r,j)=>{ tot++; if(gt[j]) malTot++; if(r[1]>0){ obs++; if(gt[j]) malObs++; sc.push(1-r[0]); lab.push(gt[j]); } }); });
+  return {auc:auc(sc,lab), obs, tot, malObs, malTot}; }
+function renderKPI(){ const k=FOCUS; const r=runsOf(k); const c=D.configs[k];
+  if(!r.length){ $('kpis').innerHTML=kpi('Konfigurasi fokus', NA,'', esc(c.short)); return; }
+  const m=x=>mean(metricVals(k,x)); const tx=metricVals(k,'flowmon_udp_tx_packets'), rx=metricVals(k,'flowmon_udp_rx_packets');
+  const vm=sum(r.map(([key,x])=>viaMal(x.paths,D.gt[key]))), srcs=sum(r.map(([key])=>+key.split('_')[0]));
+  const det=detAgg(k), ips=ipsAgg(k), te=trustEval();
+  $('kpis').innerHTML =
+   kpi('PDR', fmt(m('pdr_percent'),2), '%', `rerata ${r.length} run · ${esc(c.short)}`)+
+   kpi('Packet drop ratio', fmt(m('packet_drop_ratio_percent'),2), '%', 'FlowMonitor (UDP sensor)')+
+   kpi('Throughput', fmt(m('throughput_kbps'),2), 'kbps', 'UDP sensor')+
+   kpi('Latency end-to-end', fmt(m('latency_ms'),3), 'ms', 'rerata per paket diterima')+
+   kpi('Energi sensor', fmt(m('energy_consumption_J'),2), 'J', 'total semua sensor / run')+
+   kpi('Network lifetime', fmt(m('network_lifetime_s')/86400,1), 'hari', 'proyeksi: energi awal / daya rata-rata')+
+   kpi('Paket dikirim / diterima', tx.length===r.length? fint(sum(tx))+' / '+fint(sum(rx)) : NA, '', tx.length===r.length?'FlowMonitor UDP, total terfilter':'tidak dicatat di run langkah-1')+
+   kpi('Sumber lewat malicious', fmt(100*vm/srcs,1), '%', `${fint(vm)} dari ${fint(srcs)} rute (ground truth)`)+
+   kpi('Bi-GAN F1 (NS-3)', fmt(100*det.bigan.f1,1), '%', 'pool semua window monitoring')+
+   kpi('DTO F1 (NS-3)', fmt(100*det.dto.f1,1), '%', 'top-k, k = 10% node (diketahui a priori)')+
+   kpi('IPS: penyerang terisolasi', fmt(100*ips.mitig,1), '%', `${fint(ips.hit)} dari ${fint(ips.att)}; blok salah ${fint(ips.false)}`)+
+   kpi('Trust telemetry AUC', isFinite(te.auc)?fmt(te.auc,3):NA, '', `dari run Stage 1 (input Stage 2), bukan konfigurasi fokus; node teramati ${te.obs}/${te.tot}, malicious ${te.malObs}/${te.malTot}`); }
+
+// ---------------- 6. E2E flow ----------------
+function renderFlow(){ const k=FOCUS, c=D.configs[k], r=runsOf(k);
+  const st=(t,m,d,dash)=>({t,m,d,dash});
+  if(!r.length){ $('flow').innerHTML=NA; return; }
+  const n_nodes=sum(r.map(([key])=>+key.split('_')[0])), n_mal=sum(r.map(([key])=>D.gt[key].reduce((a,b)=>a+b,0)));
+  const tx=metricVals(k,'flowmon_udp_tx_packets'); const tel=r.map(([,x])=>x.tel).filter(Boolean);
+  const W=sum(r.map(([,x])=>x.m.wd_watches||0)), A=sum(r.map(([,x])=>x.m.wd_unobserved_rxfail||0));
+  const te=trustEval(); const vm=sum(r.map(([key,x])=>viaMal(x.paths,D.gt[key])));
+  const det=detAgg(k), ips=ipsAgg(k);
+  const trustTxt = {gt:['dari label','trust diturunkan dari ground truth (bukan metode tanpa label)'], uniform:['0.5','semua sensor 0.5 (tanpa informasi)'],
+    telemetry:[isFinite(te.auc)?'AUC '+fmt(te.auc,3):'–','dari watchdog run Stage 1; '+te.obs+'/'+te.tot+' node teramati'], none_used:['tidak dipakai','greedy memilih progres terbesar']}[c.trust];
+  const steps=[
+   st('Network Traffic', tx.length===r.length?fint(sum(tx))+' paket':fint(n_nodes)+' sensor', `${fint(n_nodes-n_mal)} normal · ${fint(n_mal)} malicious (ground truth, flooding + grayhole)`),
+   st('Telemetry Monitoring', c.telemetry?fint(W)+' watch':'Not Available', c.telemetry?`ambigu ${fmt(100*A/Math.max(W,1),1)}%; IP/MAC/PHY/energi per 30 s`:'run ini dibuat sebelum telemetry ada'),
+   st('Trust Evaluation', trustTxt[0], trustTxt[1], c.trust==='telemetry'?false:true),
+   st('TLDQN Routing', c.policy==='TLDQN'?fmt(100*vm/n_nodes,1)+'% lewat malicious':'Greedy: '+fmt(100*vm/n_nodes,1)+'%', `hop terencana ${fmt(mean(metricVals(k,'planned_hops_mean')),2)}; kebijakan ${c.policy}`),
+   st('Bi-GAN / DTO Detection', `F1 ${fmt(100*det.bigan.f1,1)}% / ${fmt(100*det.dto.f1,1)}%`, 'Bi-GAN: sampel NSL-KDD per node; DTO: laju kirim + energi terukur, k = 10% node diketahui a priori', true),
+   st('IPS Prevention', fint(ips.blocked)+' node diisolasi', `${fint(ips.hit)} penyerang, ${fint(ips.false)} blok salah (t = 8.3 s)`),
+   st('Network Performance', 'PDR '+fmt(mean(metricVals(k,'pdr_percent')),2)+'%', `throughput ${fmt(mean(metricVals(k,'throughput_kbps')),2)} kbps · latency ${fmt(mean(metricVals(k,'latency_ms')),3)} ms · energi ${fmt(mean(metricVals(k,'energy_consumption_J')),2)} J`)];
+  $('flow').innerHTML = steps.map((s,i)=>(i?`<span class="farrow" aria-hidden="true">${steps[i].dash?'⇢':'→'}</span>`:'')+
+    `<div class="fstep"><div class="t">${i+1}. ${s.t}</div><div class="m">${s.m}</div><div class="d">${s.d}</div></div>`).join('')+
+    `<div class="note" style="flex-basis:100%">Keterkaitan nyata di implementasi saat ini: trust telemetry Stage 1 → tabel rute Stage 2 (offline). Hasil Bi-GAN/DTO memicu isolasi IPS,
+     tetapi belum mengubah routing; node terisolasi masih meneruskan paket transit (langkah 5). DTO belum memakai telemetry (langkah 3).</div>`; }
+
+// ---------------- map ----------------
+const P=D.sensors.concat(D.sinks); const minX=Math.min(...P.map(p=>p[0]))-40, maxX=Math.max(...P.map(p=>p[0]))+40, minY=Math.min(...P.map(p=>p[1]))-40, maxY=Math.max(...P.map(p=>p[1]))+40;
+const SC=1000/Math.max(maxX-minX,maxY-minY), X=p=>(p[0]-minX)*SC, Y=p=>(p[1]-minY)*SC;
+function mapKey(){ const n=$('fN').value==='all'?100:+$('fN').value, s=$('fS').value==='all'?1:+$('fS').value; return n+'_'+s; }
+function pos(n,j){ return j<n?D.sensors[j]:D.sinks[j-n]; }
+function tcolor(t){ if(t===null||t===undefined) return '#6c7a96'; if(Math.abs(t-0.5)<1e-9) return '#fcc419';
+  const u=Math.max(0,Math.min(1,t)); return `rgb(${Math.round(255+(81-255)*u)},${Math.round(107+(207-107)*u)},${Math.round(107+(102-107)*u)})`; }
+function renderMap(){ const key=mapKey(), n=+key.split('_')[0], run=D.runs[FOCUS][key], gt=D.gt[key], svg=$('map'); svg.innerHTML='';
+  $('mapNote').innerHTML = `Skenario n=${n}, seed=${key.split('_')[1]} · rute: ${esc(D.configs[FOCUS].short)}`+(($('fN').value==='all'||$('fS').value==='all')?' — <span class="na">peta butuh satu skenario; pilih jumlah sensor & seed (default n=100, seed=1)</span>':'');
+  if(!run){ const t=el('text',{x:500,y:500,'text-anchor':'middle',fill:'#fcc419','font-size':28},svg); t.textContent='Not Available: tidak ada run untuk skenario ini'; return; }
+  const ti=trustInput(FOCUS,key);
+  el('defs',{},svg).innerHTML='<marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#4dabf7"/></marker><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#ff6b6b"/></marker><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#fcc419"/></marker>';
+  if(SEL!==null&&SEL<n) el('circle',{cx:X(D.sensors[SEL]),cy:Y(D.sensors[SEL]),r:150*SC,fill:'#4dabf7','fill-opacity':0.05,stroke:'#4dabf7','stroke-dasharray':'5 5'},svg);
+  const seen=new Set();
+  run.paths.forEach(p=>{ for(let i=0;i+1<p.length;i++){ const k=p[i]+'-'+p[i+1]; if(seen.has(k)) continue; seen.add(k); const a=pos(n,p[i]), b=pos(n,p[i+1]);
+    const bad=showGT()&&p[i+1]<n&&gt[p[i+1]]; el('line',{x1:X(a),y1:Y(a),x2:X(b),y2:Y(b),stroke:bad?'#ff6b6b':'#4dabf7','stroke-width':bad?2.2:1.5,'stroke-opacity':bad?0.9:0.5,'marker-end':bad?'url(#a2)':'url(#a1)'},svg); } });
+  if(SEL!==null&&SEL<n){ const p=run.paths[SEL]; for(let i=0;i+1<p.length;i++){ const a=pos(n,p[i]),b=pos(n,p[i+1]); el('line',{x1:X(a),y1:Y(a),x2:X(b),y2:Y(b),stroke:'#fcc419','stroke-width':5,'marker-end':'url(#a3)'},svg); } }
+  D.sinks.forEach((p,k)=>{ el('rect',{x:X(p)-12,y:Y(p)-12,width:24,height:24,rx:4,fill:'#b197fc'},svg); const t=el('text',{x:X(p),y:Y(p)-18,'text-anchor':'middle','font-size':15,'font-weight':700,fill:'#b197fc'},svg); t.textContent='Sink '+k; });
+  for(let j=0;j<n;j++){ const p=D.sensors[j], tr=ti?ti[j]:null; const obs=D.trust[key]?D.trust[key][j][1]:0;
+    const g=el('g',{tabindex:0,role:'button','aria-label':`Sensor ${j}`+(tr!==null?`, trust input ${tr.toFixed(2)}`:'')+(showGT()&&gt[j]?', malicious (ground truth)':'')},svg); g.style.cursor='pointer';
+    const r=7+Math.min(7,Math.sqrt(obs)/3); el('circle',{cx:X(p),cy:Y(p),r,fill:tcolor(tr),stroke:j===SEL?'#fff':'#0b1220','stroke-width':j===SEL?3:1.5},g);
+    if(showGT()&&gt[j]){ const x=X(p),y=Y(p),R=r+8; el('polygon',{points:`${x},${y-R} ${x+R*0.9},${y+R*0.62} ${x-R*0.9},${y+R*0.62}`,fill:'none',stroke:'#e599f7','stroke-width':2.5},g); }
+    const tt=el('text',{x:X(p)+r+2,y:Y(p)+4,'font-size':11,fill:'#93a4c2'},g); tt.textContent=j;
+    const pick=()=>{ SEL=j; renderMap(); renderRouteDetail(); renderTrustTable(); }; g.onclick=pick; g.onkeydown=e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); } }; } }
+
+// ---------------- 1. network ----------------
+function renderNetwork(){ const keys=scenKeys(), vis=visibleConfigs();
+  let nN=0,nM=0; keys.forEach(k=>{ nN+=D.gt[k].length; nM+=D.gt[k].reduce((a,b)=>a+b,0); });
+  let h=`<table><tr><th>Item</th><th class="n">Nilai</th></tr><tr><td>Skenario terfilter</td><td class="n">${keys.length}</td></tr>
+   <tr><td>Sensor normal / malicious <span class="pill gt">ground truth</span></td><td class="n">${fint(nN-nM)} / ${fint(nM)}</td></tr>
+   <tr><td>Edge sink</td><td class="n">4</td></tr></table><h3 style="margin-top:12px">Per konfigurasi</h3>
+   <table><tr><th>Konfigurasi</th><th class="n">Run</th><th class="n">Dikirim</th><th class="n">Diterima</th><th class="n">PDR %</th><th class="n">Drop %</th></tr>`;
+  vis.forEach(k=>{ const r=runsOf(k), tx=metricVals(k,'flowmon_udp_tx_packets'), rx=metricVals(k,'flowmon_udp_rx_packets'), full=r.length&&tx.length===r.length;
+    h+=`<tr><td><span style="color:${COLORS[k]}">■</span> ${esc(D.configs[k].short)}</td><td class="n">${r.length||NA}</td><td class="n">${full?fint(sum(tx)):NA}</td><td class="n">${full?fint(sum(rx)):NA}</td><td class="n">${r.length?fmt(mean(metricVals(k,'pdr_percent')),2):NA}</td><td class="n">${r.length?fmt(mean(metricVals(k,'packet_drop_ratio_percent')),2):NA}</td></tr>`; });
+  $('netSummary').innerHTML=h+'</table><div class="mute">Paket dikirim/diterima hanya dicatat pada run langkah-2 (baris FlowMonitor UDP di metrics).</div>';
+  const c=$('netCharts'); c.innerHTML='';
+  c.appendChild(lineChart('PDR','%',r=>r.m.pdr_percent));
+  c.appendChild(lineChart('Packet drop ratio','%',r=>r.m.packet_drop_ratio_percent));
+  c.appendChild(lineChart('Throughput','kbps',r=>r.m.throughput_kbps));
+  c.appendChild(lineChart('Latency end-to-end','ms',r=>r.m.latency_ms));
+  c.appendChild(lineChart('Energi semua sensor','J',r=>r.m.energy_consumption_J,{note:'Energi radio total sensor selama 600 s (model arus kelas CC2420).'}));
+  c.appendChild(lineChart('Network lifetime (proyeksi)','hari',r=>r.m.network_lifetime_s/86400,{note:'Proyeksi: energi awal 100 J / daya rata-rata terukur; bukan waktu habis energi yang disimulasikan.'})); }
+
+// ---------------- 2. routing ----------------
+function renderRouteDetail(){ const key=mapKey(), n=+key.split('_')[0], run=D.runs[FOCUS][key], gt=D.gt[key];
+  if(SEL===null||SEL>=n||!run){ $('routeDetail').innerHTML='<p class="mute">Klik sensor di peta untuk melihat rutenya.</p>'; return; }
+  const p=run.paths[SEL], ti=trustInput(FOCUS,key), lq=D.lq[key], tel=run.tel;
+  let h=`<div class="mute">Sensor ${SEL} → Sink ${p[p.length-1]-n} · ${p.length-1} hop · ${esc(D.configs[FOCUS].short)}</div>
+   <table><tr><th>Hop</th><th class="n">Trust input relay</th><th class="n">Link quality (model TLDQN)</th><th class="n">RSSI NS-3</th><th class="n">SNR NS-3</th><th class="n">MAC ACK / timeout</th><th class="n">Diteruskan / diamati (watchdog)</th><th>Label</th></tr>`;
+  for(let i=0;i+1<p.length;i++){ const a=p[i], b=p[i+1], hk=a+'-'+b, hop=tel&&tel.hops[hk];
+    const isSink=b>=n, nm=isSink?'Sink '+(b-n):'S'+b;
+    const fw = (!isSink&&tel)? tel.node.obs_watched[b] ? `${fint(tel.node.obs_forwarded[b]+tel.node.obs_forwarded_late[b])} / ${fint(tel.node.obs_watched[b])}` : 'tidak diamati' : (isSink?'–':NA);
+    h+=`<tr><td>S${a} → ${nm}</td><td class="n">${isSink?'1 (sink)':(ti?fmt(ti[b],3):'tidak dipakai')}</td><td class="n">${fmt(lq[hk],3)}</td>
+     <td class="n">${hop&&hop[0]!==null?fmt(hop[0],1)+' dBm':NA}</td><td class="n">${hop&&hop[1]!==null?fmt(hop[1],1)+' dB':NA}</td><td class="n">${hop?fint(hop[2])+' / '+fint(hop[3]):NA}</td>
+     <td class="n">${fw}</td><td>${showGT()&&!isSink&&gt[b]?'<span class="pill gt">malicious</span>':''}</td></tr>`; }
+  $('routeDetail').innerHTML=h+`</table><div class="mute">Link quality model = PRR geometris × stabilitas (lingkungan Python, masukan TLDQN). RSSI/SNR/MAC dari telemetry NS-3 run ini
+   (hanya run langkah-2). Watchdog: paket transit yang diserahkan ke relay dan terdengar diteruskan.</div>`; }
+function renderRouting(){ const vis=visibleConfigs(), keys=scenKeys();
+  let h=`<table><tr><th>Konfigurasi</th><th class="n">Rute lewat malicious</th><th class="n">Rute lengkap ke sink</th><th class="n">Delivery success (PDR)</th><th class="n">Hop terencana</th><th class="n">Drop grayhole / run</th></tr>`;
+  vis.forEach(k=>{ const r=runsOf(k); if(!r.length){ h+=`<tr><td>${esc(D.configs[k].short)}</td><td colspan="5">${NA}</td></tr>`; return; }
+    const tot=sum(r.map(([key])=>+key.split('_')[0])), vm=sum(r.map(([key,x])=>viaMal(x.paths,D.gt[key]))), comp=sum(r.map(([key,x])=>x.paths.filter(p=>p[p.length-1]>=+key.split('_')[0]).length));
+    h+=`<tr><td><span style="color:${COLORS[k]}">■</span> ${esc(D.configs[k].short)}</td><td class="n">${fint(vm)} / ${fint(tot)} (${fmt(100*vm/tot,1)}%)</td><td class="n">${fmt(100*comp/tot,1)}%</td>
+     <td class="n">${fmt(mean(metricVals(k,'pdr_percent')),2)}%</td><td class="n">${fmt(mean(metricVals(k,'planned_hops_mean')),2)}</td><td class="n">${fmt(mean(metricVals(k,'grayhole_drops')),1)}</td></tr>`; });
+  $('routeCompare').innerHTML=h+'</table><div class="mute">"Rute lewat malicious" memakai ground truth (evaluasi). Rute lengkap = tabel mencapai sink tanpa loop (divalidasi juga oleh NS-3).</div>';
+  const c=$('routeCharts'); c.innerHTML='';
+  c.appendChild(lineChart('Sumber yang rutenya lewat malicious','%',(r,k,n)=>100*viaMal(r.paths,D.gt[n+'_'+r._s])/n));
+  c.appendChild(lineChart('Paket dijatuhkan grayhole','paket / run',r=>r.m.grayhole_drops));
+  c.appendChild(lineChart('Hop terencana rata-rata','hop',r=>r.m.planned_hops_mean));
+  renderPairs(); renderProbe(); }
+function renderPairs(){ const base=$('fBase').value, k=FOCUS; const keys=scenKeys().filter(x=>D.runs[k][x]&&D.runs[base]&&D.runs[base][x]);
+  if(base===k||!keys.length){ $('pairTests').innerHTML=`<p>${NA} <span class="mute">(butuh dua konfigurasi berbeda dengan skenario yang sama)</span></p>`; return; }
+  const M=[['pdr_percent','PDR','%',+1],['packet_drop_ratio_percent','Drop ratio','%',-1],['throughput_kbps','Throughput','kbps',+1],['latency_ms','Latency','ms',-1],['energy_consumption_J','Energi','J',-1],['grayhole_drops','Drop grayhole','paket',-1]];
+  let h=`<table><tr><th>Metrik</th><th class="n">${esc(D.configs[k].short)}</th><th class="n">${esc(D.configs[base].short)}</th><th class="n">Selisih</th><th class="n">Lebih baik / seri / lebih buruk</th><th class="n">p</th></tr>`;
+  M.forEach(([m,l,u,b])=>{ const a=keys.map(x=>D.runs[k][x].m[m]), c=keys.map(x=>D.runs[base][x].m[m]); const t=signTest(a.map((v,i)=>v-c[i]),b);
+    h+=`<tr><td>${l}</td><td class="n">${fmt(mean(a),3)} ${u}</td><td class="n">${fmt(mean(c),3)} ${u}</td><td class="n">${fmt(mean(a)-mean(c),3)}</td><td class="n">${t.w} / ${t.t} / ${t.l}</td><td class="n">${t.p<0.001?t.p.toExponential(1):fmt(t.p,3)}</td></tr>`; });
+  $('pairTests').innerHTML=h+`</table><div class="mute">${keys.length} pasangan (n, seed). Uji tanda dua sisi, skenario seri dikeluarkan; skenario diperlakukan independen.
+   ${D.configs[k].stage!==D.configs[base].stage&&(D.configs[k].stage==='step1'||D.configs[base].stage==='step1')?' Run langkah-1 dibuat dengan binary sebelum telemetry; kesetaraan perilaku binary tidak diverifikasi langsung (pasif diuji hanya pada 3 skenario).':''}</div>`; }
+function renderProbe(){ const t=D.reports.tables, p=D.reports.probe; if(!t||!p){ $('probe').innerHTML=NA; return; }
+  $('probe').innerHTML=`<table><tr><th>Indikator (sumber: ml/reports/telemetry_step2_tables.json)</th><th class="n">Nilai</th></tr>
+   <tr><td>Sumber lewat malicious: Stage 1 → Stage 2 (langkah-1 trust GT)</td><td class="n">${t.stage1_none} → ${t.stage2_telemetry} (${t.step1_simulated})</td></tr>
+   <tr><td>Stage 2 lewat malicious yang tidak teramati / teramati di Stage 1</td><td class="n">${t.stage2_via_unobserved_mal} / ${t.stage2_via_observed_mal}</td></tr>
+   <tr><td>Keputusan yang berubah bila trust kandidat terpilih di-set 0 (sensitivitas Q-net)</td><td class="n">${p.flip_trust0} / ${p.decisions} (${fmt(100*p.flip_trust0/p.decisions,0)}%)</td></tr>
+   <tr><td>Entri yang memilih malicious teramati; alternatif lebih tepercaya dgn link quality lebih baik</td><td class="n">${p.mal_entries}; ${p.mal_alt_lq_better}</td></tr></table>
+   <div class="mute">Hipotesis (belum disimpulkan): kebijakan menukar trust dengan link quality secara suboptimal. Angka ini untuk seluruh 27 skenario, tidak mengikuti filter.</div>`; }
+
+// ---------------- 3. detection ----------------
+function renderDetection(){ const k=FOCUS, det=detAgg(k), c=$('detCards'); c.innerHTML='';
+  const r=runsOf(k); const win=r.length?mean(r.map(([,x])=>x.m.windows)):NaN;
+  c.appendChild(confGrid(`Bi-GAN · ${esc(D.configs[k].short)}`, det&&det.bigan, `Satuan: keputusan node × window (${fmt(win,0)} window/run, pool ${r.length} run). Ambang & model dari pipeline lama export_decisions.py.`));
+  c.appendChild(confGrid(`DTO · ${esc(D.configs[k].short)}`, det&&det.dto, `Satuan: satu keputusan per node pada t = 8.3 s (pool ${r.length} run). Bukti = laju kirim + energi terukur NS-3. DTO memilih tepat k = 10% node teratas; k = jumlah penyerang sebenarnya dan merupakan <b>input</b> algoritma (diketahui a priori), sehingga FP = FN dan precision = recall = F1.`));
+  const ex=document.createElement('div'); ex.className='card'; ex.innerHTML=`<h3>Perbandingan & keterbatasan</h3>
+   <table><tr><th>Metrik</th><th class="n">Bi-GAN</th><th class="n">DTO</th></tr>
+   ${['prec','rec','f1','acc','fpr'].map(m=>`<tr><td>${{prec:'Precision',rec:'Recall / detection rate',f1:'F1-score',acc:'Accuracy',fpr:'False positive rate'}[m]}</td><td class="n">${det?fmt(100*det.bigan[m],1)+'%':NA}</td><td class="n">${det?fmt(100*det.dto[m],1)+'%':NA}</td></tr>`).join('')}
+   <tr><td>Attack terdeteksi (TP)</td><td class="n">${det?fint(det.bigan.tp):NA}</td><td class="n">${det?fint(det.dto.tp):NA}</td></tr>
+   <tr><td>ROC-AUC (NS-3)</td><td class="n">${NA}</td><td class="n">${NA}</td></tr></table>
+   <div class="mute">Satuan berbeda (node×window vs node), jadi bandingkan rasio, bukan jumlah. ROC-AUC tidak tersedia untuk run NS-3 (skor per window tidak diekspor;
+   DTO tidak menghasilkan skor). Bi-GAN NS-3 identik antar konfigurasi routing karena keputusannya dari CSV yang sama; DTO (dan IPS) berubah dengan routing karena buktinya (laju kirim, energi) bergantung pada beban relay. DTO diberi k = 10% node a priori.</div>`; c.appendChild(ex);
+  const ch=$('detCharts'); ch.innerHTML='';
+  ch.appendChild(lineChart('F1 Bi-GAN (NS-3)','%',r=>{ const x=conf(r.m.TP,r.m.TN,r.m.FP,r.m.FN); return 100*x.f1; }));
+  ch.appendChild(lineChart('F1 DTO (NS-3)','%',r=>{ const x=conf(r.m.dto_TP,r.m.dto_TN,r.m.dto_FP,r.m.dto_FN); return 100*x.f1; }));
+  // deteksi per window (konfigurasi fokus)
+  const ts=r.map(([,x])=>x.ts).filter(Boolean);
+  if(ts.length){ const L=Math.min(...ts.map(t=>t.length)); const pts=[]; for(let w=0;w<L;w++){ const tp=sum(ts.map(t=>t[w][1])),tn=sum(ts.map(t=>t[w][2])),fp=sum(ts.map(t=>t[w][3])),fn=sum(ts.map(t=>t[w][4])); pts.push([ts[0][w][0], conf(tp,tn,fp,fn)]); }
+    const box=document.createElement('div'); box.className='card'; box.innerHTML=`<h3>Bi-GAN per window monitoring · ${esc(D.configs[k].short)}</h3>
+     <div class="tablewrap" style="max-height:260px"><table><tr><th class="n">t (s)</th><th class="n">TP</th><th class="n">FP</th><th class="n">FN</th><th class="n">Recall</th><th class="n">Precision</th></tr>
+     ${pts.map(([t,c])=>`<tr><td class="n">${fmt(t,1)}</td><td class="n">${c.tp}</td><td class="n">${c.fp}</td><td class="n">${c.fn}</td><td class="n">${fmt(100*c.rec,1)}%</td><td class="n">${fmt(100*c.prec,1)}%</td></tr>`).join('')}</table></div>
+     <div class="mute">Sumber: timeseries_&lt;n&gt;_s&lt;seed&gt;*.csv, dijumlah pada skenario terfilter. Isolasi IPS hanya memakai window pertama (t = 8.3 s).</div>`; ch.appendChild(box); }
+  const nk=D.nslkdd; if(!nk){ $('nslkdd').innerHTML=NA; return; }
+  const row=(s,v)=>`<tr><td>${s}</td><td class="n">${fint(v.n)}</td><td class="n">${fmt(100*v.prevalence,1)}%</td><td class="n">${fmt(v.AUC,3)}</td><td class="n">${fmt(100*v.precision,1)}%</td><td class="n">${fmt(100*v.recall,1)}%</td><td class="n">${fmt(100*v.F1,1)}%</td><td class="n">${fmt(100*v.FPR,2)}%</td></tr>`;
+  $('nslkdd').innerHTML=`<table><tr><th>Split NSL-KDD</th><th class="n">Sampel</th><th class="n">Prevalensi</th><th class="n">ROC-AUC</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">FPR</th></tr>
+   ${row('Validasi (ambang dipilih di sini)',nk.validation)}${row('Test (KDDTest+)',nk.test)}</table>
+   <div class="mute">Checkpoint ${esc(nk.checkpoint)} (refaktor fase 1, skor −logit D(x,E(x)), ambang ${fmt(nk.threshold.value,3)} kebijakan ${esc(nk.threshold.policy)}). Sumber: ${esc(nk.source)}.
+   Model ini <b>belum</b> dipakai oleh run NS-3. Arah skor bergantung pada seed dan arsitektur (AUC validasi per seed: docs/PAPER_DEVIATIONS.md bagian 2a.4).</div>`; }
+
+// ---------------- 4. trust ----------------
+function trustNodes(cfg){ // per node pada skenario terfilter: trust telemetry (Stage 1) + observasi run cfg
+  const out=[]; scenKeys().forEach(key=>{ const t=D.trust[key]; const run=D.runs[cfg]&&D.runs[cfg][key]; const tel=run&&run.tel; const gt=D.gt[key];
+    if(!t) return; t.forEach((r,j)=>{ out.push({key,j,mal:gt[j],trust:r[0],N:r[1],F:r[2],A:r[3],U:r[4],Dest:r[5],
+      obsW:tel?tel.node.obs_watched[j]:null, obsF:tel?tel.node.obs_forwarded[j]+tel.node.obs_forwarded_late[j]:null,
+      audTx:tel?tel.audit[j][0]:null, audN:tel?tel.audit[j][1]:null}); }); }); return out; }
+function telCfg(){ return D.configs[FOCUS].telemetry ? FOCUS : 'stage1'; }
+function renderTrust(){ const cfg=telCfg(), rows=trustNodes(cfg), c=$('trustCards'); c.innerHTML='';
+  const te=trustEval(); const susp=rows.filter(r=>r.N>=10&&r.trust<0.5), few=rows.filter(r=>r.N<10);
+  const box=document.createElement('div'); box.className='card';
+  box.innerHTML=`<h3>Ringkasan trust telemetry (skenario terfilter)</h3><table>
+   <tr><td>Node teramati (≥ 1 observasi)</td><td class="n">${fint(te.obs)} / ${fint(te.tot)}</td></tr>
+   <tr><td>Suspicious (trust &lt; 0.5, ≥ 10 observasi)</td><td class="n">${fint(susp.length)}${showGT()?` <span class="mute">(${susp.filter(r=>r.mal).length} malicious)</span>`:''}</td></tr>
+   <tr><td>Belum cukup terobservasi (&lt; 10 observasi)</td><td class="n">${fint(few.length)}${showGT()?` <span class="mute">(${few.filter(r=>r.mal).length} malicious)</span>`:''}</td></tr>
+   <tr><td>AUC (1 − trust) vs ground truth, node teramati</td><td class="n">${isFinite(te.auc)?fmt(te.auc,3):NA}</td></tr>
+   <tr><td>Malicious teramati</td><td class="n">${fint(te.malObs)} / ${fint(te.malTot)}</td></tr></table>
+   <div class="mute">Trust = Beta(1,1) dengan koreksi kategori ambigu (ml/telemetry_trust.py), dari run Stage 1. Observasi per-run di tabel/grafik memakai telemetry ${esc(D.configs[cfg].short)}.</div>`;
+  c.appendChild(box);
+  // rasio penerusan per kelas dari laporan (pooled, semua skenario run)
+  const rep=D.reports[cfg]; const pb=document.createElement('div'); pb.className='card';
+  if(rep&&rep.pooled){ const pl=rep.pooled; pb.innerHTML=`<h3>Forwarding ratio: estimasi vs perilaku sebenarnya · ${esc(D.configs[cfg].short)}</h3>
+   <table><tr><th>Kelas (ground truth)</th><th class="n">Watch</th><th class="n">Estimasi terkoreksi</th><th class="n">Buang ambigu</th><th class="n">Batas [lo, hi]</th><th class="n">Audit (aktual)</th></tr>
+   ${['malicious','normal'].map(cl=>{ const x=pl[cl]; const act=rows.filter(r=>(cl==='malicious')===!!r.mal&&r.audN); const a=sum(act.map(r=>r.audTx)), b=sum(act.map(r=>r.audN));
+     return `<tr><td>${cl}</td><td class="n">${fint(x.watched)}</td><td class="n"><b>${fmt(x.est_corrected,3)}</b></td><td class="n">${fmt(x.est,3)}</td><td class="n">[${fmt(x.lo,3)}, ${fmt(x.hi,3)}]</td><td class="n">${b?fmt(a/b,3):NA}</td></tr>`; }).join('')}</table>
+   <div class="mute">Estimasi: seluruh skenario run ini (ml/reports). Kolom audit: skenario terfilter. Grayhole dikonfigurasi meneruskan 0.30.</div>`; }
+  else pb.innerHTML='<h3>Forwarding ratio</h3>'+NA; c.appendChild(pb);
+  const ch=$('trustCharts'); ch.innerHTML='';
+  const obs=rows.filter(r=>r.N>0);
+  ch.appendChild(histChart('Distribusi trust telemetry: normal vs malicious (node teramati)', showGT()?[{label:'normal',color:'#4dabf7',values:obs.filter(r=>!r.mal).map(r=>r.trust)},{label:'malicious',color:'#e599f7',values:obs.filter(r=>r.mal).map(r=>r.trust)}]:[{label:'semua node teramati',color:'#4dabf7',values:obs.map(r=>r.trust)}]));
+  const sp=rows.filter(r=>r.N>0&&r.audN>0).map(r=>({x:1-r.Dest/r.N, y:r.audTx/r.audN, color:showGT()&&r.mal?'#e599f7':'#4dabf7', shape:showGT()&&r.mal?'tri':'circ', label:`n=${r.key.split('_')[0]} s=${r.key.split('_')[1]} S${r.j}: estimasi ${fmt(1-r.Dest/r.N,3)}, aktual ${fmt(r.audTx/r.audN,3)}`}));
+  ch.appendChild(scatterChart(cfg==='stage1'?'Estimasi vs aktual forwarding ratio per node (Stage 1)':'Estimasi (Stage 1) vs aktual (audit run terpilih)', sp, 'estimasi watchdog = 1 − D/N', 'aktual (audit simulator)'));
+  renderTrustTable(); }
+function renderTrustTable(){ const key=mapKey(), t=D.trust[key], gt=D.gt[key], cfg=telCfg(), run=D.runs[cfg][key], tel=run&&run.tel;
+  if(!t){ $('trustTable').innerHTML=NA; return; }
+  const rows=t.map((r,j)=>({j,r})).sort((a,b)=>a.r[0]-b.r[0]);
+  let h=`<table><tr><th>Sensor</th><th class="n">Trust</th><th class="n">Observasi N</th><th class="n">Diteruskan</th><th class="n">Ambigu</th><th class="n">Tak terdengar</th><th class="n">Estimasi drop</th><th class="n">Diteruskan / diamati (${esc(D.configs[cfg].short)})</th><th class="n">Aktual (audit)</th><th>Status</th><th>Label</th></tr>`;
+  rows.forEach(({j,r})=>{ const st=r[1]<10?'<span class="pill warn">belum cukup</span>':(r[0]<0.5?'<span class="pill bad">suspicious</span>':'<span class="pill ok">tepercaya</span>');
+    const ow=tel?tel.node.obs_watched[j]:null, of=tel?tel.node.obs_forwarded[j]+tel.node.obs_forwarded_late[j]:null, an=tel?tel.audit[j]:null;
+    h+=`<tr${j===SEL?' style="background:#1b2a48"':''}><td>S${j}</td><td class="n">${fmt(r[0],3)}</td><td class="n">${fint(r[1])}</td><td class="n">${fint(r[2])}</td><td class="n">${fint(r[3])}</td><td class="n">${fint(r[4])}</td><td class="n">${fmt(r[5],1)}</td>
+     <td class="n">${tel?(ow?fint(of)+' / '+fint(ow):'–'):NA}</td><td class="n">${an&&an[1]?fmt(an[0]/an[1],3):'–'}</td><td>${st}</td><td>${showGT()&&gt[j]?'<span class="pill gt">malicious</span>':''}</td></tr>`; });
+  $('trustTable').innerHTML=h+'</table>'; }
+
+// ---------------- 5. IPS ----------------
+function renderIPS(){ const vis=visibleConfigs();
+  let h=`<table><tr><th>Konfigurasi</th><th class="n">Terdeteksi & diisolasi</th><th class="n">Penyerang terisolasi</th><th class="n">Mitigasi</th><th class="n">Blok salah (node normal)</th><th class="n">False blocking rate</th></tr>`;
+  vis.forEach(k=>{ const x=ipsAgg(k); if(!x){ h+=`<tr><td>${esc(D.configs[k].short)}</td><td colspan="5">${NA}</td></tr>`; return; }
+    h+=`<tr><td><span style="color:${COLORS[k]}">■</span> ${esc(D.configs[k].short)}</td><td class="n">${fint(x.blocked)}</td><td class="n">${fint(x.hit)} / ${fint(x.att)}</td><td class="n">${fmt(100*x.mitig,1)}%</td><td class="n">${fint(x.false)}</td><td class="n">${fmt(100*x.fbr,1)}%</td></tr>`; });
+  $('ipsSummary').innerHTML=h+`</table><div class="mute">Aksi pencegahan: node yang ditandai Bi-GAN (window pertama) <b>atau</b> DTO pada t = 8.3 s diisolasi (flow-rule drop, aplikasi berhenti mengirim);
+   delegator optimal mengirim alarm ke sink-nya pada t = 15.3 s. Mitigasi = penyerang terisolasi / total penyerang (ground truth). Blok salah = node normal yang diisolasi.<br>Perbedaan antar konfigurasi berasal dari DTO (Bi-GAN identik), yang buktinya bergantung pada beban relay dan yang diberi k = 10% node a priori; selisih 1–2 node per skenario bukan bukti efek routing.</div>`;
+  $('ipsImpact').innerHTML=`<p>${NA}</p><div class="mute">Tidak ada run tanpa IPS sebagai pembanding, sehingga dampak kausal pencegahan terhadap PDR/latency/energi tidak bisa diukur dari data yang ada.
+   Catatan dari implementasi: isolasi terjadi pada t = 8.3 s ketika sebagian besar trafik sensor (50 paket/node) sudah terkirim, dan node terisolasi masih meneruskan paket transit (langkah 5).</div>`;
+  const c=$('ipsCharts'); c.innerHTML='';
+  c.appendChild(barChart('Mitigasi penyerang','%',vis.map(k=>{ const x=ipsAgg(k); return {label:D.configs[k].short,value:x?100*x.mitig:NaN,color:COLORS[k]}; }),{max:100,dec:1}));
+  c.appendChild(barChart('Node normal yang diblok (false blocking)','node',vis.map(k=>{ const x=ipsAgg(k); return {label:D.configs[k].short,value:x?x.false:NaN,color:COLORS[k]}; }),{dec:0})); }
+
+// ---------------- 7. comparison ----------------
+function renderCompare(){ const vis=visibleConfigs();
+  let a=`<table><tr><th>Konfigurasi</th>${D.nodes.map(n=>`<th class="n">${n}</th>`).join('')}</tr>`;
+  Object.keys(D.configs).forEach(k=>{ a+=`<tr><td><span style="color:${COLORS[k]}">■</span> ${esc(D.configs[k].label)}${vis.includes(k)?'':' <span class="mute">(tersaring)</span>'}</td>`+
+    D.nodes.map(n=>{ const c=D.seeds.filter(s=>D.runs[k][n+'_'+s]).length; return `<td class="n">${c?c+'/3':'<span class="na">NA</span>'}</td>`; }).join('')+'</tr>'; });
+  $('avail').innerHTML=a+`</table><div class="mute">Jumlah seed tersedia per jumlah sensor. Kombinasi yang tidak pernah dijalankan (mis. Greedy + trust telemetry) tidak muncul; filter yang hanya memilih kombinasi itu menampilkan "Not Available".</div>`;
+  const M=[['pdr_percent','PDR','%',2],['packet_drop_ratio_percent','Drop ratio','%',2],['throughput_kbps','Throughput','kbps',2],['latency_ms','Latency','ms',3],['energy_consumption_J','Energi','J',3],['network_lifetime_s','Lifetime (proyeksi)','hari',1],['grayhole_drops','Drop grayhole','paket',1],['planned_hops_mean','Hop terencana','hop',2]];
+  let h=`<table><tr><th>Metrik</th>${vis.map(k=>`<th class="n" style="color:${COLORS[k]}">${esc(D.configs[k].short)}</th>`).join('')}</tr>`;
+  M.forEach(([m,l,u,d])=>{ h+=`<tr><td>${l} (${u})</td>`+vis.map(k=>{ let v=metricVals(k,m); if(m==='network_lifetime_s') v=v.map(x=>x/86400); return `<td class="n">${v.length?fmt(mean(v),d)+(v.length>1?' ± '+fmt(sd(v),d):''):NA}</td>`; }).join('')+'</tr>'; });
+  h+=`<tr><td>Rute lewat malicious (%)</td>`+vis.map(k=>{ const r=runsOf(k); if(!r.length) return `<td class="n">${NA}</td>`; const v=r.map(([key,x])=>100*viaMal(x.paths,D.gt[key])/(+key.split('_')[0])); return `<td class="n">${fmt(mean(v),1)} ± ${fmt(sd(v),1)}</td>`; }).join('')+'</tr>';
+  h+=`<tr><td>F1 Bi-GAN / DTO (%)</td>`+vis.map(k=>{ const d=detAgg(k); return `<td class="n">${d?fmt(100*d.bigan.f1,1)+' / '+fmt(100*d.dto.f1,1):NA}</td>`; }).join('')+'</tr>';
+  h+=`<tr><td>Run (skenario)</td>`+vis.map(k=>`<td class="n">${runsOf(k).length}</td>`).join('')+'</tr>';
+  $('cmpTable').innerHTML=h+'</table>'; }
+
+// ---------------- footer ----------------
+function renderFooter(){ const r=D.reports, ok=b=>b?'<span class="pill ok">lolos</span>':'<span class="pill bad">gagal</span>';
+  const items=[]; if(r.stage1) items.push(`Validasi telemetry Stage 1 ${ok(r.stage1.all_valid)}, seed ulang identik ${ok(r.stage1.repeat_all_identical)} (${r.stage1.repeat_checked}), pasif ${ok(r.stage1.passive_all_identical)} (${r.stage1.passive_checked})`);
+  if(r.stage2) items.push(`Stage 2 ${ok(r.stage2.all_valid)}, penerusan = FlowMonitor eksak ${r.stage2.forward_check?r.stage2.forward_check.exact_delivered:'–'} run`);
+  if(r.ctrl0) items.push(`Kontrol grayholeDrop=0: malicious ${fmt(r.ctrl0.pooled.malicious.est_corrected,3)} vs normal ${fmt(r.ctrl0.pooled.normal.est_corrected,3)} (tanpa kebocoran label)`);
+  $('footer').innerHTML=`<div>${items.join(' · ')}</div><div style="margin-top:6px">Sumber konfigurasi: ${Object.entries(D.configs).map(([k,c])=>esc(c.short)+': '+esc(c.source)).join(' · ')}.
+   Rincian metodologi: docs/TELEMETRY.md, docs/PAPER_DEVIATIONS.md. Ground truth hanya untuk evaluasi; tidak dipakai sebagai input apa pun di halaman ini.</div>`; }
+
+// ---------------- orkestrasi ----------------
+Object.values(D.runs).forEach(byKey=>Object.entries(byKey).forEach(([key,r])=>{ r._s=+key.split('_')[1]; }));
+function refreshFocus(){ const vis=visibleConfigs(), prev=$('fFocus').value; $('fFocus').innerHTML='';
+  vis.forEach(k=>$('fFocus').add(new Option(D.configs[k].short,k)));
+  if(!vis.length){ FOCUS=null; return; } FOCUS = vis.includes(prev)?prev:(vis.includes('stage2')?'stage2':vis[0]); $('fFocus').value=FOCUS;
+  const pb=$('fBase').value; $('fBase').innerHTML=''; Object.keys(D.configs).forEach(k=>$('fBase').add(new Option(D.configs[k].short,k)));
+  $('fBase').value = Object.keys(D.configs).includes(pb)&&pb!==FOCUS ? pb : (FOCUS==='stage1'?'stage2':'stage1'); }
+function renderAll(){ refreshFocus(); const vis=visibleConfigs(), keys=scenKeys();
+  $('filterSummary').textContent=`${keys.length} skenario (n × seed) · ${vis.length} konfigurasi terlihat · fokus: ${FOCUS?D.configs[FOCUS].label:'—'}`;
+  if(!FOCUS){ ['kpis','flow','netSummary','netCharts','routeCompare','routeCharts','detCards','detCharts','trustCards','trustCharts','ipsSummary','ipsCharts','cmpTable'].forEach(id=>$(id).innerHTML=NA); renderCompare(); return; }
+  renderKPI(); renderFlow(); renderMap(); renderNetwork(); renderRouteDetail(); renderRouting(); renderDetection(); renderTrust(); renderIPS(); renderCompare(); renderFooter(); }
+['fN','fS'].forEach(id=>$(id).onchange=()=>{ SEL=null; renderAll(); });
+$('fFocus').onchange=()=>{ FOCUS=$('fFocus').value; renderKPI(); renderFlow(); renderMap(); renderRouteDetail(); renderPairs(); renderDetection(); renderTrust(); };
+$('fBase').onchange=renderPairs; $('fGT').onchange=renderAll;
+document.querySelectorAll('input[data-f]').forEach(i=>i.onchange=()=>{ SEL=null; renderAll(); });
+renderAll();
+</script>
+</body>
+</html>

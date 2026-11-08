@@ -1,0 +1,9 @@
+metric,value
+accuracy_percent,77.8744
+precision_percent,82.6358
+recall_percent,77.3942
+f1_percent,79.9292
+TN,7624
+FP,2087
+FN,2901
+TP,9932

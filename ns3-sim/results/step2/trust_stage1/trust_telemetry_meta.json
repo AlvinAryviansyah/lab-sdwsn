@@ -1,0 +1,373 @@
+{
+ "created_at": "2026-11-07T19:43:13",
+ "method": "corrected",
+ "formula": "D=min(A+U, U/(1-b_obs)); trust=(N-D+1)/(N+2)",
+ "input_columns": [
+  "window",
+  "observer",
+  "neighbor_type",
+  "neighbor_id",
+  "wd_started",
+  "wd_forwarded",
+  "wd_forwarded_late",
+  "wd_unobserved_rxfail",
+  "wd_unobserved_clean",
+  "wd_heard_rxfail"
+ ],
+ "windows": "all",
+ "telem_dir": "../ns3-sim/results/step2/telemetry_stage1",
+ "scenarios": [
+  {
+   "n": 20,
+   "seed": 1,
+   "source_file": "telemetry_links_20_s1.csv",
+   "source_sha256": "767438d2cd8bca1398ea7179f7015ca1af2b458302ad8c72a022893f4532cad3",
+   "trust_sha256": "804c30b6d6edcf8f927779a18e2e990ecbb68cfeee88f52855c5c310a5947341",
+   "nodes_observed": 8,
+   "watches": 676,
+   "ambiguous_total": 0,
+   "b_pooled": 0.0,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 20,
+   "seed": 2,
+   "source_file": "telemetry_links_20_s2.csv",
+   "source_sha256": "80a87a9eb2db53e8dcf084cb2f02a3854830b020de0bbc1fd9b606666876dcc8",
+   "trust_sha256": "477d2d1b202a210c1301b46b01ff65516913245a7abfe6fed2eebc6515462f49",
+   "nodes_observed": 8,
+   "watches": 674,
+   "ambiguous_total": 1,
+   "b_pooled": 0.0015822784810126582,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 20,
+   "seed": 3,
+   "source_file": "telemetry_links_20_s3.csv",
+   "source_sha256": "ac11c5567c9c75305efc5df4beaac92acee06335fef272f12e4d75d2d8cc88aa",
+   "trust_sha256": "ff29d118ed422d8d18a698f4aca79d898d601ab0cb26dd20bf56f4f4bba5608e",
+   "nodes_observed": 8,
+   "watches": 637,
+   "ambiguous_total": 0,
+   "b_pooled": 0.0,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 30,
+   "seed": 1,
+   "source_file": "telemetry_links_30_s1.csv",
+   "source_sha256": "7826446e66a688e22b60dbbce0a06c66bbf38d21f83bdf1cea22da4d6609ddde",
+   "trust_sha256": "003dfd3bf3677eb9f8337be9545455b3176fad83e19d60a53064eeab68fe05af",
+   "nodes_observed": 13,
+   "watches": 978,
+   "ambiguous_total": 0,
+   "b_pooled": 0.016129032258064516,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 30,
+   "seed": 2,
+   "source_file": "telemetry_links_30_s2.csv",
+   "source_sha256": "a9bca5106a0fe25bc3689988a3ef8f0d865276223fa5a2853eda348d50740f3a",
+   "trust_sha256": "e4583199e85f6586a428aea4c5570c332ce92c5e7beb1d56c51ce9da01bdc127",
+   "nodes_observed": 13,
+   "watches": 949,
+   "ambiguous_total": 0,
+   "b_pooled": 0.0022935779816513763,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 30,
+   "seed": 3,
+   "source_file": "telemetry_links_30_s3.csv",
+   "source_sha256": "9ec549f3fb292925831cc3ba37c2bb52cf16e64dd7eef1bf7894963d1bd1a929",
+   "trust_sha256": "f5bfcaebf66b57e350ce9f44e3973a5bc334f3c26a2dc3df9688944d44dc01d6",
+   "nodes_observed": 12,
+   "watches": 917,
+   "ambiguous_total": 0,
+   "b_pooled": 0.0011389521640091116,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 40,
+   "seed": 1,
+   "source_file": "telemetry_links_40_s1.csv",
+   "source_sha256": "c0ad13c6d37b8cb84960b4045dbf22c22580d03cad924900fce65654465bac76",
+   "trust_sha256": "60e59b762c68d3ae68bd4d2f2a056b94f2f79e21db577fc89376d8ac9954acc0",
+   "nodes_observed": 16,
+   "watches": 1278,
+   "ambiguous_total": 3,
+   "b_pooled": 0.013820335636722606,
+   "cap_hit_nodes": [
+    3,
+    15
+   ]
+  },
+  {
+   "n": 40,
+   "seed": 2,
+   "source_file": "telemetry_links_40_s2.csv",
+   "source_sha256": "633c9558d5c940540fe5976aa34986a764f413ce8891b85158ea6a951fd73803",
+   "trust_sha256": "67c52afec29e5f3fdbf9cccfa23cd4490db26f69c3c9e6aa70b761f2c9127c72",
+   "nodes_observed": 14,
+   "watches": 1275,
+   "ambiguous_total": 0,
+   "b_pooled": 0.012903225806451613,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 40,
+   "seed": 3,
+   "source_file": "telemetry_links_40_s3.csv",
+   "source_sha256": "e86508cdad335323452db35cc9e195b8d37fb47f23768feb9f711b963087a39d",
+   "trust_sha256": "e8abc9f35a81e2b0736e9f67fb2700b681b6d60c89e874807340b6dd383ce98b",
+   "nodes_observed": 14,
+   "watches": 1278,
+   "ambiguous_total": 0,
+   "b_pooled": 0.0,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 50,
+   "seed": 1,
+   "source_file": "telemetry_links_50_s1.csv",
+   "source_sha256": "55312ec6ae39bb087048373fe2788e8be6784ca13bd07e0b4199b138b9982e9b",
+   "trust_sha256": "190c106114ac42dfd8c849c1efcafa66682d61b2fca7af5d69b8e5b01b83fc75",
+   "nodes_observed": 22,
+   "watches": 2053,
+   "ambiguous_total": 1,
+   "b_pooled": 0.019042717447246525,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 50,
+   "seed": 2,
+   "source_file": "telemetry_links_50_s2.csv",
+   "source_sha256": "f02ca5ccd0d85e993a4cae4aa4cb634b33820c9e71adf24d2a07e6dfd8518313",
+   "trust_sha256": "520efde1ee8ad2ca85f63cc2777878a07ea75c108d020168718855b02c39e304",
+   "nodes_observed": 22,
+   "watches": 2132,
+   "ambiguous_total": 2,
+   "b_pooled": 0.01098901098901099,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 50,
+   "seed": 3,
+   "source_file": "telemetry_links_50_s3.csv",
+   "source_sha256": "5bad63efd31460eb91130f50155fdfe01fb03c71ca706155e14b537fe83b1a3e",
+   "trust_sha256": "c192b06da14d893b66094768e6a34364dfdd871434eb6769f404955d507168f7",
+   "nodes_observed": 22,
+   "watches": 2082,
+   "ambiguous_total": 19,
+   "b_pooled": 0.3258483033932136,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 60,
+   "seed": 1,
+   "source_file": "telemetry_links_60_s1.csv",
+   "source_sha256": "4e05227dd2d2d2bbf64264fd6e015b57ea89d172524b967b7627543a7777b7b3",
+   "trust_sha256": "566ec25e1b180bd15af0c7c2db52b8da5853508ddd2fcb7a71c37c4777212b96",
+   "nodes_observed": 27,
+   "watches": 2697,
+   "ambiguous_total": 1,
+   "b_pooled": 0.10069444444444445,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 60,
+   "seed": 2,
+   "source_file": "telemetry_links_60_s2.csv",
+   "source_sha256": "ada4dc4d118f94111c7ad18b4e51caa3edeefa46107dff654d53cc6ab9a2b3c9",
+   "trust_sha256": "7a252923eeb6f914c8f3b0b9d4b257bcdb90455629e2b97d8c5a785729e962fe",
+   "nodes_observed": 26,
+   "watches": 3109,
+   "ambiguous_total": 7,
+   "b_pooled": 0.0330188679245283,
+   "cap_hit_nodes": [
+    15
+   ]
+  },
+  {
+   "n": 60,
+   "seed": 3,
+   "source_file": "telemetry_links_60_s3.csv",
+   "source_sha256": "2df2148b13eba29c4fe85a5e11facb08a229e74a3555f1068443961a011ca39f",
+   "trust_sha256": "21f5d34ecb650b236a3d87c382ab71936ddf26e05ed381cb9c686ff0d9b5c129",
+   "nodes_observed": 27,
+   "watches": 2831,
+   "ambiguous_total": 11,
+   "b_pooled": 0.046706586826347304,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 70,
+   "seed": 1,
+   "source_file": "telemetry_links_70_s1.csv",
+   "source_sha256": "66e5ab3d9ac5512c3b91c124e92d0c29c196874e68a39bbf5d1e0ad76592a80e",
+   "trust_sha256": "fd499e462f226ad835c35cca9de25c9674bee46cfba5bb84aecc935b599aa2a6",
+   "nodes_observed": 28,
+   "watches": 3619,
+   "ambiguous_total": 14,
+   "b_pooled": 0.15135437028762916,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 70,
+   "seed": 2,
+   "source_file": "telemetry_links_70_s2.csv",
+   "source_sha256": "f8bb7f6af1e534f1ed93ec3a31119ae2ae9ccacafd6ae6e0f6830b4c5dd15f4b",
+   "trust_sha256": "e6321ed42e3ba963df63f55dd86e81f9fcb5187f8fcccf96406f96f811e204e5",
+   "nodes_observed": 29,
+   "watches": 3621,
+   "ambiguous_total": 234,
+   "b_pooled": 0.2952586206896552,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 70,
+   "seed": 3,
+   "source_file": "telemetry_links_70_s3.csv",
+   "source_sha256": "be8342f1ead58606a996ea55de3de1db00431992a2ae227b7a6a6f1be7484ccc",
+   "trust_sha256": "3105957e2820bd7fa86dcc72800e1976b5d52d0d899850cdf67317bccf2bdc25",
+   "nodes_observed": 27,
+   "watches": 3540,
+   "ambiguous_total": 103,
+   "b_pooled": 0.14758751182592242,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 80,
+   "seed": 1,
+   "source_file": "telemetry_links_80_s1.csv",
+   "source_sha256": "85fae8fa632ab80741ebe55c399de35cb29df7d45cb2bc61ca935c42ad7fde79",
+   "trust_sha256": "6aed773e92070ee52c1e3d3a8ff6f8fcb4cb48b0b091af9db23b196ed7bf8443",
+   "nodes_observed": 37,
+   "watches": 4404,
+   "ambiguous_total": 17,
+   "b_pooled": 0.20034038414782399,
+   "cap_hit_nodes": [
+    0
+   ]
+  },
+  {
+   "n": 80,
+   "seed": 2,
+   "source_file": "telemetry_links_80_s2.csv",
+   "source_sha256": "4050123a84954b56c26ed00526a04123f1b3e76734faec2246950bb92854210a",
+   "trust_sha256": "3ea61e1dcbb1161e01543abaa60f18b5652ff0f7dde2a08aa41056ebf63755bd",
+   "nodes_observed": 37,
+   "watches": 4618,
+   "ambiguous_total": 179,
+   "b_pooled": 0.15637860082304528,
+   "cap_hit_nodes": []
+  },
+  {
+   "n": 80,
+   "seed": 3,
+   "source_file": "telemetry_links_80_s3.csv",
+   "source_sha256": "0469c3ea391b8da451d655fe279b28c3b9b20383be48c7dc7802c2f8e94df144",
+   "trust_sha256": "755823a2fb348dd47f54e187354099ed5903ccccb3d1fc58a0432c023f0f5508",
+   "nodes_observed": 37,
+   "watches": 4214,
+   "ambiguous_total": 38,
+   "b_pooled": 0.12917087967644084,
+   "cap_hit_nodes": [
+    15,
+    32
+   ]
+  },
+  {
+   "n": 90,
+   "seed": 1,
+   "source_file": "telemetry_links_90_s1.csv",
+   "source_sha256": "20be3ec7cf8e4518d59d453715bd36504d72a6f18df5ce294f7bdf3f6e47c6f9",
+   "trust_sha256": "8c555d744bf2d0631504922e6e95df47a8e315fa0319850231fc30975af8ae8c",
+   "nodes_observed": 40,
+   "watches": 5313,
+   "ambiguous_total": 59,
+   "b_pooled": 0.210087370929309,
+   "cap_hit_nodes": [
+    6,
+    44
+   ]
+  },
+  {
+   "n": 90,
+   "seed": 2,
+   "source_file": "telemetry_links_90_s2.csv",
+   "source_sha256": "34b12936aa078442016ede5796ac821df13099effc1814499d2945f52de455d5",
+   "trust_sha256": "9ae239f6dc82e6f5bbb207fbe0bc197621e060dba36a171bc7f6a9826a5beb80",
+   "nodes_observed": 40,
+   "watches": 5282,
+   "ambiguous_total": 18,
+   "b_pooled": 0.2242071457246086,
+   "cap_hit_nodes": [
+    18
+   ]
+  },
+  {
+   "n": 90,
+   "seed": 3,
+   "source_file": "telemetry_links_90_s3.csv",
+   "source_sha256": "487feaef017234e0d87cd605cdf6c8fd91434e26b899388fbb4efb187dd7aee9",
+   "trust_sha256": "a857c024cb23e397dc43826bc53a10b09d3842b13244cb21435c41a2e78435ed",
+   "nodes_observed": 40,
+   "watches": 5661,
+   "ambiguous_total": 113,
+   "b_pooled": 0.24457556147696993,
+   "cap_hit_nodes": [
+    3,
+    24,
+    58
+   ]
+  },
+  {
+   "n": 100,
+   "seed": 1,
+   "source_file": "telemetry_links_100_s1.csv",
+   "source_sha256": "8b8a4190c94e64561d4aa5200f770a09e132bcd6ab74a7e2698ddab1ace6d843",
+   "trust_sha256": "3eafae1d2aa238fb4e7b2aee783d89dcbbb75b408243dcc551237299d6d784a9",
+   "nodes_observed": 42,
+   "watches": 6317,
+   "ambiguous_total": 66,
+   "b_pooled": 0.31781045751633985,
+   "cap_hit_nodes": [
+    32,
+    33
+   ]
+  },
+  {
+   "n": 100,
+   "seed": 2,
+   "source_file": "telemetry_links_100_s2.csv",
+   "source_sha256": "de10793eb59f66654c79c20a469181eddbb4986c85da8f4275545adc31e74ff3",
+   "trust_sha256": "913ff37acf9d3ba85a20e6a253c3b03722b7f4c6d3e0663900ab68696a2185a6",
+   "nodes_observed": 41,
+   "watches": 6403,
+   "ambiguous_total": 307,
+   "b_pooled": 0.30309810671256454,
+   "cap_hit_nodes": [
+    82
+   ]
+  },
+  {
+   "n": 100,
+   "seed": 3,
+   "source_file": "telemetry_links_100_s3.csv",
+   "source_sha256": "7702e54fff8edc7766378a5295635358c7b8facc6ec0dd0eae6d54bcb88b9343",
+   "trust_sha256": "91e073f6807d9f71fe4089e2c3b268e92e51e7ceb87411edb6e0bc9383db14e0",
+   "nodes_observed": 41,
+   "watches": 6081,
+   "ambiguous_total": 476,
+   "b_pooled": 0.1942417669098797,
+   "cap_hit_nodes": [
+    15,
+    25,
+    63
+   ]
+  }
+ ]
+}

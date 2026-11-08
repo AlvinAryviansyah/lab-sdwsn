@@ -1,0 +1,55 @@
+[1/27] node=20 seed=1 profile=paper
+    selesai dalam 1 s
+[2/27] node=30 seed=1 profile=paper
+    selesai dalam 2 s
+[3/27] node=40 seed=1 profile=paper
+    selesai dalam 3 s
+[4/27] node=50 seed=1 profile=paper
+    selesai dalam 5 s
+[5/27] node=60 seed=1 profile=paper
+    selesai dalam 6 s
+[6/27] node=70 seed=1 profile=paper
+    selesai dalam 9 s
+[7/27] node=80 seed=1 profile=paper
+    selesai dalam 11 s
+[8/27] node=90 seed=1 profile=paper
+    selesai dalam 14 s
+[9/27] node=100 seed=1 profile=paper
+    selesai dalam 16 s
+[10/27] node=20 seed=2 profile=paper
+    selesai dalam 1 s
+[11/27] node=30 seed=2 profile=paper
+    selesai dalam 2 s
+[12/27] node=40 seed=2 profile=paper
+    selesai dalam 3 s
+[13/27] node=50 seed=2 profile=paper
+    selesai dalam 5 s
+[14/27] node=60 seed=2 profile=paper
+    selesai dalam 7 s
+[15/27] node=70 seed=2 profile=paper
+    selesai dalam 10 s
+[16/27] node=80 seed=2 profile=paper
+    selesai dalam 11 s
+[17/27] node=90 seed=2 profile=paper
+    selesai dalam 14 s
+[18/27] node=100 seed=2 profile=paper
+    selesai dalam 18 s
+[19/27] node=20 seed=3 profile=paper
+    selesai dalam 2 s
+[20/27] node=30 seed=3 profile=paper
+    selesai dalam 2 s
+[21/27] node=40 seed=3 profile=paper
+    selesai dalam 3 s
+[22/27] node=50 seed=3 profile=paper
+    selesai dalam 5 s
+[23/27] node=60 seed=3 profile=paper
+    selesai dalam 6 s
+[24/27] node=70 seed=3 profile=paper
+    selesai dalam 9 s
+[25/27] node=80 seed=3 profile=paper
+    selesai dalam 10 s
+[26/27] node=90 seed=3 profile=paper
+    selesai dalam 15 s
+[27/27] node=100 seed=3 profile=paper
+    selesai dalam 19 s
+Selesai. Hasil: /app/ns-3-dev/results/metrics_<n>_s<seed>.csv

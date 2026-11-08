@@ -1,0 +1,94 @@
+{
+ "checkpoint": "checkpoints/bigan_v2_h2",
+ "model": {
+  "x_dim": 122,
+  "z_dim": 32,
+  "hidden": 128,
+  "n_hidden": 2,
+  "activation": "relu",
+  "lr": 0.0002,
+  "beta1": 0.5,
+  "beta2": 0.999,
+  "batch_size": 256,
+  "epochs": 20,
+  "d_steps": 1,
+  "seed": 1,
+  "latent_prior": "normal"
+ },
+ "threshold": {
+  "policy": "f1_weighted",
+  "prevalence": 0.1,
+  "target_fpr": 0.05,
+  "fit_on": "validation",
+  "value": 1.2446981066318987,
+  "val_weighted_f1": 0.6372886223926307
+ },
+ "validation": {
+  "split": "validation",
+  "n": 25195,
+  "prevalence": 0.46540980353244693,
+  "threshold": 1.2446981066318987,
+  "AUC": 0.7652802253529488,
+  "TP": 6213,
+  "TN": 13270,
+  "FP": 199,
+  "FN": 5513,
+  "accuracy": 0.7732883508632665,
+  "precision": 0.9689644416718652,
+  "recall": 0.5298482005799079,
+  "TPR": 0.5298482005799079,
+  "FPR": 0.014774667755586904,
+  "F1": 0.6850810453192193,
+  "expected_at_prevalence": {
+   "prevalence": 0.1,
+   "precision": 0.7993844971564611,
+   "recall": 0.5298482005799079,
+   "F1": 0.6372886223926308,
+   "accuracy": 0.9396876190779626
+  }
+ },
+ "test": {
+  "split": "test",
+  "n": 22544,
+  "prevalence": 0.5692423704755145,
+  "threshold": 1.2446981066318987,
+  "AUC": 0.487943895256462,
+  "TP": 2673,
+  "TN": 9616,
+  "FP": 95,
+  "FN": 10160,
+  "accuracy": 0.545111781405252,
+  "precision": 0.965679190751445,
+  "recall": 0.20829112444479078,
+  "TPR": 0.20829112444479078,
+  "FPR": 0.00978272062609412,
+  "F1": 0.3426703416447664,
+  "expected_at_prevalence": {
+   "prevalence": 0.1,
+   "precision": 0.7028892828263676,
+   "recall": 0.20829112444479078,
+   "F1": 0.3213537032003538,
+   "accuracy": 0.9120246638809943
+  }
+ },
+ "ablation_recon_test": {
+  "AUC": 0.8547592676861252,
+  "TP": 3544,
+  "TN": 9177,
+  "FP": 534,
+  "FN": 9289,
+  "accuracy": 0.5642743080198722,
+  "precision": 0.8690534575772437,
+  "recall": 0.27616301722122655,
+  "TPR": 0.27616301722122655,
+  "FPR": 0.054989187519308,
+  "F1": 0.4191354739518656,
+  "expected_at_prevalence": {
+   "prevalence": 0.1,
+   "precision": 0.35815756746545174,
+   "recall": 0.27616301722122655,
+   "F1": 0.31186083775203527,
+   "accuracy": 0.8781260329547455
+  }
+ }
+}
